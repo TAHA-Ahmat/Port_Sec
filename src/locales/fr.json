@@ -1,0 +1,188 @@
+{
+  "nav": {
+    "home": "Projet",
+    "project": "Projet",
+    "impact": "Impact",
+    "dataroom": "Espace documentaire",
+    "contact": "Contact",
+    "invest": "Investir"
+  },
+
+  "hero": {
+    "tag": "APD 75% • PND 2026–2030",
+    "title": "Port Sec de N'Djamena : le hub logistique de demain",
+    "subtitle": "Un projet clé pour dynamiser le commerce et le développement entre le Tchad et la région.",
+    "ctaInvest": "Investir",
+    "ctaContact": "Nous contacter",
+    "trust": "Aligné PND 2026–2030",
+
+    "secondaryCta": "Accéder aux documents",
+    "badges": ["PND 2026–2030", "Corridor CEMAC"],
+    "corridorNote": "Douala ↔ N’Djamena • Accès régional et international"
+  },
+
+  "kpi": {
+    "capex": "Investissement total",
+    "equity": "Fonds propres",
+    "debt": "Emprunt",
+    "apd": "Avancement des études"
+  },
+
+  "kpiValues": {
+    "capexXaf": 37000000000,
+    "capexEur": 56400000,
+    "equityXaf": 7000000000,
+    "debtXaf": 30000000000,
+    "apdPct": 75,
+    "disclaimer": "Indicateurs issus de l’APD (non contractuels)."
+  },
+
+  "highlights": {
+    "title": "Pourquoi ce projet ?",
+    "speed": {
+      "title": "Dédouanement rapide",
+      "desc": "Sortie plus rapide des marchandises et moins d’immobilisations.",
+      "kpi": "-30% temps de séjour (objectif)"
+    },
+    "control": {
+      "title": "Traçabilité & contrôle",
+      "desc": "Guichet unique, processus simples et suivi digital.",
+      "kpi": "Traçabilité GPS sur site"
+    },
+    "cost": {
+      "title": "Coûts optimisés",
+      "desc": "Moins de frais d’entreposage et de surestaries.",
+      "kpi": "-X% surestaries (objectif)"
+    },
+    "compliance": {
+      "title": "Conformité",
+      "desc": "Normes internationales et sécurité renforcée.",
+      "kpi": "Procédures harmonisées"
+    }
+  },
+
+  "impact": {
+    "title": "Impact",
+    "before": "Avant",
+    "after": "Après",
+    "list": {
+      "before1": "Séjours longs au port",
+      "before2": "Attente du GPS",
+      "before3": "Procédures complexes",
+      "before4": "Frais de stockage élevés",
+      "after1": "Sortie plus rapide",
+      "after2": "GPS installé sur site",
+      "after3": "Guichet unique douane & IT",
+      "after4": "Tarifs réduits"
+    },
+    "captionBefore": "Situation actuelle des flux",
+    "captionAfter": "Situation cible avec le Port Sec opérationnel",
+    "tips": {
+      "gps": "L’installation du GPS sur site réduit l’attente au départ du corridor.",
+      "oneStop": "Le guichet unique centralise les formalités et accélère les sorties."
+    },
+    "process": {
+      "title": "Processus d’investissement",
+      "step1": { "title": "Étape 1", "desc": "Présentation courte et premier échange." },
+      "step2": { "title": "Étape 2", "desc": "Accès aux documents principaux après validation." },
+      "step3": { "title": "Étape 3", "desc": "Vérifications techniques, juridiques et financières." }
+    },
+    "milestones": {
+      "title": "Jalons",
+      "t0": { "title": "APD 75%", "desc": "Études détaillées avancées" },
+      "t1": { "title": "Bouclage financier", "desc": "Fonds propres 7 Mds XAF + dette" },
+      "t2": { "title": "Construction", "desc": "Lancement des travaux" },
+      "t3": { "title": "Mise en service", "desc": "Démarrage des opérations (Douala)" }
+    },
+    "opportunity": {
+      "title": "Une opportunité d’investissement stratégique",
+      "cta": "Investir",
+      "dataroom": "Accéder aux documents"
+    },
+    "disclaimer": "Indicateurs prévisionnels basés sur l’APD (non contractuels)."
+  },
+
+  "invest": {
+    "title": "Investir",
+    "pitch": "Un actif logistique stratégique à Douala pour fluidifier les flux Tchad–Cameroun, avec une gouvernance dédiée et un modèle opérationnel clair.",
+    "process": "Processus d’investissement",
+    "benefitsTitle": "Pourquoi investir",
+    "step1": "Découverte",
+    "step2": "Espace documentaire",
+    "step3": "Vérifications",
+    "step4": "Proposition",
+    "step4desc": "Accord de principes et calendrier.",
+    "structure": "Structure d’investissement",
+
+    "partners": {
+      "title": "Partenariats recherchés",
+      "items": [
+        "Investisseurs en fonds propres",
+        "Partenaires techniques (réalisation & exploitation)",
+        "Bailleurs de moyen/long terme"
+      ]
+    },
+    "ctaPartners": "Proposer un partenariat"
+  },
+
+  "location": {
+    "title": "Localisation & rôle régional",
+    "desc": "Implanté à Douala avec pilotage à N’Djamena, le Port Sec sert de passerelle vers les marchés régionaux et internationaux au sein de la CEMAC.",
+    "points": [
+      "Douala : première porte maritime desservant le Tchad",
+      "N’Djamena : coordination institutionnelle et opérationnelle",
+      "Corridor prioritaire du commerce extérieur"
+    ]
+  },
+
+  "policy": {
+    "title": "Alignement PND 2026–2030",
+    "points": [
+      "Compétitivité portuaire régionale renforcée",
+      "Services sûrs et conformes aux normes internationales",
+      "Intégration régionale et facilitation des échanges"
+    ]
+  },
+
+  "financeBreakdown": {
+    "title": "Montage financier",
+    "items": [
+      { "label": "Capex", "xaf": 37000000000, "eur": 56400000 },
+      { "label": "Fonds propres", "xaf": 7000000000, "eur": null },
+      { "label": "Dette à mobiliser", "xaf": 30000000000, "eur": null }
+    ]
+  },
+
+  "faqInvest": {
+    "title": "Questions fréquentes",
+    "q1": { "q": "Comment accéder à l’espace documentaire ?", "a": "Soumettez une demande via le formulaire ; un accès vous est accordé après validation." },
+    "q2": { "q": "Quel est le calendrier prévisionnel ?", "a": "Bouclage financier → construction → mise en service. Les dates seront confirmées après closing." },
+    "q3": { "q": "Quelles formes de participation ?", "a": "Entrée en fonds propres, partenariats techniques, dette M/L terme." },
+    "q4": { "q": "Gouvernance ?", "a": "Gouvernance dédiée avec reporting et indicateurs de performance." }
+  },
+
+  "dataroom": {
+    "open": "Accéder aux documents",
+    "brief": "Pitch deck, note d’investissement, extraits APD."
+  },
+
+  "footer": {
+    "tagline": "Port Sec",
+    "links": {
+      "project": "Projet",
+      "impact": "Impact",
+      "invest": "Investir",
+      "dataroom": "Espace documentaire",
+      "contact": "Contact"
+    },
+    "contact": {
+      "title": "Contact",
+      "addr": "N’Djamena & Douala"
+    },
+    "legal": {
+      "mentions": "Mentions légales",
+      "cookies": "Politique cookies"
+    },
+    "updated": "Mis à jour le"
+  }
+}
