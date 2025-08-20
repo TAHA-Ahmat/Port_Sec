@@ -7,182 +7,250 @@
     "contact": "Contact",
     "invest": "Invest"
   },
-
   "hero": {
     "tag": "FS 75% • NDP 2026–2030",
-    "title": "Dry Port of N’Djamena: the logistics hub of tomorrow",
+    "title": "Dry Port of Douala: the logistics hub of tomorrow",
     "subtitle": "A key project to boost trade and development between Chad and the region.",
     "ctaInvest": "Invest",
     "ctaContact": "Contact us",
-    "trust": "Aligned with NDP 2026–2030",
-
-    "secondaryCta": "Access documents",
-    "badges": ["NDP 2026–2030", "CEMAC Corridor"],
-    "corridorNote": "Douala ↔ N’Djamena • Regional & international access"
+    "trust": "Aligned with NDP 2026–2030"
   },
-
-  "kpi": {
-    "capex": "Total investment",
-    "equity": "Own funds",
-    "debt": "Loan",
-    "apd": "Study progress"
-  },
-
-  "kpiValues": {
-    "capexXaf": 37000000000,
-    "capexEur": 56400000,
-    "equityXaf": 7000000000,
-    "debtXaf": 30000000000,
-    "apdPct": 75,
-    "disclaimer": "Feasibility‑based indicators (non‑contractual)."
-  },
-
   "highlights": {
-    "title": "Why this project?",
-    "speed": {
-      "title": "Faster clearance",
-      "desc": "Quicker gate‑out and lower dwell time.",
-      "kpi": "-30% dwell time (target)"
-    },
-    "control": {
-      "title": "Traceability & control",
-      "desc": "One‑stop window, simple processes and digital tracking.",
-      "kpi": "On‑site GPS traceability"
-    },
-    "cost": {
-      "title": "Optimized costs",
-      "desc": "Lower storage fees and demurrage.",
-      "kpi": "-X% demurrage (target)"
-    },
-    "compliance": {
-      "title": "Compliance",
-      "desc": "International standards and stronger security.",
-      "kpi": "Harmonized procedures"
-    }
+    "title": "Highlights",
+    "items": [
+      "Strategic position in the CEMAC area",
+      "Modern and scalable infrastructure",
+      "Significant socio-economic impact",
+      "Strong institutional partnerships",
+      "Structural reduction in logistics costs",
+      "One-stop desk and PAD/Customs integration",
+      "End-to-end traceability (customs & GPS)",
+      "Digitized formalities and payments",
+      "Banking & customs facilitation",
+      "Institutional robustness and public partnerships"
+    ]
   },
-
+  "kpi": {
+    "title": "Key indicators",
+    "capex": "CAPEX",
+    "equity": "Equity",
+    "debt": "Debt",
+    "apd": "FS"
+  },
+  "kpiValues": {
+    "capexXaf": "XAF 58 bn",
+    "equityXaf": "XAF 20 bn",
+    "debtXaf": "XAF 38 bn",
+    "apdPct": "75 %"
+  },
   "impact": {
     "title": "Impact",
-    "before": "Before",
-    "after": "After",
-    "list": {
-      "before1": "Long stays at port",
-      "before2": "Waiting for GPS",
-      "before3": "Complex procedures",
-      "before4": "High storage costs",
-      "after1": "Faster exit",
-      "after2": "GPS installed on site",
-      "after3": "One‑stop customs & IT",
-      "after4": "Lower tariffs"
-    },
-    "captionBefore": "Current flow status",
-    "captionAfter": "Target state with the Dry Port in operation",
-    "tips": {
-      "gps": "On‑site GPS installation cuts waiting time before departure.",
-      "oneStop": "The one‑stop window centralizes formalities for faster exit."
-    },
-    "process": {
-      "title": "Investment process",
-      "step1": { "title": "Step 1", "desc": "Short presentation and first discussion." },
-      "step2": { "title": "Step 2", "desc": "Access to main documents after approval." },
-      "step3": { "title": "Step 3", "desc": "Technical, legal and financial checks." }
-    },
-    "milestones": {
-      "title": "Milestones",
-      "t0": { "title": "FS 75%", "desc": "Advanced detailed studies" },
-      "t1": { "title": "Financial close", "desc": "XAF 7bn equity + debt" },
-      "t2": { "title": "Construction", "desc": "Works start" },
-      "t3": { "title": "Commissioning", "desc": "Operations start (Douala)" }
-    },
-    "opportunity": {
-      "title": "A strategic investment opportunity",
-      "cta": "Invest",
-      "dataroom": "Access documents"
-    },
-    "disclaimer": "Forecast indicators based on the feasibility study (non‑contractual)."
+    "subtitle": "Speed up logistics, reduce costs, and boost competitiveness.",
+    "benefits": [
+      "Reduced logistics lead times",
+      "Job creation",
+      "Optimized trade flows",
+      "Digitalized procedures"
+    ]
   },
-
   "invest": {
-    "title": "Invest",
-    "pitch": "A strategic logistics asset in Douala to streamline Chad–Cameroon flows, with dedicated governance and a clear operating model.",
-    "process": "Investment process",
-    "benefitsTitle": "Why invest",
+    "title": "Investment opportunity",
+    "pitch": "A strategic logistics asset at PAD (Douala), serving Chad–CEMAC flows.",
     "step1": "Pitch deck",
-    "step2": "Document room",
-    "step3": "Checks",
-    "step4": "Term sheet",
-    "step4desc": "Heads of terms and timeline.",
-    "structure": "Investment structure",
-
-    "partners": {
-      "title": "Partners sought",
-      "items": [
-        "Equity investors",
-        "Technical partners (construction & operations)",
-        "Medium/long‑term lenders"
-      ]
-    },
-    "ctaPartners": "Propose a partnership"
+    "step2": "Dataroom access",
+    "step3": "Due diligence"
   },
-
-  "location": {
-    "title": "Location & regional role",
-    "desc": "Based in Douala with steering in N’Djamena, the Dry Port is a gateway to regional and international markets within CEMAC.",
-    "points": [
-      "Douala: main maritime gateway for Chad",
-      "N’Djamena: institutional & operational coordination",
-      "Priority corridor for external trade"
-    ]
-  },
-
-  "policy": {
-    "title": "Alignment with NDP 2026–2030",
-    "points": [
-      "Stronger regional port competitiveness",
-      "Safe services aligned with international standards",
-      "Regional integration & trade facilitation"
-    ]
-  },
-
-  "financeBreakdown": {
-    "title": "Financial structure",
-    "items": [
-      { "label": "Capex", "xaf": 37000000000, "eur": 56400000 },
-      { "label": "Own funds", "xaf": 7000000000, "eur": null },
-      { "label": "Debt to raise", "xaf": 30000000000, "eur": null }
-    ]
-  },
-
   "faqInvest": {
     "title": "Frequently asked questions",
-    "q1": { "q": "How to access the document room?", "a": "Submit a request via the form; access is granted after approval." },
-    "q2": { "q": "What is the tentative timeline?", "a": "Financial close → construction → commissioning. Dates confirmed after closing." },
-    "q3": { "q": "What forms of participation?", "a": "Equity, technical partnerships, and medium/long‑term debt." },
-    "q4": { "q": "Governance?", "a": "Dedicated governance with transparent reporting and KPIs." }
+    "q1": "What is the business model?",
+    "a1": "Logistics revenues (storage, handling, digital services).",
+    "q2": "What are the guarantees?",
+    "a2": "Reinforced bilateral legal framework and institutional alignment.",
+    "q3": "What is the timeline?",
+    "a3": "Progressive rollout aligned with Vision 2030."
   },
-
   "dataroom": {
-    "open": "Access documents",
-    "brief": "Pitch deck, investment note, feasibility extracts."
+    "open": "Document room",
+    "cta": "Request access"
   },
-
-  "footer": {
-    "tagline": "Dry Port",
-    "links": {
-      "project": "Project",
-      "impact": "Impact",
-      "invest": "Invest",
-      "dataroom": "Document room",
-      "contact": "Contact"
+  "location": {
+    "title": "Location",
+    "desc": "Strategic site at PAD (Douala – Bonaberi), connected to the Douala–N’Djamena corridor."
+  },
+  "policy": {
+    "title": "Policy & framework",
+    "desc": "Compliance with national and international standards, with a focus on safety and transparency."
+  },
+  "financeBreakdown": {
+    "title": "Financial structure",
+    "equity": "Equity",
+    "debt": "Debt",
+    "grants": "Grants / FS"
+  },
+  "home": {
+    "problem": {
+      "intro": "Chad is largely dependent on the PAD: breaks in load, scattered formalities and long delays weigh on costs and competitiveness.",
+      "title": "Context & pain points",
+      "bullets": [
+        "Landlocked country, 1,850 km from the Atlantic",
+        "80–90% of Chad’s trade goes via the Port of Douala (CEMAC)",
+        "Current lead times: 21–30 days",
+        "≈ 4 handlings, scattered formalities",
+        "High logistics costs",
+        "Limited visibility on flows and documents",
+        "Lower competitiveness for Chadian importers",
+        "Unsecured flows (losses, pilferage)"
+      ]
     },
-    "contact": {
-      "title": "Contact",
-      "addr": "N’Djamena & Douala"
+    "solution": {
+      "title": "The Dry Port solution",
+      "features": [
+        "22-ha dedicated zone in Douala – Bonaberi",
+        "One-stop window: Chadian Customs, BNFT, banks, freight forwarders",
+        "Digitalization: GPS, scanners, e-invoicing",
+        "Multimodal connection: road + rail (2-km extension)",
+        "Target outcome: 5 days (costs −30 to −40%)",
+        "Integrated Customs & forwarder workflows",
+        "Near-real-time customs & GPS traceability",
+        "Dedicated SLAs and priority channel to Chad",
+        "Lower disputes and pilferage",
+        "Integrated banking support for payments",
+        "Regional interoperability (CEMAC)",
+        "Optimized disputes through fast arbitration"
+      ]
+    },
+    "beforeAfter": {
+      "title": "Before / After",
+      "labels": {
+        "before": "Before",
+        "after": "After"
+      },
+      "metric": "Metric",
+      "rows": [
+        { "metric": "Lead time", "before": "≈ 30 days", "after": "≈ 5 days" },
+        { "metric": "Handlings", "before": ">= 4", "after": "1" },
+        { "metric": "Services", "before": "Scattered", "after": "Centralized (one-stop)" },
+        { "metric": "Costs", "before": "High", "after": "−30 to −40 %" }
+      ],
+      "notes": [
+        "Indicative targets to be confirmed in operations.",
+        "Progressive optimizations via digitization and integration."
+      ],
+      "handle": "@dryport-avant-apres",
+      "assets": {
+        "before": "img/before.jpg",
+        "after": "img/after.jpg"
+      }
+    },
+    "kpiOps": {
+      "title": "Capacity & resources",
+      "areaHa": "22 ha",
+      "capacityEvp": "2,400 TEU (1,500 dedicated)",
+      "railFleet": "2 locomotives + 8 wagons",
+      "jobsDirect": "≈ 140 direct jobs"
     },
     "legal": {
-      "mentions": "Legal",
-      "cookies": "Cookies"
+      "title": "Legal & institutional framework",
+      "mou": "Memorandum of Understanding signed on 23 June 2022",
+      "nyConvention": "New York Convention (1965) — access to the sea for landlocked states",
+      "bilateral": "Chad–Cameroon bilateral agreements: Chadian customs zone in Douala"
+    }
+  },
+  "investPlus": {
+    "exec": {
+      "title": "Executive summary",
+      "bullets": [
+        "Integrated and secure logistics platform",
+        "Lead time: 30 → 5 days; costs −30 to −40 %",
+        "One-stop desk & GPS/scanner traceability",
+        "2,400 TEU capacity; 2-km rail"
+      ]
     },
-    "updated": "Updated"
+    "context": {
+      "title": "Context, stakes & partners",
+      "lead": "A project aligned with national/regional priorities and supported by institutions."
+    },
+    "infra": {
+      "title": "Infrastructure & equipment",
+      "items": [
+        "22-ha dedicated zone in Douala – Bonaberi",
+        "Rail extension (~2 km), docks, warehouses",
+        "Equipment: scanners, weighbridge, forklifts",
+        "Rail assets: 2 locomotives + 8 wagons"
+      ]
+    },
+    "services": {
+      "title": "Services & operational benefits",
+      "items": [
+        "One-stop window (Customs, BNFT, banks, forwarders)",
+        "Real-time digital tracking (GPS)",
+        "E-invoicing & harmonized procedures",
+        "Enhanced security and fraud reduction"
+      ]
+    },
+    "market": {
+      "title": "Market analysis & served area",
+      "areas": ["Chad", "CAR", "Northern Nigeria", "Northern Congo"],
+      "imports": ["Vehicles (≈ 14% of value)", "Consumer goods", "Manufactured products"],
+      "exports": ["Cotton", "Livestock", "Gum arabic", "Sesame", "Groundnuts", "Cereals"],
+      "trend": "Steady growth in regional trade."
+    },
+    "legal": {
+      "title": "Regulatory framework",
+      "items": [
+        "Memorandum of Understanding (2022) with the Chadian State",
+        "Chad–Cameroon bilateral agreements",
+        "New York Convention (UN, 1965)"
+      ],
+      "assurance": "Strong, lasting legal certainty for investors."
+    },
+    "opportunity": {
+      "title": "Investor opportunity",
+      "bullets": [
+        "Captive, structural market",
+        "Secure legal framework & State support",
+        "Attractive returns via volumes & innovative services"
+      ]
+    },
+    "vision": {
+      "title": "Vision 2030 & trajectory",
+      "goals": [
+        "Integration into major Central African corridors",
+        "Competitive regional hub within AfCFTA",
+        "Strengthened logistics sovereignty"
+      ]
+    }
+  },
+  "dataroomPlus": {
+    "title": "Document room",
+    "filters": {
+      "all": "All",
+      "legal": "Legal",
+      "tech": "Technical",
+      "market": "Market",
+      "finance": "Financial",
+      "governance": "Governance"
+    },
+    "view": "View PDF"
+  },
+  "contactPlus": {
+    "title": "Get in touch",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send"
+    },
+    "info": {
+      "addressLabel": "Address",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone"
+    },
+    "success": "Thanks, your message has been sent."
+  },
+  "footer": {
+    "copyright": "© 2025 Port Sec of Chad. All rights reserved.",
+    "links": ["Legal notice", "Privacy policy"]
   }
 }

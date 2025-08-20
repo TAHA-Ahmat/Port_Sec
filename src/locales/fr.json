@@ -7,182 +7,245 @@
     "contact": "Contact",
     "invest": "Investir"
   },
-
   "hero": {
     "tag": "APD 75% • PND 2026–2030",
-    "title": "Port Sec de N'Djamena : le hub logistique de demain",
+    "title": "Port Sec de DOUALA : le hub logistique de demain",
     "subtitle": "Un projet clé pour dynamiser le commerce et le développement entre le Tchad et la région.",
     "ctaInvest": "Investir",
     "ctaContact": "Nous contacter",
-    "trust": "Aligné PND 2026–2030",
-
-    "secondaryCta": "Accéder aux documents",
-    "badges": ["PND 2026–2030", "Corridor CEMAC"],
-    "corridorNote": "Douala ↔ N’Djamena • Accès régional et international"
+    "trust": "Aligné PND 2026–2030"
   },
-
-  "kpi": {
-    "capex": "Investissement total",
-    "equity": "Fonds propres",
-    "debt": "Emprunt",
-    "apd": "Avancement des études"
-  },
-
-  "kpiValues": {
-    "capexXaf": 37000000000,
-    "capexEur": 56400000,
-    "equityXaf": 7000000000,
-    "debtXaf": 30000000000,
-    "apdPct": 75,
-    "disclaimer": "Indicateurs issus de l’APD (non contractuels)."
-  },
-
   "highlights": {
-    "title": "Pourquoi ce projet ?",
-    "speed": {
-      "title": "Dédouanement rapide",
-      "desc": "Sortie plus rapide des marchandises et moins d’immobilisations.",
-      "kpi": "-30% temps de séjour (objectif)"
-    },
-    "control": {
-      "title": "Traçabilité & contrôle",
-      "desc": "Guichet unique, processus simples et suivi digital.",
-      "kpi": "Traçabilité GPS sur site"
-    },
-    "cost": {
-      "title": "Coûts optimisés",
-      "desc": "Moins de frais d’entreposage et de surestaries.",
-      "kpi": "-X% surestaries (objectif)"
-    },
-    "compliance": {
-      "title": "Conformité",
-      "desc": "Normes internationales et sécurité renforcée.",
-      "kpi": "Procédures harmonisées"
-    }
+    "title": "Points forts",
+    "items": [
+      "Position stratégique au cœur de la CEMAC",
+      "Infrastructure moderne et évolutive",
+      "Impact économique et social significatif",
+      "Partenariats institutionnels solides",
+      "Réduction structurelle des coûts logistiques",
+      "Guichet unique et intégration PAD/Douanes",
+      "Traçabilité bout-en-bout (douane & GPS)",
+      "Digitalisation des formalités et paiements",
+      "Facilitation bancaire & douanière",
+      "Robustesse institutionnelle et partenariats publics"
+    ]
   },
-
+  "kpi": {
+    "title": "Indicateurs clés",
+    "capex": "CAPEX",
+    "equity": "Fonds propres",
+    "debt": "Dette",
+    "apd": "APD"
+  },
+  "kpiValues": {
+    "capexXaf": "58 Mds XAF",
+    "equityXaf": "20 Mds XAF",
+    "debtXaf": "38 Mds XAF",
+    "apdPct": "75 %"
+  },
   "impact": {
     "title": "Impact",
-    "before": "Avant",
-    "after": "Après",
-    "list": {
-      "before1": "Séjours longs au port",
-      "before2": "Attente du GPS",
-      "before3": "Procédures complexes",
-      "before4": "Frais de stockage élevés",
-      "after1": "Sortie plus rapide",
-      "after2": "GPS installé sur site",
-      "after3": "Guichet unique douane & IT",
-      "after4": "Tarifs réduits"
-    },
-    "captionBefore": "Situation actuelle des flux",
-    "captionAfter": "Situation cible avec le Port Sec opérationnel",
-    "tips": {
-      "gps": "L’installation du GPS sur site réduit l’attente au départ du corridor.",
-      "oneStop": "Le guichet unique centralise les formalités et accélère les sorties."
-    },
-    "process": {
-      "title": "Processus d’investissement",
-      "step1": { "title": "Étape 1", "desc": "Présentation courte et premier échange." },
-      "step2": { "title": "Étape 2", "desc": "Accès aux documents principaux après validation." },
-      "step3": { "title": "Étape 3", "desc": "Vérifications techniques, juridiques et financières." }
-    },
-    "milestones": {
-      "title": "Jalons",
-      "t0": { "title": "APD 75%", "desc": "Études détaillées avancées" },
-      "t1": { "title": "Bouclage financier", "desc": "Fonds propres 7 Mds XAF + dette" },
-      "t2": { "title": "Construction", "desc": "Lancement des travaux" },
-      "t3": { "title": "Mise en service", "desc": "Démarrage des opérations (Douala)" }
-    },
-    "opportunity": {
-      "title": "Une opportunité d’investissement stratégique",
-      "cta": "Investir",
-      "dataroom": "Accéder aux documents"
-    },
-    "disclaimer": "Indicateurs prévisionnels basés sur l’APD (non contractuels)."
+    "subtitle": "Accélérer la chaîne logistique, réduire les coûts et renforcer la compétitivité.",
+    "benefits": [
+      "Réduction des délais logistiques",
+      "Création d'emplois",
+      "Optimisation des flux commerciaux",
+      "Digitalisation des procédures"
+    ]
   },
-
   "invest": {
-    "title": "Investir",
-    "pitch": "Un actif logistique stratégique à Douala pour fluidifier les flux Tchad–Cameroun, avec une gouvernance dédiée et un modèle opérationnel clair.",
-    "process": "Processus d’investissement",
-    "benefitsTitle": "Pourquoi investir",
-    "step1": "Découverte",
-    "step2": "Espace documentaire",
-    "step3": "Vérifications",
-    "step4": "Proposition",
-    "step4desc": "Accord de principes et calendrier.",
-    "structure": "Structure d’investissement",
-
-    "partners": {
-      "title": "Partenariats recherchés",
-      "items": [
-        "Investisseurs en fonds propres",
-        "Partenaires techniques (réalisation & exploitation)",
-        "Bailleurs de moyen/long terme"
-      ]
-    },
-    "ctaPartners": "Proposer un partenariat"
+    "title": "Opportunité d’investissement",
+    "pitch": "Un actif logistique stratégique au PAD (Douala), au service des flux Tchad–CEMAC.",
+    "step1": "Pitch deck",
+    "step2": "Accès Dataroom",
+    "step3": "Due diligence"
   },
-
-  "location": {
-    "title": "Localisation & rôle régional",
-    "desc": "Implanté à Douala avec pilotage à N’Djamena, le Port Sec sert de passerelle vers les marchés régionaux et internationaux au sein de la CEMAC.",
-    "points": [
-      "Douala : première porte maritime desservant le Tchad",
-      "N’Djamena : coordination institutionnelle et opérationnelle",
-      "Corridor prioritaire du commerce extérieur"
-    ]
-  },
-
-  "policy": {
-    "title": "Alignement PND 2026–2030",
-    "points": [
-      "Compétitivité portuaire régionale renforcée",
-      "Services sûrs et conformes aux normes internationales",
-      "Intégration régionale et facilitation des échanges"
-    ]
-  },
-
-  "financeBreakdown": {
-    "title": "Montage financier",
-    "items": [
-      { "label": "Capex", "xaf": 37000000000, "eur": 56400000 },
-      { "label": "Fonds propres", "xaf": 7000000000, "eur": null },
-      { "label": "Dette à mobiliser", "xaf": 30000000000, "eur": null }
-    ]
-  },
-
   "faqInvest": {
     "title": "Questions fréquentes",
-    "q1": { "q": "Comment accéder à l’espace documentaire ?", "a": "Soumettez une demande via le formulaire ; un accès vous est accordé après validation." },
-    "q2": { "q": "Quel est le calendrier prévisionnel ?", "a": "Bouclage financier → construction → mise en service. Les dates seront confirmées après closing." },
-    "q3": { "q": "Quelles formes de participation ?", "a": "Entrée en fonds propres, partenariats techniques, dette M/L terme." },
-    "q4": { "q": "Gouvernance ?", "a": "Gouvernance dédiée avec reporting et indicateurs de performance." }
+    "q1": "Quel est le modèle économique ?",
+    "a1": "Modèle basé sur des revenus logistiques (stockage, manutention, services digitaux).",
+    "q2": "Quelles sont les garanties ?",
+    "a2": "Cadre légal bilatéral et alignement institutionnel renforcés.",
+    "q3": "Quel calendrier ?",
+    "a3": "Déploiement progressif aligné sur la Vision 2030."
   },
-
   "dataroom": {
-    "open": "Accéder aux documents",
-    "brief": "Pitch deck, note d’investissement, extraits APD."
+    "open": "Espace documentaire",
+    "cta": "Demander l’accès"
   },
-
-  "footer": {
-    "tagline": "Port Sec",
-    "links": {
-      "project": "Projet",
-      "impact": "Impact",
-      "invest": "Investir",
-      "dataroom": "Espace documentaire",
-      "contact": "Contact"
+  "location": {
+    "title": "Localisation",
+    "desc": "Implantation stratégique au PAD (Douala – Bonabéri), connectée au corridor Douala–N'Djamena."
+  },
+  "policy": {
+    "title": "Politique & cadre",
+    "desc": "Conformité aux normes nationales et internationales, avec un accent sur la sécurité et la transparence."
+  },
+  "financeBreakdown": {
+    "title": "Structure financière",
+    "equity": "Fonds propres",
+    "debt": "Dette",
+    "grants": "Subventions / APD"
+  },
+  "home": {
+    "problem": {
+      "intro": "Le Tchad dépend largement du PAD : ruptures de charge, formalités dispersées et délais longs pèsent sur les coûts et la compétitivité.",
+      "title": "Contexte & problématique",
+      "bullets": [
+        "Pays enclavé à 1 850 km de l’Atlantique",
+        "80–90 % du commerce extérieur transite par le PAD (CEMAC)",
+        "Délais actuels : 21–30 jours",
+        "≈ 4 manutentions, formalités dispersées",
+        "Coûts logistiques élevés",
+        "Visibilité limitée sur les flux et la documentation",
+        "Compétitivité pénalisée pour les importateurs tchadiens",
+        "Sécurité des flux non garantie (pertes, démarquages)"
+      ]
     },
-    "contact": {
-      "title": "Contact",
-      "addr": "N’Djamena & Douala"
+    "solution": {
+      "title": "La solution Port Sec",
+      "features": [
+        "Zone dédiée de 22 ha à Douala – Bonabéri",
+        "Guichet unique : Douanes tchadiennes, BNFT, banques, transitaires",
+        "Digitalisation : GPS, scanners, facturation électronique",
+        "Connexion multimodale : route + rail (extension 2 km)",
+        "Résultat cible : 5 jours (coûts −30 à −40 %)",
+        "Intégration Douanes & transit (workflows unifiés)",
+        "Traçabilité douane & GPS en temps quasi réel",
+        "SLA dédiés et canal prioritaire vers le Tchad",
+        "Diminution des litiges et du démarquage",
+        "Support bancaire intégré pour paiements",
+        "Interopérabilité régionale (CEMAC)",
+        "Optimisation litiges via arbitrage rapide"
+      ]
+    },
+    "beforeAfter": {
+      "title": "Avant / Après",
+      "labels": {
+        "before": "Avant",
+        "after": "Après"
+      },
+      "metric": "Indicateur",
+      "rows": [
+        { "metric": "Délais", "before": "≈ 30 jours", "after": "≈ 5 jours" },
+        { "metric": "Manutentions", "before": ">= 4", "after": "1" },
+        { "metric": "Services", "before": "Dispersés", "after": "Centralisés (guichet unique)" },
+        { "metric": "Coûts", "before": "Élevés", "after": "−30 à −40 %" }
+      ],
+      "notes": [
+        "Cibles indicatives à confirmer en exploitation.",
+        "Optimisations progressives via digitalisation et intégration."
+      ]
+    },
+    "kpiOps": {
+      "title": "Capacités & ressources",
+      "areaHa": "22 ha",
+      "capacityEvp": "2 400 EVP (dont 1 500 dédiés)",
+      "railFleet": "2 locomotives + 8 wagons",
+      "jobsDirect": "≈ 140 emplois directs"
     },
     "legal": {
-      "mentions": "Mentions légales",
-      "cookies": "Politique cookies"
+      "title": "Cadre légal & institutionnel",
+      "mou": "Mémorandum d’Entente signé le 23 juin 2022",
+      "nyConvention": "Convention de New York (1965) — accès des pays enclavés à la mer",
+      "bilateral": "Accords Tchad–Cameroun : reconnaissance d’une zone sous douane tchadienne à Douala"
+    }
+  },
+  "investPlus": {
+    "exec": {
+      "title": "Résumé exécutif",
+      "bullets": [
+        "Plateforme logistique intégrée et sécurisée",
+        "Délais : 30 → 5 jours ; coûts −30 à −40 %",
+        "Guichet unique & traçabilité GPS/scanners",
+        "Capacité 2 400 EVP ; rail 2 km"
+      ]
     },
-    "updated": "Mis à jour le"
+    "context": {
+      "title": "Contexte, enjeux & partenaires",
+      "lead": "Un projet aligné avec les priorités nationales/régionales et soutenu par les institutions."
+    },
+    "infra": {
+      "title": "Infrastructures & équipements",
+      "items": [
+        "Zone dédiée de 22 ha à Douala – Bonabéri",
+        "Extension ferroviaire (≈ 2 km), quais, entrepôts",
+        "Équipements : scanners, pont-bascule, chariots élévateurs",
+        "Actifs ferroviaires : 2 locomotives + 8 wagons"
+      ]
+    },
+    "services": {
+      "title": "Services & avantages opérationnels",
+      "items": [
+        "Guichet unique (douanes, BNFT, banques, transitaires)",
+        "Suivi digitalisé des marchandises en temps réel (GPS)",
+        "Facturation électronique & procédures harmonisées",
+        "Sécurité renforcée et réduction de la fraude"
+      ]
+    },
+    "market": {
+      "title": "Analyse de marché & zone desservie",
+      "areas": ["Tchad", "RCA", "Nord Nigéria", "Nord Congo"],
+      "imports": ["Véhicules (≈ 14 % de la valeur)", "Biens de consommation", "Produits manufacturés"],
+      "exports": ["Coton", "Élevage", "Gomme arabique", "Sésame", "Arachides", "Céréales"],
+      "trend": "Croissance soutenue des échanges régionaux."
+    },
+    "legal": {
+      "title": "Cadre réglementaire",
+      "items": [
+        "Protocole d’accord (2022) avec l’État tchadien",
+        "Accords bilatéraux Tchad–Cameroun",
+        "Convention de New York (ONU, 1965)"
+      ],
+      "assurance": "Sécurité juridique solide et pérenne pour les investisseurs."
+    },
+    "opportunity": {
+      "title": "Opportunité pour les investisseurs",
+      "bullets": [
+        "Marché captif et structurel",
+        "Cadre légal sécurisé & appui étatique",
+        "Potentiel de rentabilité via volumes & services innovants"
+      ]
+    },
+    "vision": {
+      "title": "Vision 2030 & trajectoire",
+      "goals": [
+        "Intégration aux grands corridors d’Afrique centrale",
+        "Hub régional compétitif dans la ZLECAf",
+        "Souveraineté logistique renforcée"
+      ]
+    }
+  },
+  "dataroomPlus": {
+    "title": "Espace documentaire",
+    "filters": {
+      "all": "Tous",
+      "legal": "Juridique",
+      "tech": "Technique",
+      "market": "Marché",
+      "finance": "Financier",
+      "governance": "Gouvernance"
+    },
+    "view": "Voir le PDF"
+  },
+  "contactPlus": {
+    "title": "Nous contacter",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "subject": "Objet",
+      "message": "Message",
+      "send": "Envoyer"
+    },
+    "info": {
+      "addressLabel": "Adresse",
+      "emailLabel": "Email",
+      "phoneLabel": "Téléphone"
+    },
+    "success": "Merci, votre message a bien été envoyé."
+  },
+  "footer": {
+    "copyright": "© 2025 Port Sec du Tchad. Tous droits réservés.",
+    "links": ["Mentions légales", "Politique de confidentialité"]
   }
 }

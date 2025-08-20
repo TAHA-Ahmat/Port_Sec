@@ -1,6 +1,8 @@
 <template>
   <section class="max-w-6xl mx-auto p-6 space-y-12">
-    <!-- En-tête -->
+    <!-- =========================
+         1) En-tête
+    ========================== -->
     <header class="space-y-2 text-left">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-800 bg-neutral-900 text-xs opacity-80">
         <span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
@@ -14,130 +16,304 @@
       </h1>
 
       <p class="opacity-80 max-w-3xl">
-        {{ t('invest.pitch') || 'Un actif logistique stratégique avec un modèle robuste et des perspectives de création de valeur.' }}
+        {{ t('invest.pitch') || 'Un actif logistique stratégique au PAD (Douala), au service des flux Tchad–CEMAC.' }}
       </p>
     </header>
 
-    <!-- Structure de financement / KPIs -->
-    <section class="space-y-3">
-      <h2 class="text-xl md:text-2xl font-bold">
-        {{ t('invest.structure') || 'Structure de financement' }}
-      </h2>
-      <!-- Conserve ton composant et les données i18n existantes -->
-      <KpiStrip />
+    <!-- =========================
+         2) Finance (KpiStrip = finance only)
+    ========================== -->
+    <section aria-label="Structure financière" class="space-y-4">
+      <div class="section-head">
+        <h2 class="section-title">
+          <span class="dot" aria-hidden="true"></span>
+          {{ t('financeBreakdown.title', 'Structure du financement') }}
+        </h2>
+        <div class="section-legend">
+          <span>• {{ t('financeBreakdown.equity', 'Fonds propres') }}</span>
+          <span>• {{ t('financeBreakdown.debt', 'Dette') }}</span>
+          <span>• {{ t('financeBreakdown.grants', 'Subventions/APD') }}</span>
+        </div>
+      </div>
+
+      <!-- KpiStrip : CAPEX / Fonds propres / Dette / APD -->
+      <KpiStrip :show-title="false" :columns="4" />
+
+      <!-- CTA après Finance -->
+      <div class="flex flex-wrap gap-3">
+        <RouterLink to="/dataroom" class="btn-secondary">
+          {{ t('dataroom.open', 'Accéder à la dataroom') }}
+        </RouterLink>
+        <RouterLink to="/contact" class="btn-primary">
+          {{ t('hero.ctaContact', 'Nous contacter') }}
+        </RouterLink>
+      </div>
     </section>
 
-    <!-- Pourquoi investir (3 cartes concrètes) -->
-    <section class="space-y-3">
-      <h2 class="text-xl md:text-2xl font-bold">
-        {{ t('invest.benefitsTitle') || 'Pourquoi investir ?' }}
+    <!-- =========================
+         3) Capacités & ressources (Opérationnel)
+    ========================== -->
+    <section aria-label="Capacités et ressources" class="space-y-3">
+      <h2 class="section-title">
+        <span class="dot" aria-hidden="true"></span>
+        {{ t('home.kpiOps.title', 'Capacités & ressources') }}
       </h2>
 
-      <!-- On réutilise ton composant existant -->
-      <ProjectHighlights />
+      <ul role="list" class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[1fr]">
+        <li role="listitem" class="card h-full">
+          <p class="kpi-label">{{ t('home.kpiOps.areaHa', 'Superficie (ha)') }}</p>
+          <p class="kpi-value">
+            {{ t('home.kpiOps.values.areaHa', t('home.kpiOps.areaHaValue', '')) }}
+          </p>
+        </li>
 
-      <!-- Option : court texte de contexte (non intrusif) -->
-      <p class="text-sm opacity-70 max-w-3xl">
-        {{ t('invest.benefitsNote') || 'Positionnement, exécution et durabilité : un triptyque d’atouts différenciants.' }}
-      </p>
+        <li role="listitem" class="card h-full">
+          <p class="kpi-label">{{ t('home.kpiOps.capacityEvp', 'Capacité (EVP/an)') }}</p>
+          <p class="kpi-value">
+            {{ t('home.kpiOps.values.capacityEvp', t('home.kpiOps.capacityEvpValue', '')) }}
+          </p>
+        </li>
+
+        <li role="listitem" class="card h-full">
+          <p class="kpi-label">{{ t('home.kpiOps.railFleet', 'Matériel ferroviaire') }}</p>
+          <p class="kpi-value">
+            {{ t('home.kpiOps.values.railFleet', t('home.kpiOps.railFleetValue', '')) }}
+          </p>
+        </li>
+
+        <li role="listitem" class="card h-full">
+          <p class="kpi-label">{{ t('home.kpiOps.jobsDirect', 'Emplois directs') }}</p>
+          <p class="kpi-value">
+            {{ t('home.kpiOps.values.jobsDirect', t('home.kpiOps.jobsDirectValue', '')) }}
+          </p>
+        </li>
+      </ul>
+
+      <!-- CTA après Opérations -->
+      <div class="flex flex-wrap gap-3">
+        <RouterLink to="/contact" class="btn-primary">
+          {{ t('hero.ctaContact', 'Nous contacter') }}
+        </RouterLink>
+      </div>
     </section>
 
-    <!-- Processus (4 étapes, langage grand public) -->
-    <section class="space-y-3">
-      <h2 class="text-xl md:text-2xl font-bold">
-        {{ t('invest.process') || 'Processus d’investissement' }}
+    <!-- =========================
+         4) Points forts (complet via composant)
+    ========================== -->
+    <section aria-label="Points forts" class="space-y-3">
+
+      <!-- Le composant gère ses items ; on lui laisse le contenu sans doubler le header visuel -->
+
+    </section>
+
+    <!-- =========================
+         5) Process 3 étapes (sans clés interdites)
+    ========================== -->
+    <section aria-label="Processus d’investissement" class="space-y-4">
+      <h2 class="section-title">
+        <span class="dot" aria-hidden="true"></span>
+        <!-- Texte direct pour éviter d’introduire une clé non listée -->
+        Processus d’investissement (3 étapes)
       </h2>
 
-      <ol class="grid md:grid-cols-4 gap-4">
-        <Step
-          n="1"
-          :title="t('invest.step1') || 'Prise de contact'"
-          :desc="t('invest.step1Desc') || 'Présentation synthétique et échange d’introduction.'"
-        />
-        <Step
-          n="2"
-          :title="t('invest.step2') || 'Accès documentaire'"
-          :desc="t('invest.step2Desc') || 'Accès aux documents clés après validation.'"
-        />
-        <Step
-          n="3"
-          :title="t('invest.step3') || 'Analyses & vérifications'"
-          :desc="t('invest.step3Desc') || 'Analyses techniques, juridiques et financières (due diligence) en langage clair.'"
-        />
-        <Step
-          n="4"
-          :title="t('invest.step4') || 'Accord & calendrier'"
-          :desc="t('invest.step4Desc') || 'Accord de principes, modalités et jalons de déploiement.'"
-        />
+      <ol class="grid gap-4 grid-cols-1 sm:grid-cols-3 auto-rows-[1fr]">
+        <Step n="1" :title="t('invest.step1', 'Prise de contact')" />
+        <Step n="2" :title="t('invest.step2', 'Accès dataroom & échanges')" />
+        <Step n="3" :title="t('invest.step3', 'Term sheet & closing')" />
       </ol>
+
+      <!-- micro-CTA -->
+      <div class="flex flex-wrap gap-3">
+        <RouterLink to="/contact" class="btn-primary">
+          {{ t('hero.ctaContact', 'Nous contacter') }}
+        </RouterLink>
+        <RouterLink to="/dataroom" class="btn-secondary">
+          {{ t('dataroom.open', 'Accéder à la dataroom') }}
+        </RouterLink>
+      </div>
     </section>
 
-    <!-- Gouvernance & véhicule -->
-    <section class="space-y-2">
-      <h2 class="text-xl md:text-2xl font-bold">
-        {{ t('invest.governanceTitle') || 'Gouvernance & véhicule' }}
+    <!-- =========================
+         6) Cadre légal (version courte)
+    ========================== -->
+    <section aria-label="Cadre légal" class="space-y-3">
+      <h2 class="section-title">
+        <span class="dot" aria-hidden="true"></span>
+        {{ t('home.legal.title', 'Cadre légal & institutionnel') }}
       </h2>
-      <p class="opacity-80 max-w-3xl">
-        {{ t('invest.governanceText') || 'Gouvernance dédiée, suivi conformité et reporting régulier pour sécuriser l’investissement.' }}
-      </p>
-      <ul class="text-sm opacity-80 grid md:grid-cols-3 gap-2">
-        <li>✔ {{ t('invest.gov.item1') || 'Comité d’investissement dédié' }}</li>
-        <li>✔ {{ t('invest.gov.item2') || 'Cadre juridique et conformité' }}</li>
-        <li>✔ {{ t('invest.gov.item3') || 'Reporting de performance périodique' }}</li>
+
+      <ul role="list" class="grid gap-4 grid-cols-1 sm:grid-cols-3 auto-rows-[1fr]">
+        <li v-for="(it, i) in legalList" :key="`legal-${i}`"
+            role="listitem"
+            class="card h-full flex items-start gap-3">
+          <span class="text-emerald-400 mt-1">✔</span>
+          <span class="leading-relaxed">{{ it }}</span>
+        </li>
       </ul>
     </section>
 
-    <!-- CTA final -->
-    <section class="p-5 rounded-xl border border-neutral-800 bg-neutral-900 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-      <div class="text-lg md:text-xl font-semibold">
-        {{ t('impact.opportunity.title') || 'Intéressé pour avancer ?' }}
-      </div>
-      <div class="flex gap-3">
-        <RouterLink
-          to="/contact"
-          class="rounded-xl px-5 py-3 font-semibold bg-emerald-500 text-black hover:scale-[1.02] transition"
-        >
-          {{ t('hero.ctaContact') || 'Contacter l’équipe' }}
-        </RouterLink>
+    <!-- =========================
+         7) Opportunité investisseurs
+    ========================== -->
+    <section aria-label="Opportunité investisseurs" class="space-y-3">
+      <h2 class="section-title">
+        <span class="dot" aria-hidden="true"></span>
+        {{ t('investPlus.opportunity.title', 'Opportunité pour les investisseurs') }}
+      </h2>
 
-        <RouterLink
-          to="/dataroom"
-          class="rounded-xl px-5 py-3 font-semibold border border-neutral-700 hover:bg-neutral-800 transition"
-        >
-          {{ t('dataroom.open') || 'Accéder aux documents' }}
+      <ul role="list" class="grid gap-4 grid-cols-1 sm:grid-cols-3 auto-rows-[1fr]">
+        <li v-for="(b, i) in oppoBullets" :key="`oppo-${i}`" role="listitem" class="card h-full">
+          <div class="font-medium">{{ b }}</div>
+        </li>
+      </ul>
+
+      <div class="flex flex-wrap gap-3">
+        <RouterLink to="/contact" class="btn-primary">
+          {{ t('hero.ctaContact', 'Nous contacter') }}
         </RouterLink>
       </div>
     </section>
+
+    <!-- =========================
+         8) CTA finaux
+    ========================== -->
+    <footer class="flex flex-wrap gap-3 border-t border-neutral-800/60 pt-6">
+      <RouterLink to="/dataroom" class="btn-secondary">
+        {{ t('dataroom.cta', t('dataroom.open', 'Accéder aux documents')) }}
+      </RouterLink>
+      <RouterLink to="/contact" class="btn-primary">
+        {{ t('hero.ctaContact', 'Nous contacter') }}
+      </RouterLink>
+    </footer>
   </section>
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { RouterLink } from 'vue-router'
 
-/**
- * On conserve tes composants existants (zéro régression) :
- * - KpiStrip : affiche Capex / Fonds propres / Emprunt etc. via i18n
- * - ProjectHighlights : tes 3 cartes “Pourquoi investir” déjà stylées
- */
 import KpiStrip from '../components/KpiStrip.vue'
 import ProjectHighlights from '../components/ProjectHighlights.vue'
 
-const { t } = useI18n()
+const { t, tm } = useI18n()
 
-// Petit composant local (4 étapes) pour éviter d’introduire de nouvelles dépendances.
+// Cadre légal (3 clés courtes uniquement)
+const legalList = computed(() => {
+  const items = [
+    t('home.legal.mou', ''),
+    t('home.legal.nyConvention', ''),
+    t('home.legal.bilateral', '')
+  ].filter(Boolean)
+  return items
+})
+
+// Opportunité investisseurs (3 bullets)
+const oppoBullets = computed(() => {
+  const arr = tm('investPlus.opportunity.bullets') || []
+  return Array.isArray(arr) ? arr.filter(Boolean) : []
+})
+
+// Petit composant interne pour les étapes (simple, stylé, accessible)
 const Step = {
-  props: { n: String, title: String, desc: String },
+  props: { n: String, title: String },
   template: `
-    <li class="p-5 rounded-xl border border-neutral-800 bg-neutral-900">
+    <li class="card h-full">
       <div class="text-2xl">{{ n }}️⃣</div>
       <div class="font-semibold mt-1">{{ title }}</div>
-      <p class="text-sm opacity-80 mt-1">{{ desc }}</p>
     </li>
   `
 }
 </script>
 
 <style scoped>
-/* Optionnel : micro-ajustements typographiques si besoin sans casser ton thème sombre */
+/* Entêtes homogènes */
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* 2 */
+}
+@media (min-width: 768px) {
+  .section-head {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  opacity: 0.8;
+  font-size: .95rem;
+}
+.section-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: .8rem;
+  opacity: .6;
+}
+.dot {
+  display: inline-block;
+  height: 0.5rem; /* 2 */
+  width: 0.5rem;  /* 2 */
+  border-radius: 9999px;
+  background-color: rgb(52 211 153); /* emerald-400 */
+}
+
+/* Cartes & KPI */
+.card {
+  border-radius: 1rem;         /* rounded-2xl */
+  border: 1px solid rgb(38 38 38); /* border-neutral-800 */
+  background-color: rgb(23 23 23); /* bg-neutral-900 */
+  padding: 1rem;               /* p-4 */
+}
+.kpi-label {
+  font-size: .75rem;           /* text-xs */
+  opacity: .6;
+}
+.kpi-value {
+  margin-top: .25rem;
+  font-size: 1.25rem;          /* text-xl */
+  font-weight: 600;
+  background-image: linear-gradient(to right, #6ee7b7, #ffffff, #6ee7b7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Boutons */
+.btn-primary {
+  padding: .5rem .75rem;       /* px-3 py-2 */
+  border-radius: .5rem;        /* rounded-lg */
+  background-color: rgb(5 150 105);  /* emerald-600 */
+  color: rgb(23 23 23);        /* text-neutral-900 */
+  font-weight: 600;
+  font-size: .875rem;          /* text-sm */
+  transition: background-color .15s ease-in-out;
+}
+.btn-primary:hover {
+  background-color: rgb(16 185 129); /* emerald-500 */
+}
+.btn-secondary {
+  padding: .5rem .75rem;       /* px-3 py-2 */
+  border-radius: .5rem;        /* rounded-lg */
+  border: 1px solid rgb(38 38 38);   /* border-neutral-800 */
+  background-color: rgb(23 23 23);   /* bg-neutral-900 */
+  font-size: .875rem;          /* text-sm */
+  transition: background-color .15s ease-in-out;
+}
+.btn-secondary:hover {
+  background-color: rgb(38 38 38);   /* bg-neutral-800 */
+}
+
+/* Grilles : même hauteur par rang */
+.auto-rows-\[1fr\] {
+  grid-auto-rows: 1fr;
+}
+
+/* Thème sombre conservé (aucune régression visuelle) */
 </style>
