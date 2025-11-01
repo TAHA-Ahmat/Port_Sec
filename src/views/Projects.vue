@@ -1,34 +1,15 @@
 <template>
   <main class="space-y-8">
+    <!-- Breadcrumbs -->
+    <Breadcrumbs :items="[{ label: 'Accueil', to: '/' }, { label: 'Nos Projets' }]" />
+
     <!-- =========================
          1. HERO – Introduction GPM + carte interactive
          ========================= -->
     <HeroProjects data-testid="projects-hero" />
 
     <!-- =========================
-         2. VUE D'ENSEMBLE DU RÉSEAU
-         ========================= -->
-    <section class="max-w-6xl mx-auto p-6 space-y-6">
-      <header class="space-y-2">
-        <div class="flex items-center gap-2 text-sm opacity-80">
-          <span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
-          <h2 class="font-semibold">{{ t('projectsPage.overview.title', 'Un réseau logistique intégré') }}</h2>
-        </div>
-        <p class="opacity-80 leading-relaxed">
-          {{ t('projectsPage.overview.intro', 'À travers le Port Sec du Tchad à Douala...') }}
-        </p>
-      </header>
-
-      <!-- Timeline Vision -->
-      <Timeline
-        data-testid="projects-timeline"
-        :title="''"
-        :show-title="false"
-      />
-    </section>
-
-    <!-- =========================
-         3. GRILLE DES PROJETS
+         2. GRILLE DES PROJETS
          ========================= -->
     <section class="max-w-6xl mx-auto p-6 space-y-6">
       <header class="flex items-center gap-2 text-sm opacity-80">
@@ -72,11 +53,9 @@
               <h3 class="font-semibold flex-1">{{ project.name }}</h3>
               <span
                 class="shrink-0 px-2 py-1 rounded-full text-xs border"
-                :class="project.status === 'active'
-                  ? 'bg-emerald-900/30 text-emerald-300 border-emerald-700/50'
-                  : 'bg-yellow-900/20 text-yellow-300 border-yellow-600/50'"
+                :class="getProjectBadgeClass(project)"
               >
-                {{ project.status === 'active' ? '✓ En cours' : '○ ' + project.phase }}
+                {{ getProjectBadge(project) }}
               </span>
             </div>
 
@@ -95,13 +74,16 @@
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
               </button>
-              <span
+              <RouterLink
                 v-else
-                class="inline-block text-xs opacity-50 cursor-not-allowed"
-                :title="t('projectsPage.grid.inPreparation', 'En préparation')"
+                :to="`/projects/${project.id}`"
+                class="inline-flex items-center gap-2 text-sm font-medium text-emerald-300 hover:text-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded px-2 py-1"
               >
-                {{ t('projectsPage.grid.comingSoon', 'Bientôt disponible') }}
-              </span>
+                <span>{{ t('projectsPage.grid.learnMore', 'En savoir plus sur ce projet') }}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </RouterLink>
             </div>
           </div>
         </article>
@@ -109,17 +91,17 @@
     </section>
 
     <!-- =========================
-         4. FICHE DÉTAILLÉE DOUALA (avec accordéons)
+         3. FICHE DÉTAILLÉE DOUALA (avec accordéons)
          ========================= -->
     <ProjectAccordion data-testid="projects-douala-detail" />
 
     <!-- =========================
-         5. PROJETS À VENIR
+         4. PROJETS À VENIR
          ========================= -->
     <ProjectUpcoming data-testid="projects-upcoming" />
 
     <!-- =========================
-         6. CTA FINAL
+         5. CTA FINAL
          ========================= -->
     <InvestorCTA
       data-testid="projects-final-cta"
@@ -136,11 +118,12 @@
 
 <script setup>
 import { computed } from 'vue'
+import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import projectsData from '../data/projects.json'
 
+import Breadcrumbs from '../components/Breadcrumbs.vue'
 import HeroProjects from '../components/HeroProjects.vue'
-import Timeline from '../components/Timeline.vue'
 import ProjectAccordion from '../components/ProjectAccordion.vue'
 import ProjectUpcoming from '../components/ProjectUpcoming.vue'
 import InvestorCTA from '../components/InvestorCTA.vue'
@@ -158,6 +141,40 @@ const getProjectIcon = (id) => {
     ngaoundere: '🚂'
   }
   return icons[id] || '📦'
+}
+
+// Badge avec dates
+const getProjectBadge = (project) => {
+  if (project.status === 'active') {
+    return '✓ En cours'
+  }
+
+  if (project.id === 'kribi') {
+    return '○ En préparation • Lancement T2 2026'
+  }
+
+  if (project.id === 'ngaoundere') {
+    return '○ En étude • Lancement T4 2026'
+  }
+
+  return `○ ${project.phase}`
+}
+
+// Classes CSS pour les badges
+const getProjectBadgeClass = (project) => {
+  if (project.status === 'active') {
+    return 'bg-emerald-900/30 text-emerald-300 border-emerald-700/50'
+  }
+
+  if (project.id === 'kribi') {
+    return 'bg-yellow-900/20 text-yellow-300 border-yellow-600/50'
+  }
+
+  if (project.id === 'ngaoundere') {
+    return 'bg-blue-900/20 text-blue-300 border-blue-600/50'
+  }
+
+  return 'bg-neutral-800 text-neutral-300 border-neutral-700'
 }
 
 // Scroll vers détails Douala

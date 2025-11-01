@@ -46,27 +46,19 @@
           {{ t('projectsPage.hero.intro', 'GPM développe un réseau de ports secs et plateformes logistiques pour fluidifier le commerce extérieur du Tchad.') }}
         </p>
 
-        <!-- CTA avec magnetic effect -->
+        <!-- CTA unique -->
         <div
           ref="heroCtas"
           class="flex flex-wrap gap-3 pt-4"
           :style="{ transform: `translateY(${parallaxCtas}px)` }"
         >
-          <button
-            @click="scrollToProject"
-            ref="ctaPrimaryRef"
-            class="cta-primary px-6 py-3 rounded-xl bg-emerald-500 text-neutral-900 font-bold hover:bg-emerald-400 shadow-2xl shadow-black/60 hover:shadow-emerald-500/40 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-600 text-base md:text-lg inline-block"
-            :aria-label="t('projectsPage.hero.ctaPrimary', 'Voir le Port Sec de Douala')"
-          >
-            {{ t('projectsPage.hero.ctaPrimary', 'Voir le Port Sec de Douala') }}
-          </button>
           <RouterLink
             to="/contact"
-            ref="ctaSecondaryRef"
-            class="px-6 py-3 rounded-xl border-2 border-emerald-500/60 bg-neutral-900/60 backdrop-blur-sm hover:bg-neutral-900/80 hover:border-emerald-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-neutral-600 font-semibold text-base md:text-lg inline-block"
-            :aria-label="t('projectsPage.hero.ctaSecondary', 'Nous contacter')"
+            ref="ctaPrimaryRef"
+            class="cta-primary px-6 py-3 rounded-xl bg-emerald-500 text-neutral-900 font-bold hover:bg-emerald-400 shadow-2xl shadow-black/60 hover:shadow-emerald-500/40 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-600 text-base md:text-lg inline-block"
+            :aria-label="t('projectsPage.hero.ctaPrimary', 'Nous contacter')"
           >
-            {{ t('projectsPage.hero.ctaSecondary', 'Nous contacter') }}
+            {{ t('projectsPage.hero.ctaPrimary', 'Nous contacter') }}
           </RouterLink>
         </div>
       </div>
@@ -99,13 +91,11 @@ const mapContainer = ref(null)
 const textContainer = ref(null)
 const heroCtas = ref(null)
 
-// ===== Magnetic CTAs =====
+// ===== Magnetic CTA =====
 const ctaPrimaryRef = ref(null)
-const ctaSecondaryRef = ref(null)
 
-// Activer l'effet magnétique sur les boutons
+// Activer l'effet magnétique sur le bouton
 useMagneticButton(ctaPrimaryRef, { strength: 0.3, radius: 80 })
-useMagneticButton(ctaSecondaryRef, { strength: 0.25, radius: 70 })
 
 const handleScroll = () => {
   if (typeof window !== 'undefined') {
@@ -132,12 +122,6 @@ onUnmounted(() => {
     window.removeEventListener('scroll', handleScroll)
   }
 })
-
-// Scroll vers les détails du projet Douala
-const scrollToProject = () => {
-  const el = document.getElementById('douala')
-  el?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-}
 </script>
 
 <style scoped>

@@ -1,5 +1,8 @@
 <template>
   <main class="space-y-8">
+    <!-- Breadcrumbs -->
+    <Breadcrumbs :items="[{ label: 'Accueil' }]" />
+
     <!-- =========================
          1. HERO SECTION – Identité & Mission GPM (Full-Width)
          ========================= -->
@@ -10,7 +13,7 @@
       :trust-override="t('gpmHero.trust', 'Basé à N\'Djamena • Opérateur CEMAC')"
       :cta-invest-label="t('gpmHero.ctaPrimary', 'Découvrir nos projets')"
       :cta-secondary-label="t('gpmHero.ctaSecondary', 'Nous contacter')"
-      invest-to="#projects"
+      invest-to="/projects"
       secondary-to="/contact"
       :feature-badges="[]"
       org-name="Genesis Port Management"
@@ -38,14 +41,39 @@
     />
 
     <!-- =========================
-         4. NOS PROJETS – Portefeuille GPM
+         4. NOS RÉALISATIONS – Appel vers Projects
          ========================= -->
-    <ProjectCard
-      id="projects"
-      data-testid="home-projects"
-      :title="t('projects.title', 'Nos Projets')"
-      :columns="4"
-    />
+    <section id="projects" class="max-w-6xl mx-auto p-6">
+      <div class="rounded-2xl border border-neutral-800 bg-neutral-900 p-8 md:p-12 text-center space-y-6">
+        <header class="flex items-center justify-center gap-2 text-sm opacity-80">
+          <span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
+          <h2 class="font-semibold">{{ t('projects.title', 'Nos Projets') }}</h2>
+        </header>
+
+        <div class="space-y-4">
+          <p class="text-3xl md:text-4xl font-bold">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-white to-emerald-300">
+              3 infrastructures logistiques majeures
+            </span>
+          </p>
+          <p class="text-lg opacity-90 max-w-2xl mx-auto">
+            {{ t('home.projectsIntro', 'GPM développe un réseau intégré de ports secs et plateformes logistiques pour connecter le Tchad au commerce mondial.') }}
+          </p>
+        </div>
+
+        <div class="pt-4">
+          <RouterLink
+            to="/projects"
+            class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-emerald-500 text-neutral-900 font-bold hover:bg-emerald-400 shadow-2xl shadow-black/60 hover:shadow-emerald-500/40 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-600 text-lg"
+          >
+            <span>{{ t('home.discoverProjects', 'Découvrir nos projets') }}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </RouterLink>
+        </div>
+      </div>
+    </section>
 
     <!-- =========================
          5. DOMAINES D'EXPERTISE – 6 cartes iconiques
@@ -58,34 +86,41 @@
     />
 
     <!-- =========================
-         6. IMPACT ET CHIFFRES CLÉS
+         6. IMPACT & RÉSEAU – KPIs + Partenaires
          ========================= -->
-    <section class="max-w-6xl mx-auto p-6 space-y-4">
+    <section class="max-w-6xl mx-auto p-6 space-y-8">
       <header class="flex items-center gap-2 text-sm opacity-80">
         <span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
-        <h2 class="font-semibold">{{ t('impactKpis.title','Nos résultats concrets') }}</h2>
+        <h2 class="font-semibold">{{ t('impactKpis.title','Impact & Réseau') }}</h2>
       </header>
-      <KpiStrip
-        mode="impact"
-        :columns="5"
-        :show-title="false"
-        :animated="true"
-        data-testid="kpi-impact"
-      />
+
+      <!-- KPIs -->
+      <div class="space-y-3">
+        <h3 class="text-lg font-semibold opacity-90">{{ t('impactKpis.subtitle','Nos résultats concrets') }}</h3>
+        <KpiStrip
+          mode="impact"
+          :columns="5"
+          :show-title="false"
+          :animated="true"
+          data-testid="kpi-impact"
+        />
+      </div>
+
+      <!-- Partenaires -->
+      <div class="space-y-3">
+        <h3 class="text-lg font-semibold opacity-90">{{ t('partners.title', 'Ils nous accompagnent') }}</h3>
+        <LogoCarousel
+          data-testid="home-partners"
+          :title="''"
+          :show-title="false"
+          :intro="t('partners.intro', '')"
+          :auto-scroll="true"
+        />
+      </div>
     </section>
 
     <!-- =========================
-         7. PARTENAIRES & COLLABORATIONS
-         ========================= -->
-    <LogoCarousel
-      data-testid="home-partners"
-      :title="t('partners.title', 'Ils nous accompagnent')"
-      :intro="t('partners.intro', '')"
-      :auto-scroll="true"
-    />
-
-    <!-- =========================
-         8. ACTUALITÉS & AVANCEMENT
+         7. ACTUALITÉS & AVANCEMENT
          ========================= -->
     <NewsCarousel
       data-testid="home-news"
@@ -95,16 +130,16 @@
     />
 
     <!-- =========================
-         9. SECTION FINALE – Appel à action
+         8. SECTION FINALE – Appel à action
          ========================= -->
     <InvestorCTA
       data-testid="home-final-cta"
       :title="t('cta.title', 'Rejoignez la dynamique nationale')"
       :subtitle="t('cta.subtitle', 'Ensemble, construisons le réseau logistique du futur.')"
-      primary-to="#projects"
-      :primary-label="t('cta.primaryLabel', 'Découvrir nos projets')"
-      secondary-to="/invest"
-      :secondary-label="t('cta.secondaryLabel', 'Demander un accès investisseur')"
+      primary-to="/contact"
+      :primary-label="t('cta.primaryLabel', 'Nous contacter')"
+      secondary-to="/projects"
+      :secondary-label="t('cta.secondaryLabel', 'Voir tous nos projets')"
       variant="solid"
     />
   </main>
@@ -112,17 +147,18 @@
 
 <script setup>
 // =========================================
-// Home.vue — Nouvelle structure GPM
-// 9 sections : Hero, About, Vision, Projects, Expertise, Impact, Partners, News, CTA
+// Home.vue — Nouvelle structure GPM optimisée
+// 8 sections : Hero, About, Vision, Projects (CTA), Expertise, Impact & Réseau, News, CTA
 // =========================================
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 // import { useScrollReveal } from '@/composables/useScrollReveal' // Désactivé temporairement
 
+import { RouterLink } from 'vue-router'
+import Breadcrumbs from '../components/Breadcrumbs.vue'
 import HeroSection from '../components/HeroSection.vue'
 import AboutGPM from '../components/AboutGPM.vue'
 import Timeline from '../components/Timeline.vue'
-import ProjectCard from '../components/ProjectCard.vue'
 import ProjectHighlights from '../components/ProjectHighlights.vue'
 import KpiStrip from '../components/KpiStrip.vue'
 import LogoCarousel from '../components/LogoCarousel.vue'
