@@ -6,6 +6,7 @@ export default createRouter({
   history: createWebHistory(),
   routes: [
     { path: '/', component: Home, meta: { title: 'Accueil' } },
+    { path: '/projects', component: () => import('../views/Projects.vue'), meta: { title: 'Nos Projets' } },
     { path: '/invest', component: () => import('../views/Invest.vue'), meta: { title: 'Investir' } },
     { path: '/dataroom', component: () => import('../views/DataRoom.vue'), meta: { title: 'Espace documentaire' } },
     { path: '/contact', component: () => import('../views/Contact.vue'), meta: { title: 'Contact' } },

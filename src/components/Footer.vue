@@ -18,11 +18,11 @@
           {{ $t('nav.project') }}
         </h4>
         <ul class="space-y-1 text-sm">
-          <li><RouterLink to="/projet" class="hover:text-emerald-400">{{ $t('footer.links.project') }}</RouterLink></li>
-          <li><RouterLink to="/impact" class="hover:text-emerald-400">{{ $t('footer.links.impact') }}</RouterLink></li>
-          <li><RouterLink to="/invest" class="hover:text-emerald-400">{{ $t('footer.links.invest') }}</RouterLink></li>
-          <li><RouterLink to="/dataroom" class="hover:text-emerald-400">{{ $t('footer.links.dataroom') }}</RouterLink></li>
-          <li><RouterLink to="/contact" class="hover:text-emerald-400">{{ $t('footer.links.contact') }}</RouterLink></li>
+          <li><RouterLink to="/" class="hover:text-emerald-400 transition">{{ $t('footer.links.project') }}</RouterLink></li>
+          <li><RouterLink to="/impact" class="hover:text-emerald-400 transition">{{ $t('footer.links.impact') }}</RouterLink></li>
+          <li><RouterLink to="/invest" class="hover:text-emerald-400 transition">{{ $t('footer.links.invest') }}</RouterLink></li>
+          <li><RouterLink to="/dataroom" class="hover:text-emerald-400 transition">{{ $t('footer.links.dataroom') }}</RouterLink></li>
+          <li><RouterLink to="/contact" class="hover:text-emerald-400 transition">{{ $t('footer.links.contact') }}</RouterLink></li>
         </ul>
       </div>
 
@@ -50,11 +50,14 @@
       </div>
 
     </div>
+
+    <!-- Copyright -->
+    <div class="max-w-6xl mx-auto px-4 mt-8 pt-6 border-t border-neutral-800 text-center text-sm opacity-60">
+      {{ $t('footer.copyright') }}
+    </div>
   </footer>
 </template>
 
-<script>
-export default {
-  name: 'Footer'
-}
+<script setup>
+import { RouterLink } from 'vue-router'
 </script>

@@ -1,5 +1,6 @@
 <template>
   <section
+    ref="sectionRef"
     class="max-w-6xl mx-auto p-6"
     :aria-label="aria"
     role="region"
@@ -40,7 +41,7 @@
           :class="dense ? 'text-lg' : 'text-xl'"
           :aria-label="kpi.aria || kpi.label"
         >
-          {{ kpi.value }}
+          {{ displayValue(kpi, i) }}
         </p>
 
         <p v-if="kpi.note" class="mt-1 text-xs opacity-60">
@@ -53,13 +54,12 @@
 
 <script setup>
 // =========================================
-// KpiStrip.vue — FINANCE ONLY (contrat verrouillé)
-// - N'affiche QUE : CAPEX / Fonds propres / Dette / APD
-// - Consomme : kpi.* + kpiValues.*
-// - AUCUNE référence à home.kpiOps.*
-// - La légende financeBreakdown.* se gère dans la VUE, pas ici.
+// KpiStrip.vue — FINANCE + IMPACT (mode étendu)
+// - Mode 'finance' : CAPEX / Fonds propres / Dette / APD
+// - Mode 'impact' : Chiffres clés opérationnels avec counter-up animation
+// - Consomme : kpi.* + kpiValues.* OU impactKpis.*
 // =========================================
-import { computed } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const props = defineProps({
@@ -69,11 +69,17 @@ const props = defineProps({
    */
   items: { type: Array, default: null },
 
+  /** Mode : 'finance' ou 'impact' */
+  mode: { type: String, default: 'finance' },
+
   /** Titre explicite (facultatif). Par défaut, aucun titre pour éviter le doublon. */
   title: { type: String, default: '' },
 
   /** Afficher le titre oui/non (par défaut: non pour limiter les doublons visuels). */
   showTitle: { type: Boolean, default: false },
+
+  /** Activer animation counter (mode impact uniquement) */
+  animated: { type: Boolean, default: true },
 
   /** Typo plus compacte */
   dense: { type: Boolean, default: false },
@@ -85,26 +91,28 @@ const props = defineProps({
   ariaLabel: { type: String, default: '' }
 })
 
-const { t } = useI18n()
+const { t, tm } = useI18n()
+
+const sectionRef = ref(null)
+const isVisible = ref(false)
+const animatedValues = ref({})
 
 // -----------------------------
 // Accessibilité
 // -----------------------------
-const aria = computed(() =>
-  props.ariaLabel || 'Indicateurs financiers'
-)
+const aria = computed(() => {
+  if (props.ariaLabel) return props.ariaLabel
+  return props.mode === 'impact' ? 'Indicateurs d\'impact' : 'Indicateurs financiers'
+})
 
 // -----------------------------
-// Titre (pas d’i18n ici pour éviter d’introduire une clé non prévue)
+// Titre
 // -----------------------------
 const resolvedTitle = computed(() => props.title)
 
 // -----------------------------
 // Items FINANCE depuis i18n (contrat strict)
 // -----------------------------
-// Clés autorisées :
-// - Labels : kpi.capex, kpi.equity, kpi.debt, kpi.apd
-// - Valeurs : kpiValues.capexXaf, kpiValues.equityXaf, kpiValues.debtXaf, kpiValues.apdPct (ou apd)
 const financeItemsFromI18n = computed(() => {
   const list = []
 
@@ -124,10 +132,24 @@ const financeItemsFromI18n = computed(() => {
 })
 
 // -----------------------------
-// Résolution finale des items
+// Items IMPACT depuis i18n
+// -----------------------------
+const impactItemsFromI18n = computed(() => {
+  const items = tm('impactKpis.items')
+  if (Array.isArray(items) && items.length) return items
+  return []
+})
+
+// -----------------------------
+// Résolution finale des items selon le mode
 // -----------------------------
 const resolvedItems = computed(() => {
   if (Array.isArray(props.items) && props.items.length) return props.items
+
+  if (props.mode === 'impact') {
+    return impactItemsFromI18n.value
+  }
+
   return financeItemsFromI18n.value
 })
 
@@ -149,6 +171,93 @@ const gridClass = computed(() => {
 // Utilitaire : détecter un composant pour l'icône
 // -----------------------------
 const isComponent = (maybe) => typeof maybe === 'object' || typeof maybe === 'function'
+
+// -----------------------------
+// Animation counter-up (mode impact uniquement)
+// -----------------------------
+const extractNumber = (value) => {
+  if (typeof value === 'number') return value
+  if (typeof value !== 'string') return 0
+
+  // Extraire le nombre (gérer les signes négatifs, espaces, virgules, etc.)
+  const cleaned = value.replace(/[^\d.-]/g, '')
+  const num = parseFloat(cleaned)
+  return isNaN(num) ? 0 : num
+}
+
+const animateValue = (index, targetValue, duration = 2000) => {
+  const target = extractNumber(targetValue)
+  if (target === 0) {
+    animatedValues.value[index] = targetValue
+    return
+  }
+
+  const startTime = performance.now()
+  const isNegative = target < 0
+  const absTarget = Math.abs(target)
+
+  const step = (currentTime) => {
+    const elapsed = currentTime - startTime
+    const progress = Math.min(elapsed / duration, 1)
+
+    // Easing function (ease-out)
+    const easeOut = 1 - Math.pow(1 - progress, 3)
+    const current = Math.floor(easeOut * absTarget)
+
+    // Formater selon le type de nombre
+    const formatted = isNegative ? `−${current}` : current.toLocaleString()
+    animatedValues.value[index] = formatted
+
+    if (progress < 1) {
+      requestAnimationFrame(step)
+    } else {
+      // Valeur finale exacte
+      animatedValues.value[index] = targetValue
+    }
+  }
+
+  requestAnimationFrame(step)
+}
+
+const setupIntersectionObserver = () => {
+  if (!props.animated || props.mode !== 'impact') return
+  if (typeof IntersectionObserver === 'undefined') {
+    // Pas de support, afficher les valeurs directement
+    resolvedItems.value.forEach((item, i) => {
+      animatedValues.value[i] = item.value
+    })
+    return
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !isVisible.value) {
+        isVisible.value = true
+        // Démarrer les animations
+        resolvedItems.value.forEach((item, i) => {
+          animateValue(i, item.value)
+        })
+        observer.disconnect()
+      }
+    })
+  }, { threshold: 0.3 })
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value)
+  }
+}
+
+// Afficher la valeur (animée ou statique)
+const displayValue = (item, index) => {
+  if (props.mode === 'impact' && props.animated && animatedValues.value[index] !== undefined) {
+    return animatedValues.value[index]
+  }
+  return item.value
+}
+
+onMounted(() => {
+  setupIntersectionObserver()
+})
 </script>
 
 <style scoped>

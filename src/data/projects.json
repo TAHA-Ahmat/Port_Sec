@@ -1,0 +1,88 @@
+{
+  "projects": [
+    {
+      "id": "douala",
+      "name": "Port Sec du Tchad à Douala",
+      "status": "active",
+      "phase": "2024–2025",
+      "location": {
+        "city": "Douala",
+        "country": "Cameroun",
+        "lat": 4.0511,
+        "lng": 9.7679
+      },
+      "metrics": {
+        "surface": "10 ha",
+        "surfaceM2": "100 000 m²",
+        "capacity": "3 500 EVP",
+        "costReduction": "−30 à −40 %",
+        "transitTime": "≈ 5 jours",
+        "jobsDirect": "≈ 140",
+        "jobsTotal": "500+",
+        "launchDate": "2026"
+      },
+      "description": "Premier terminal logistique tchadien au Cameroun. 10 ha – 3 500 EVP – services douaniers intégrés.",
+      "image": "",
+      "details": {
+        "objective": "Le Port Sec du Tchad à Douala est un projet stratégique et hautement rentable, conçu pour sécuriser et accélérer les flux commerciaux du Tchad tout en réduisant les coûts logistiques pour les opérateurs.",
+        "context": "Pays enclavé, le Tchad dépend des infrastructures portuaires des pays côtiers pour son commerce extérieur. Le corridor Douala–N'Djamena concentre plus de 85 % des échanges du pays, mais subit des délais élevés, des ruptures de charge et des coûts logistiques pouvant atteindre 30 à 40 % du prix final des biens. Ce projet fluidifie et digitalise la chaîne logistique, renforçant la compétitivité régionale (CEMAC).",
+        "legal": [
+          "Convention BOT signée (janvier 2024)",
+          "Mémorandum d'Entente (juin 2022)",
+          "Accords bilatéraux Tchad–Cameroun",
+          "Convention de New York (1967) garantissant le libre accès à la mer",
+          "Exclusivité accordée par l'État tchadien pour la gestion du fret national via le Port Sec GPM"
+        ],
+        "technical": "Le Port Sec du Tchad à Douala combine un terminal conteneurs et une plateforme logistique intégrée (dédouanement, entreposage, services financiers, restauration, etc.). Il comprend un bâtiment administratif R+4, une zone conteneurs, une station-service et un réseau ferroviaire connecté au PAD. Le site intègre des installations photovoltaïques et des dispositifs de sûreté numérique.",
+        "governance": "GPM assure le pilotage du projet à travers un conseil d'administration, une direction expérimentée et des comités techniques, financiers et juridiques. Des indicateurs de performance (temps de transit, volumes, sécurité, satisfaction clients) sont suivis pour garantir une exploitation optimale.",
+        "strategy": [
+          {
+            "period": "2024–2025",
+            "title": "Mise en service",
+            "description": "Études techniques et mise en service initiale à Douala"
+          },
+          {
+            "period": "2026–2028",
+            "title": "Modernisation",
+            "description": "Digitalisation et meilleures pratiques ESG"
+          },
+          {
+            "period": "2028–2030",
+            "title": "Extension réseau",
+            "description": "Extension vers Kribi, Ngaoundéré et Nigéria"
+          }
+        ]
+      }
+    },
+    {
+      "id": "kribi",
+      "name": "Plateforme logistique de Kribi",
+      "status": "planned",
+      "phase": "2026–2028",
+      "location": {
+        "city": "Kribi",
+        "country": "Cameroun",
+        "lat": 2.9428,
+        "lng": 9.9087
+      },
+      "description": "Site côtier à vocation d'export et d'interconnexion maritime.",
+      "image": "",
+      "details": null
+    },
+    {
+      "id": "ngaoundere",
+      "name": "Hub ferroviaire de Ngaoundéré",
+      "status": "planned",
+      "phase": "2028–2030",
+      "location": {
+        "city": "Ngaoundéré",
+        "country": "Cameroun",
+        "lat": 7.3167,
+        "lng": 13.5833
+      },
+      "description": "Plateforme logistique intérieure au cœur du corridor Tchad–Cameroun.",
+      "image": "",
+      "details": null
+    }
+  ]
+}

@@ -98,12 +98,32 @@
     </section>
 
     <!-- =========================
-         4) Points forts (complet via composant)
+         4) Points forts
     ========================== -->
-    <section aria-label="Points forts" class="space-y-3">
+    <section aria-label="Points forts" class="space-y-4">
+      <h2 class="section-title">
+        <span class="dot" aria-hidden="true"></span>
+        Points forts du projet
+      </h2>
 
-      <!-- Le composant gère ses items ; on lui laisse le contenu sans doubler le header visuel -->
-
+      <ul role="list" class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[1fr]">
+        <li role="listitem" class="card h-full flex items-start gap-3">
+          <span class="text-emerald-400 text-xl mt-1">🎯</span>
+          <span class="leading-relaxed">Position stratégique au cœur du corridor Douala–N'Djamena</span>
+        </li>
+        <li role="listitem" class="card h-full flex items-start gap-3">
+          <span class="text-emerald-400 text-xl mt-1">⚖️</span>
+          <span class="leading-relaxed">Cadre légal sécurisé et appui étatique</span>
+        </li>
+        <li role="listitem" class="card h-full flex items-start gap-3">
+          <span class="text-emerald-400 text-xl mt-1">💼</span>
+          <span class="leading-relaxed">Rentabilité soutenue par un marché captif</span>
+        </li>
+        <li role="listitem" class="card h-full flex items-start gap-3">
+          <span class="text-emerald-400 text-xl mt-1">📈</span>
+          <span class="leading-relaxed">Impact économique et social positif</span>
+        </li>
+      </ul>
     </section>
 
     <!-- =========================

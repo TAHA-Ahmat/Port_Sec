@@ -1,7 +1,7 @@
 <template>
   <!-- Header global -->
   <header
-    class="sticky top-0 z-50 border-b border-neutral-800/60 bg-neutral-950/70 backdrop-blur"
+    class="sticky top-0 z-50 border-b border-emerald-500/20 bg-gradient-to-r from-neutral-950/80 via-neutral-900/80 to-neutral-950/80 backdrop-blur-xl shadow-lg shadow-emerald-500/5"
     role="banner"
   >
     <nav
@@ -12,10 +12,13 @@
       <!-- Logo / Accueil -->
       <RouterLink
         to="/"
-        class="flex items-center gap-2 font-semibold tracking-wide hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-xl"
+        class="flex items-center gap-2 font-semibold tracking-wide hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-xl px-2 py-1"
       >
-        <span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
-        <span>GPM</span>
+        <img
+          :src="logoGpm"
+          alt="GPM"
+          class="h-10 w-auto bg-black rounded-lg px-2 py-1"
+        />
       </RouterLink>
 
       <!-- Menu desktop -->
@@ -157,6 +160,7 @@
 import { ref, onMounted } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import logoGpm from '@/assets/images/logoGpm.svg'
 
 // État panneau mobile
 const open = ref(false)
@@ -166,6 +170,7 @@ const { t, locale } = useI18n()
 // Items de navigation (clé i18n + fallback + target)
 const navItems = [
   { key: 'nav.home', fallback: 'Accueil', to: '/' },
+  { key: 'nav.projects', fallback: 'Nos Projets', to: '/projects' },
   { key: 'nav.invest', fallback: 'Investir', to: '/invest' },
   { key: 'nav.dataroom', fallback: 'Espace documentaire', to: '/dataroom' },
   { key: 'nav.contact', fallback: 'Contact', to: '/contact' }
@@ -224,4 +229,31 @@ onMounted(() => {
 /* Transition simple pour le panneau mobile */
 .fade-enter-active, .fade-leave-active { transition: opacity 0.18s ease; }
 .fade-enter-from, .fade-leave-to { opacity: 0; }
+
+/* Effet moderne sur le header */
+header {
+  position: relative;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(16, 185, 129, 0.3) 20%,
+    rgba(16, 185, 129, 0.6) 50%,
+    rgba(16, 185, 129, 0.3) 80%,
+    transparent 100%
+  );
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
 </style>

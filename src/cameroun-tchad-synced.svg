@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny" width="400" height="550" viewBox="0 0 400 550" stroke-linecap="round" stroke-linejoin="round">
+<defs>
+  <linearGradient id="tchadGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.6" />
+    <stop offset="100%" style="stop-color:#059669;stop-opacity:0.8" />
+  </linearGradient>
+</defs>
+<g id="custom.geo">
+  <!-- Cameroun en gris neutre -->
+  <path d="M 156 274 168 307.5 176.5 414.5 152 549 30.5 547.5 1 483 85 426 156 274 Z"
+        id="CMR"
+        fill="#525252"
+        fill-opacity="0.3"
+        stroke="#737373"
+        stroke-width="2"
+        stroke-opacity="0.4"/>
+  <!-- Tchad en dégradé émeraude -->
+  <path d="M 156 274 191.5 1 397.5 100 399 203 351 271.5 372.5 318.5 246 402.5 176.5 414.5 168 307.5 156 274 Z"
+        id="TCD"
+        fill="url(#tchadGradient)"
+        stroke="#10b981"
+        stroke-width="3"
+        stroke-opacity="0.8"
+        filter="drop-shadow(0 0 20px rgba(16, 185, 129, 0.3))"/>
+</g>
+</svg>

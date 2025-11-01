@@ -23,7 +23,7 @@
       <article
         v-for="(h, i) in resolvedItems"
         :key="i + ':' + (h.title || h)"
-        class="rounded-2xl border border-neutral-800 bg-neutral-900 p-4 focus-within:ring-2 focus-within:ring-emerald-500 hover:border-emerald-700/40 hover:bg-neutral-900/80 transition-colors"
+        class="hoverable-subtle rounded-2xl border border-neutral-800 bg-neutral-900 p-4 focus-within:ring-2 focus-within:ring-emerald-500 hover:border-emerald-700/40 hover:bg-neutral-900/80"
         role="listitem"
         tabindex="0"
       >

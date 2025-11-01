@@ -1,6 +1,7 @@
 {
   "nav": {
-    "home": "Project",
+    "home": "Home",
+    "projects": "Projects",
     "project": "Project",
     "impact": "Impact",
     "dataroom": "Document room",
@@ -14,6 +15,305 @@
     "ctaInvest": "Invest",
     "ctaContact": "Contact us",
     "trust": "Aligned with NDP 2026–2030"
+  },
+  "gpmHero": {
+    "tag": "Chadian national operator • Vision 2030",
+    "title": "Connecting Chad to the world through modern logistics infrastructure",
+    "subtitle": "Genesis Port Management (GPM) develops and manages regional logistics platforms serving Chad's external trade.",
+    "ctaPrimary": "Discover our projects",
+    "ctaSecondary": "Contact us",
+    "trust": "Based in N'Djamena • CEMAC Operator"
+  },
+  "gpm": {
+    "title": "A leading Chadian operator in regional logistics",
+    "intro": "GPM is a Chadian company based in N'Djamena. It supports the national trade facilitation policy by developing modern infrastructure: dry ports, logistics zones and multimodal platforms.",
+    "badges": [
+      {
+        "icon": "🇹🇩",
+        "title": "Based in N'Djamena",
+        "text": "Chadian company serving the national economy"
+      },
+      {
+        "icon": "⚙️",
+        "title": "Engineering & operations",
+        "text": "Development and management of modern logistics infrastructure"
+      },
+      {
+        "icon": "🌍",
+        "title": "CEMAC regional coverage",
+        "text": "Strategic platform for Chad-Cameroon-Regional trade"
+      }
+    ]
+  },
+  "vision": {
+    "title": "Our Vision 2030",
+    "intro": "By 2030, GPM aims to build an integrated logistics network connecting Douala, Kribi, Ngaoundéré and N'Djamena, to make Chad a regional CEMAC transit hub.",
+    "timeline": [
+      {
+        "period": "2024–2025",
+        "title": "Chad Dry Port in Douala",
+        "status": "In progress",
+        "statusIcon": "✅",
+        "description": "Commissioning of the first Chadian logistics platform in Cameroon"
+      },
+      {
+        "period": "2026–2028",
+        "title": "Digitalization & logistics expansion",
+        "status": "Planned",
+        "statusIcon": "⚙️",
+        "description": "Full digital integration and expanded processing capacity"
+      },
+      {
+        "period": "2028–2030",
+        "title": "Ngaoundéré / Northern Chad",
+        "status": "Scheduled",
+        "statusIcon": "🔵",
+        "description": "Development of new regional hubs and national interconnection"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Our Projects",
+    "items": [
+      {
+        "name": "Chad Dry Port in Douala",
+        "description": "First Chadian logistics platform in Cameroon – operational from 2026.",
+        "status": "In progress",
+        "link": "/projects/douala",
+        "image": ""
+      },
+      {
+        "name": "Kribi Platform",
+        "description": "Strategic extension at deep-water port.",
+        "status": "In preparation",
+        "link": "",
+        "image": ""
+      },
+      {
+        "name": "Ngaoundéré Platform",
+        "description": "Regional rail hub under design.",
+        "status": "Under study",
+        "link": "",
+        "image": ""
+      }
+    ]
+  },
+  "expertise": {
+    "title": "Our areas of expertise",
+    "items": [
+      {
+        "icon": "🧱",
+        "title": "Infrastructure & development",
+        "text": "Design and development of integrated logistics zones"
+      },
+      {
+        "icon": "⚙️",
+        "title": "Engineering & digitalization",
+        "text": "Technology solutions for traceability and flow optimization"
+      },
+      {
+        "icon": "🚛",
+        "title": "Operations & transit",
+        "text": "Operational management of platforms and logistics services"
+      },
+      {
+        "icon": "🌱",
+        "title": "Sustainable development",
+        "text": "Eco-responsible infrastructure and positive social impact"
+      },
+      {
+        "icon": "🤝",
+        "title": "Public-private partnerships",
+        "text": "Project structuring with national and regional institutions"
+      },
+      {
+        "icon": "📊",
+        "title": "Monitoring & performance",
+        "text": "Operational KPIs and investor reporting"
+      }
+    ]
+  },
+  "impactKpis": {
+    "title": "Our concrete results",
+    "items": [
+      {
+        "label": "Logistics cost reduction",
+        "value": "−40",
+        "unit": "%",
+        "note": "Gains on the Douala–N'Djamena corridor",
+        "icon": "💰"
+      },
+      {
+        "label": "Average transit time",
+        "value": "−25",
+        "unit": "days",
+        "note": "Port time reduction",
+        "icon": "⏱️"
+      },
+      {
+        "label": "Developed area",
+        "value": "100,000",
+        "unit": "m²",
+        "note": "Douala site",
+        "icon": "🏗️"
+      },
+      {
+        "label": "Jobs created",
+        "value": "500",
+        "unit": "+",
+        "note": "Total at maturity (≈140 direct)",
+        "icon": "👷"
+      },
+      {
+        "label": "Coverage",
+        "value": "3",
+        "unit": "countries",
+        "note": "Chad – Cameroon – CEMAC",
+        "icon": "🌍"
+      }
+    ]
+  },
+  "partners": {
+    "title": "Our partners",
+    "intro": "GPM works in coordination with Chadian and Cameroonian authorities, regional financial institutions and international technical partners.",
+    "logos": []
+  },
+  "news": {
+    "title": "Project progress",
+    "items": [
+      {
+        "date": "March 2025",
+        "title": "Douala–Kribi protocol signing",
+        "text": "Extension of logistics cooperation to the deep-water port of Kribi"
+      },
+      {
+        "date": "In progress",
+        "title": "Development works",
+        "text": "Progress on Douala Dry Port infrastructure (phase 1)"
+      },
+      {
+        "date": "2026",
+        "title": "Kribi–Ngaoundéré study",
+        "text": "Preparation of rail connection and Ngaoundéré hub development"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Join Chad's national logistics development momentum",
+    "subtitle": "Together, let's build the port and logistics network of the future.",
+    "primaryLabel": "Discover our projects",
+    "secondaryLabel": "Request investor access"
+  },
+  "projectsPage": {
+    "hero": {
+      "title": "Our Projects — Building the logistics infrastructure of the future",
+      "intro": "GPM develops a network of dry ports and logistics platforms to connect Chad to the sea and reduce external trade costs.",
+      "ctaPrimary": "See Chad Dry Port in Douala",
+      "ctaSecondary": "Contact us",
+      "mapAlt": "Map of Chad-Cameroon logistics corridor"
+    },
+    "overview": {
+      "title": "An integrated logistics network serving Chad",
+      "intro": "Through the Chad Dry Port in Douala and future sites in Kribi and Ngaoundéré, GPM is establishing a continuous logistics chain connecting port, rail and inland platforms. This progressive approach aligns with the national vision for trade and transport modernization."
+    },
+    "grid": {
+      "title": "Project Portfolio",
+      "seeDetails": "See details",
+      "comingSoon": "Coming soon",
+      "inPreparation": "In preparation"
+    },
+    "douala": {
+      "title": "Chad Dry Port in Douala",
+      "sections": {
+        "objective": {
+          "title": "Project Objective",
+          "content": "The Chad Dry Port in Douala is a strategic and highly profitable project, designed to secure and accelerate Chad's trade flows while reducing logistics costs for operators."
+        },
+        "context": {
+          "title": "Context & Justification",
+          "content": "As a landlocked country, Chad depends on coastal countries' port infrastructure for its external trade. The Douala–N'Djamena corridor handles over 85% of the country's trade, but suffers from high delays, cargo breaks and logistics costs reaching 30 to 40% of final goods prices. This project streamlines and digitalizes the logistics chain, strengthening regional (CEMAC) competitiveness."
+        },
+        "metrics": {
+          "title": "Key Data",
+          "surface": "Area",
+          "capacity": "Capacity",
+          "costReduction": "Logistics cost reduction",
+          "transitTime": "Average Douala–N'Djamena transit time",
+          "jobsDirect": "Direct jobs",
+          "jobsTotal": "Total jobs",
+          "launch": "Expected launch"
+        },
+        "legal": {
+          "title": "Legal & Institutional Framework",
+          "items": [
+            "BOT Convention signed (January 2024)",
+            "Memorandum of Understanding (June 2022)",
+            "Chad–Cameroon bilateral agreements",
+            "New York Convention (1967) guaranteeing landlocked access to sea",
+            "Exclusivity granted by Chad State for national freight management"
+          ]
+        },
+        "technical": {
+          "title": "Technical Description",
+          "content": "The Chad Dry Port in Douala combines a container terminal and integrated logistics platform (customs clearance, warehousing, financial services, catering, etc.). It includes a 4-floor administrative building, container area, service station and rail network connected to PAD. The site integrates photovoltaic installations and digital security devices."
+        },
+        "governance": {
+          "title": "Governance & Performance",
+          "content": "GPM manages the project through a board of directors, experienced management and technical, financial and legal committees. Performance indicators (transit time, volumes, security, customer satisfaction) are monitored to ensure optimal operations."
+        },
+        "strategy": {
+          "title": "Development Strategy 2024–2030"
+        }
+      }
+    },
+    "beforeAfter": {
+      "title": "Expected Results — Before / After",
+      "intro": "The operational gains of the Chad Dry Port in Douala immediately translate into improved national competitiveness and reduced costs for operators.",
+      "headers": {
+        "indicator": "Indicator",
+        "before": "Before",
+        "after": "After",
+        "gain": "Gain"
+      },
+      "rows": [
+        {
+          "indicator": "Average Douala–N'Djamena lead time",
+          "before": "≈ 30 days",
+          "after": "≈ 5 days",
+          "gain": "− 25 days"
+        },
+        {
+          "indicator": "Handlings",
+          "before": "≥ 4",
+          "after": "1",
+          "gain": "− 3 operations"
+        },
+        {
+          "indicator": "Logistics costs",
+          "before": "High",
+          "after": "−30 to −40 %",
+          "gain": "−35 % (average)"
+        },
+        {
+          "indicator": "Services",
+          "before": "Scattered",
+          "after": "Centralized (one-stop desk)",
+          "gain": "—"
+        }
+      ],
+      "note": "Indicative targets to be confirmed in operations."
+    },
+    "upcoming": {
+      "title": "Upcoming Projects",
+      "intro": "GPM is preparing the launch of two new projects to strengthen the Chad–Cameroon logistics corridor:",
+      "status": "In preparation"
+    },
+    "finalCta": {
+      "title": "GPM is building the logistics network that will support Chad's trade sovereignty",
+      "subtitle": "Join our institutional partners.",
+      "primaryLabel": "Contact us",
+      "secondaryLabel": "DataRoom Access"
+    }
   },
   "highlights": {
     "title": "Highlights",
@@ -144,8 +444,8 @@
     },
     "kpiOps": {
       "title": "Capacity & resources",
-      "areaHa": "22 ha",
-      "capacityEvp": "2,400 TEU (1,500 dedicated)",
+      "areaHa": "10 ha",
+      "capacityEvp": "3,500 TEU",
       "railFleet": "2 locomotives + 8 wagons",
       "jobsDirect": "≈ 140 direct jobs"
     },
@@ -250,7 +550,23 @@
     "success": "Thanks, your message has been sent."
   },
   "footer": {
-    "copyright": "© 2025 Port Sec of Chad. All rights reserved.",
-    "links": ["Legal notice", "Privacy policy"]
+    "copyright": "© 2025 Genesis Port Management (GPM). All rights reserved.",
+    "tagline": "Genesis Port Management",
+    "links": {
+      "project": "Project",
+      "impact": "Impact",
+      "invest": "Invest",
+      "dataroom": "Data Room",
+      "contact": "Contact"
+    },
+    "contact": {
+      "title": "Contact",
+      "addr": "N'Djamena, Chad"
+    },
+    "legal": {
+      "mentions": "Legal Notice",
+      "cookies": "Privacy and Cookie Policy"
+    },
+    "updated": "Last updated: October 2025"
   }
 }

@@ -1,6 +1,7 @@
 {
   "nav": {
-    "home": "Projet",
+    "home": "Accueil",
+    "projects": "Projets",
     "project": "Projet",
     "impact": "Impact",
     "dataroom": "Espace documentaire",
@@ -14,6 +15,305 @@
     "ctaInvest": "Investir",
     "ctaContact": "Nous contacter",
     "trust": "Aligné PND 2026–2030"
+  },
+  "gpmHero": {
+    "tag": "Opérateur national tchadien • Vision 2030",
+    "title": "Connecter le Tchad au monde par des infrastructures logistiques modernes",
+    "subtitle": "Genesis Port Management (GPM) développe et gère les plateformes logistiques régionales au service du commerce extérieur du Tchad.",
+    "ctaPrimary": "Découvrir nos projets",
+    "ctaSecondary": "Nous contacter",
+    "trust": "Basé à N'Djamena • Opérateur CEMAC"
+  },
+  "gpm": {
+    "title": "Un opérateur tchadien de référence dans la logistique régionale",
+    "intro": "GPM est une société de droit tchadien basée à N'Djamena. Elle accompagne la politique nationale de facilitation du commerce en développant des infrastructures modernes : ports secs, zones logistiques et plateformes multimodales.",
+    "badges": [
+      {
+        "icon": "🇹🇩",
+        "title": "Basée à N'Djamena",
+        "text": "Société de droit tchadien au service de l'économie nationale"
+      },
+      {
+        "icon": "⚙️",
+        "title": "Ingénierie & exploitation",
+        "text": "Développement et gestion d'infrastructures logistiques modernes"
+      },
+      {
+        "icon": "🌍",
+        "title": "Couverture régionale CEMAC",
+        "text": "Plateforme stratégique pour les échanges Tchad-Cameroun-Région"
+      }
+    ]
+  },
+  "vision": {
+    "title": "Notre Vision 2030",
+    "intro": "D'ici 2030, GPM ambitionne de bâtir un réseau logistique intégré reliant Douala, Kribi, Ngaoundéré et N'Djamena, pour faire du Tchad un hub régional du transit CEMAC.",
+    "timeline": [
+      {
+        "period": "2024–2025",
+        "title": "Port Sec du Tchad à Douala",
+        "status": "En cours",
+        "statusIcon": "✅",
+        "description": "Mise en service de la première plateforme logistique tchadienne au Cameroun"
+      },
+      {
+        "period": "2026–2028",
+        "title": "Digitalisation & extension logistique",
+        "status": "Planifié",
+        "statusIcon": "⚙️",
+        "description": "Intégration digitale complète et extension des capacités de traitement"
+      },
+      {
+        "period": "2028–2030",
+        "title": "Ngaoundéré / Nord Tchad",
+        "status": "Prévu",
+        "statusIcon": "🔵",
+        "description": "Développement de nouveaux hubs régionaux et interconnexion nationale"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Nos Projets",
+    "items": [
+      {
+        "name": "Port Sec du Tchad à Douala",
+        "description": "Première plateforme logistique tchadienne au Cameroun – opérationnelle dès 2026.",
+        "status": "En cours",
+        "link": "/projects/douala",
+        "image": ""
+      },
+      {
+        "name": "Plateforme de Kribi",
+        "description": "Extension stratégique sur port en eau profonde.",
+        "status": "En préparation",
+        "link": "",
+        "image": ""
+      },
+      {
+        "name": "Plateforme de Ngaoundéré",
+        "description": "Hub ferroviaire régional en conception.",
+        "status": "En étude",
+        "link": "",
+        "image": ""
+      }
+    ]
+  },
+  "expertise": {
+    "title": "Nos domaines d'expertise",
+    "items": [
+      {
+        "icon": "🧱",
+        "title": "Infrastructure & aménagement",
+        "text": "Conception et développement de zones logistiques intégrées"
+      },
+      {
+        "icon": "⚙️",
+        "title": "Ingénierie & digitalisation",
+        "text": "Solutions technologiques pour la traçabilité et l'optimisation des flux"
+      },
+      {
+        "icon": "🚛",
+        "title": "Opérations & transit",
+        "text": "Gestion opérationnelle des plateformes et services logistiques"
+      },
+      {
+        "icon": "🌱",
+        "title": "Développement durable",
+        "text": "Infrastructures éco-responsables et impact social positif"
+      },
+      {
+        "icon": "🤝",
+        "title": "Partenariats publics-privés",
+        "text": "Structuration de projets avec institutions nationales et régionales"
+      },
+      {
+        "icon": "📊",
+        "title": "Suivi & performance",
+        "text": "KPIs opérationnels et reporting pour investisseurs"
+      }
+    ]
+  },
+  "impactKpis": {
+    "title": "Nos résultats concrets",
+    "items": [
+      {
+        "label": "Réduction coûts logistiques",
+        "value": "−40",
+        "unit": "%",
+        "note": "Gains sur le corridor Douala–N'Djamena",
+        "icon": "💰"
+      },
+      {
+        "label": "Délai moyen de transit",
+        "value": "−25",
+        "unit": "jours",
+        "note": "Réduction des temps portuaires",
+        "icon": "⏱️"
+      },
+      {
+        "label": "Superficie aménagée",
+        "value": "100 000",
+        "unit": "m²",
+        "note": "Site Douala",
+        "icon": "🏗️"
+      },
+      {
+        "label": "Emplois créés",
+        "value": "500",
+        "unit": "+",
+        "note": "Total à maturité (≈140 directs)",
+        "icon": "👷"
+      },
+      {
+        "label": "Couverture",
+        "value": "3",
+        "unit": "pays",
+        "note": "Tchad – Cameroun – CEMAC",
+        "icon": "🌍"
+      }
+    ]
+  },
+  "partners": {
+    "title": "Ils nous accompagnent",
+    "intro": "GPM travaille en coordination avec les autorités tchadiennes et camerounaises, les institutions financières régionales et des partenaires techniques internationaux.",
+    "logos": []
+  },
+  "news": {
+    "title": "Avancées du projet",
+    "items": [
+      {
+        "date": "Mars 2025",
+        "title": "Signature protocole Douala–Kribi",
+        "text": "Extension de la coopération logistique vers le port en eau profonde de Kribi"
+      },
+      {
+        "date": "En cours",
+        "title": "Travaux d'aménagement",
+        "text": "Avancement des infrastructures du Port Sec de Douala (phase 1)"
+      },
+      {
+        "date": "2026",
+        "title": "Étude Kribi–Ngaoundéré",
+        "text": "Préparation de la connexion ferroviaire et développement du hub de Ngaoundéré"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Rejoignez la dynamique nationale du développement logistique tchadien",
+    "subtitle": "Ensemble, construisons le réseau portuaire et logistique du futur.",
+    "primaryLabel": "Découvrir nos projets",
+    "secondaryLabel": "Demander un accès investisseur"
+  },
+  "projectsPage": {
+    "hero": {
+      "title": "Nos Projets — Construire les infrastructures logistiques du futur",
+      "intro": "GPM développe un réseau de ports secs et plateformes logistiques pour relier le Tchad à la mer et réduire les coûts du commerce extérieur.",
+      "ctaPrimary": "Voir le Port Sec de Douala",
+      "ctaSecondary": "Nous contacter",
+      "mapAlt": "Carte du corridor logistique Tchad-Cameroun"
+    },
+    "overview": {
+      "title": "Un réseau logistique intégré au service du Tchad",
+      "intro": "À travers le Port Sec du Tchad à Douala et les futurs sites de Kribi et Ngaoundéré, GPM met en place une chaîne logistique continue reliant les plateformes portuaires, ferroviaires et intérieures. Cette approche progressive s'inscrit dans la vision nationale de modernisation du commerce et du transport."
+    },
+    "grid": {
+      "title": "Portfolio de projets",
+      "seeDetails": "Voir détails",
+      "comingSoon": "Bientôt disponible",
+      "inPreparation": "En préparation"
+    },
+    "douala": {
+      "title": "Port Sec du Tchad à Douala",
+      "sections": {
+        "objective": {
+          "title": "Objectif du projet",
+          "content": "Le Port Sec du Tchad à Douala est un projet stratégique et hautement rentable, conçu pour sécuriser et accélérer les flux commerciaux du Tchad tout en réduisant les coûts logistiques pour les opérateurs."
+        },
+        "context": {
+          "title": "Contexte & justification",
+          "content": "Pays enclavé, le Tchad dépend des infrastructures portuaires des pays côtiers pour son commerce extérieur. Le corridor Douala–N'Djamena concentre plus de 85 % des échanges du pays, mais subit des délais élevés, des ruptures de charge et des coûts logistiques pouvant atteindre 30 à 40 % du prix final des biens. Ce projet fluidifie et digitalise la chaîne logistique, renforçant la compétitivité régionale (CEMAC)."
+        },
+        "metrics": {
+          "title": "Données clés",
+          "surface": "Superficie",
+          "capacity": "Capacité",
+          "costReduction": "Réduction coûts logistiques",
+          "transitTime": "Délai moyen Douala–N'Djamena",
+          "jobsDirect": "Emplois directs",
+          "jobsTotal": "Emplois totaux",
+          "launch": "Mise en service prévue"
+        },
+        "legal": {
+          "title": "Cadre légal & institutionnel",
+          "items": [
+            "Convention BOT signée (janvier 2024)",
+            "Mémorandum d'Entente (juin 2022)",
+            "Accords bilatéraux Tchad–Cameroun",
+            "Convention de New York (1967) garantissant le libre accès à la mer",
+            "Exclusivité accordée par l'État tchadien pour la gestion du fret national"
+          ]
+        },
+        "technical": {
+          "title": "Description technique",
+          "content": "Le Port Sec du Tchad à Douala combine un terminal conteneurs et une plateforme logistique intégrée (dédouanement, entreposage, services financiers, restauration, etc.). Il comprend un bâtiment administratif R+4, une zone conteneurs, une station-service et un réseau ferroviaire connecté au PAD. Le site intègre des installations photovoltaïques et des dispositifs de sûreté numérique."
+        },
+        "governance": {
+          "title": "Gouvernance & performance",
+          "content": "GPM assure le pilotage du projet à travers un conseil d'administration, une direction expérimentée et des comités techniques, financiers et juridiques. Des indicateurs de performance (temps de transit, volumes, sécurité, satisfaction clients) sont suivis pour garantir une exploitation optimale."
+        },
+        "strategy": {
+          "title": "Stratégie de développement 2024–2030"
+        }
+      }
+    },
+    "beforeAfter": {
+      "title": "Résultats attendus — Avant / Après",
+      "intro": "Les gains opérationnels du Port Sec du Tchad à Douala se traduisent immédiatement en amélioration de la compétitivité nationale et en réduction des coûts pour les opérateurs.",
+      "headers": {
+        "indicator": "Indicateur",
+        "before": "Avant",
+        "after": "Après",
+        "gain": "Gain"
+      },
+      "rows": [
+        {
+          "indicator": "Délais moyens Douala–N'Djamena",
+          "before": "≈ 30 jours",
+          "after": "≈ 5 jours",
+          "gain": "− 25 jours"
+        },
+        {
+          "indicator": "Manutentions",
+          "before": "≥ 4",
+          "after": "1",
+          "gain": "− 3 opérations"
+        },
+        {
+          "indicator": "Coûts logistiques",
+          "before": "Élevés",
+          "after": "−30 à −40 %",
+          "gain": "−35 % (moyenne)"
+        },
+        {
+          "indicator": "Services",
+          "before": "Dispersés",
+          "after": "Centralisés (guichet unique)",
+          "gain": "—"
+        }
+      ],
+      "note": "Cibles indicatives à confirmer en exploitation."
+    },
+    "upcoming": {
+      "title": "Projets à venir",
+      "intro": "GPM prépare le lancement de deux nouveaux projets destinés à renforcer le corridor logistique Tchad–Cameroun :",
+      "status": "En préparation"
+    },
+    "finalCta": {
+      "title": "GPM construit le réseau logistique qui soutiendra la souveraineté commerciale du Tchad",
+      "subtitle": "Rejoignez nos partenaires institutionnels.",
+      "primaryLabel": "Nous contacter",
+      "secondaryLabel": "Accès DataRoom"
+    }
   },
   "highlights": {
     "title": "Points forts",
@@ -139,8 +439,8 @@
     },
     "kpiOps": {
       "title": "Capacités & ressources",
-      "areaHa": "22 ha",
-      "capacityEvp": "2 400 EVP (dont 1 500 dédiés)",
+      "areaHa": "10 ha",
+      "capacityEvp": "3 500 EVP",
       "railFleet": "2 locomotives + 8 wagons",
       "jobsDirect": "≈ 140 emplois directs"
     },
@@ -245,7 +545,23 @@
     "success": "Merci, votre message a bien été envoyé."
   },
   "footer": {
-    "copyright": "© 2025 Port Sec du Tchad. Tous droits réservés.",
-    "links": ["Mentions légales", "Politique de confidentialité"]
+    "copyright": "© 2025 Genesis Port Management (GPM). Tous droits réservés.",
+    "tagline": "Genesis Port Management",
+    "links": {
+      "project": "Projet",
+      "impact": "Impact",
+      "invest": "Investir",
+      "dataroom": "Espace documentaire",
+      "contact": "Contact"
+    },
+    "contact": {
+      "title": "Contact",
+      "addr": "N'Djamena, Tchad"
+    },
+    "legal": {
+      "mentions": "Mentions légales",
+      "cookies": "Politique de confidentialité et cookies"
+    },
+    "updated": "Dernière mise à jour : Octobre 2025"
   }
 }
