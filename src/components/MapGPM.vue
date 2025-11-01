@@ -24,6 +24,19 @@
         />
       </pattern>
 
+      <!-- Gradient animé centré sur Douala (mode interactive) -->
+      <radialGradient
+        v-if="mode === 'interactive'"
+        id="doualaGradient"
+        :cx="gradientCx + '%'"
+        :cy="gradientCy + '%'"
+        r="15%"
+      >
+        <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.4" />
+        <stop offset="50%" style="stop-color:#059669;stop-opacity:0.2" />
+        <stop offset="100%" style="stop-color:#064e3b;stop-opacity:0.05" />
+      </radialGradient>
+
       <!-- Gradient Tchad émeraude -->
       <linearGradient id="tchadGradient" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" :style="`stop-color:${mode === 'background' ? '#10b981' : '#EAB308'};stop-opacity:${mode === 'background' ? '0.6' : '0.08'}`" />
@@ -58,6 +71,14 @@
       width="400"
       height="550"
       fill="url(#grid-pattern)"
+    />
+
+    <!-- Gradient animé Douala (mode interactive) -->
+    <rect
+      v-if="mode === 'interactive'"
+      width="100%"
+      height="100%"
+      fill="url(#doualaGradient)"
     />
 
     <!-- OCÉAN ATLANTIQUE (uniquement en mode interactive) -->
@@ -230,6 +251,7 @@
         stroke="rgba(52, 211, 153, 0.4)"
         stroke-width="2"
         stroke-dasharray="6,4"
+        class="corridor-line corridor-emerald"
       />
       <line
         :x1="cities.ngaoundere.x"
@@ -239,6 +261,7 @@
         stroke="rgba(234, 179, 8, 0.3)"
         stroke-width="2"
         stroke-dasharray="6,4"
+        class="corridor-line corridor-yellow"
       />
 
       <!-- Ligne Douala-Kribi -->
@@ -250,6 +273,7 @@
         stroke="rgba(234, 179, 8, 0.3)"
         stroke-width="2"
         stroke-dasharray="6,4"
+        class="corridor-line corridor-yellow"
       />
 
       <!-- Points des villes -->
@@ -275,63 +299,63 @@
       </g>
 
       <!-- Labels des villes -->
-      <!-- Douala -->
-      <g :transform="`translate(${cities.douala.x + 12}, ${cities.douala.y - 50})`">
-        <rect x="-3" y="-3" width="108" height="52" rx="4" fill="rgba(23,23,23,0.85)" stroke="rgba(52,211,153,0.3)" stroke-width="1"/>
-        <text x="0" y="8" fill="white" font-size="10" font-weight="700">Douala</text>
-        <g transform="translate(0, 15)">
-          <circle cx="3" cy="0" r="2" fill="#34D399"/>
-          <text x="8" y="3" fill="#34D399" font-size="8" font-weight="600">En cours</text>
+      <!-- Douala (projet principal - maximum de visibilité) -->
+      <g :transform="`translate(${cities.douala.x + 12}, ${cities.douala.y - 50})`" class="city-label">
+        <rect x="-4" y="-4" width="110" height="54" rx="4" fill="rgba(23,23,23,0.95)" stroke="rgba(52,211,153,0.5)" stroke-width="1.5"/>
+        <text x="0" y="8" fill="white" font-size="11" font-weight="700" style="text-shadow: 0 2px 30px rgba(0,0,0,0.95);">Douala</text>
+        <g transform="translate(0, 16)">
+          <circle cx="3" cy="0" r="2.5" fill="#34D399"/>
+          <text x="9" y="3" fill="#34D399" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">En cours</text>
         </g>
-        <text x="0" y="28" fill="rgba(255,255,255,0.8)" font-size="7">12 ha | 50K EVP/an</text>
-        <text x="0" y="38" fill="rgba(255,255,255,0.6)" font-size="7">300+ emplois</text>
+        <text x="0" y="29" fill="rgba(255,255,255,0.9)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">12 ha | 50K EVP/an</text>
+        <text x="0" y="39" fill="rgba(255,255,255,0.8)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">300+ emplois</text>
       </g>
 
       <!-- Kribi -->
-      <g :transform="`translate(${cities.kribi.x + 12}, ${cities.kribi.y - 10})`">
-        <rect x="-3" y="-3" width="100" height="42" rx="4" fill="rgba(23,23,23,0.85)" stroke="rgba(234,179,8,0.3)" stroke-width="1"/>
-        <text x="0" y="8" fill="white" font-size="10" font-weight="700">Kribi</text>
-        <g transform="translate(0, 15)">
-          <circle cx="3" cy="0" r="2" fill="#EAB308" fill-opacity="0.8"/>
-          <text x="8" y="3" fill="#EAB308" font-size="8" font-weight="600">Prévu 2026-28</text>
+      <g :transform="`translate(${cities.kribi.x + 12}, ${cities.kribi.y - 10})`" class="city-label">
+        <rect x="-4" y="-4" width="102" height="44" rx="4" fill="rgba(23,23,23,0.95)" stroke="rgba(234,179,8,0.5)" stroke-width="1.5"/>
+        <text x="0" y="8" fill="white" font-size="11" font-weight="700" style="text-shadow: 0 2px 30px rgba(0,0,0,0.95);">Kribi</text>
+        <g transform="translate(0, 16)">
+          <circle cx="3" cy="0" r="2.5" fill="#EAB308" fill-opacity="0.9"/>
+          <text x="9" y="3" fill="#EAB308" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">Prévu 2026-28</text>
         </g>
-        <text x="0" y="28" fill="rgba(255,255,255,0.7)" font-size="7">Port côtier</text>
+        <text x="0" y="29" fill="rgba(255,255,255,0.8)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">Port côtier</text>
       </g>
 
       <!-- Ngaoundéré -->
-      <g :transform="`translate(${cities.ngaoundere.x + 12}, ${cities.ngaoundere.y - 58})`">
-        <rect x="-3" y="-3" width="110" height="42" rx="4" fill="rgba(23,23,23,0.85)" stroke="rgba(234,179,8,0.3)" stroke-width="1"/>
-        <text x="0" y="8" fill="white" font-size="10" font-weight="700">Ngaoundéré</text>
-        <g transform="translate(0, 15)">
-          <circle cx="3" cy="0" r="2" fill="#EAB308" fill-opacity="0.8"/>
-          <text x="8" y="3" fill="#EAB308" font-size="8" font-weight="600">Prévu 2028-30</text>
+      <g :transform="`translate(${cities.ngaoundere.x + 12}, ${cities.ngaoundere.y - 58})`" class="city-label">
+        <rect x="-4" y="-4" width="112" height="44" rx="4" fill="rgba(23,23,23,0.95)" stroke="rgba(234,179,8,0.5)" stroke-width="1.5"/>
+        <text x="0" y="8" fill="white" font-size="11" font-weight="700" style="text-shadow: 0 2px 30px rgba(0,0,0,0.95);">Ngaoundéré</text>
+        <g transform="translate(0, 16)">
+          <circle cx="3" cy="0" r="2.5" fill="#EAB308" fill-opacity="0.9"/>
+          <text x="9" y="3" fill="#EAB308" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">Prévu 2028-30</text>
         </g>
-        <text x="0" y="28" fill="rgba(255,255,255,0.7)" font-size="7">Corridor ferro.</text>
+        <text x="0" y="29" fill="rgba(255,255,255,0.8)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">Corridor ferro.</text>
       </g>
 
       <!-- N'Djamena -->
-      <g :transform="`translate(${cities.ndjamena.x + 12}, ${cities.ndjamena.y - 48})`">
-        <rect x="-3" y="-3" width="85" height="36" rx="4" fill="rgba(23,23,23,0.85)" stroke="rgba(115,115,115,0.3)" stroke-width="1"/>
-        <text x="0" y="8" fill="white" font-size="10" font-weight="700">N'Djamena</text>
-        <g transform="translate(0, 15)">
-          <circle cx="3" cy="0" r="2" fill="#737373" fill-opacity="0.6"/>
-          <text x="8" y="3" fill="#9CA3AF" font-size="8" font-weight="600">Référence</text>
+      <g :transform="`translate(${cities.ndjamena.x + 12}, ${cities.ndjamena.y - 48})`" class="city-label">
+        <rect x="-4" y="-4" width="87" height="38" rx="4" fill="rgba(23,23,23,0.95)" stroke="rgba(115,115,115,0.4)" stroke-width="1.5"/>
+        <text x="0" y="8" fill="white" font-size="11" font-weight="700" style="text-shadow: 0 2px 30px rgba(0,0,0,0.95);">N'Djamena</text>
+        <g transform="translate(0, 16)">
+          <circle cx="3" cy="0" r="2.5" fill="#737373" fill-opacity="0.7"/>
+          <text x="9" y="3" fill="#9CA3AF" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">Référence</text>
         </g>
-        <text x="0" y="28" fill="rgba(255,255,255,0.6)" font-size="7">Capitale Tchad</text>
+        <text x="0" y="29" fill="rgba(255,255,255,0.7)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">Capitale Tchad</text>
       </g>
     </template>
   </svg>
 </template>
 
 <script setup>
-import { reactive } from 'vue'
+import { reactive, ref, onMounted, onUnmounted } from 'vue'
 
 /**
  * MapGPM.vue - Composant carte unifié Tchad-Cameroun
  *
  * Deux modes d'affichage :
  * - background: carte décorative avec glow émeraude, opacité faible, sans labels
- * - interactive: carte complète avec villes, corridors, statuts des projets
+ * - interactive: carte complète avec villes, corridors, statuts des projets, gradient animé
  */
 
 const props = defineProps({
@@ -348,6 +372,40 @@ const cities = reactive({
   kribi: { x: 36.9, y: 519.3 },
   ngaoundere: { x: 132.4, y: 408.3 },
   ndjamena: { x: 170.7, y: 285.9 }
+})
+
+// ===== Gradient animé centré sur Douala (mode interactive) =====
+// Conversion des coordonnées de Douala en pourcentages pour le gradient
+// Douala est à (33.2, 491.1) sur viewBox 400x550
+// cx = 33.2 / 400 * 100 = 8.3%
+// cy = 491.1 / 550 * 100 = 89.3%
+const gradientCx = ref(8.3)
+const gradientCy = ref(89.3)
+
+let rafId = null
+
+// Animation du gradient (breathing effect subtil)
+const animateGradient = () => {
+  if (props.mode !== 'interactive') return
+
+  const time = Date.now() / 1000
+  // Mouvement très subtil autour de Douala (±1.5%)
+  gradientCx.value = 8.3 + Math.sin(time * 0.3) * 1.5
+  gradientCy.value = 89.3 + Math.cos(time * 0.3) * 1.5
+
+  rafId = requestAnimationFrame(animateGradient)
+}
+
+onMounted(() => {
+  if (props.mode === 'interactive' && typeof window !== 'undefined') {
+    animateGradient()
+  }
+})
+
+onUnmounted(() => {
+  if (rafId) {
+    cancelAnimationFrame(rafId)
+  }
 })
 </script>
 
@@ -375,5 +433,46 @@ const cities = reactive({
 
 .animate-ping-slow {
   animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Hover effects sur les corridors - renforce la visibilité */
+.corridor-line {
+  transition: stroke-opacity 0.3s ease, stroke-width 0.3s ease;
+  cursor: pointer;
+}
+
+.corridor-line:hover {
+  stroke-opacity: 0.8 !important;
+  stroke-width: 3;
+}
+
+.corridor-emerald:hover {
+  stroke: rgba(52, 211, 153, 0.8) !important;
+}
+
+.corridor-yellow:hover {
+  stroke: rgba(234, 179, 8, 0.8) !important;
+}
+
+/* Hover effect sur les labels villes - slight glow */
+.city-label {
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+
+.city-label:hover {
+  filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.4));
+}
+
+/* Responsive - Adapter les labels sur mobile */
+@media (max-width: 480px) {
+  .city-label text {
+    font-size: 8px !important;
+  }
+
+  .city-label rect {
+    width: 85px !important;
+    height: 40px !important;
+  }
 }
 </style>

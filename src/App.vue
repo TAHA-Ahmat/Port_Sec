@@ -3,10 +3,13 @@
     <!-- Noise Texture Background -->
     <div class="noise-bg" aria-hidden="true"></div>
 
-    <!-- Scroll Progress Bar -->
-    <ScrollProgressBar />
-
     <Navbar />
+
+    <!-- Spacer pour compenser la navbar fixed (64px hauteur navbar) -->
+    <div class="h-16"></div>
+
+    <!-- Scroll Progress Bar - Juste après navbar dans le flux -->
+    <ScrollProgressBar />
     <main class="flex-1 relative z-10">
       <router-view :key="$route.fullPath" />
     </main>

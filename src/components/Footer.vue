@@ -55,6 +55,15 @@
     <div class="max-w-6xl mx-auto px-4 mt-8 pt-6 border-t border-neutral-800 text-center text-sm opacity-60">
       {{ $t('footer.copyright') }}
     </div>
+
+    <!-- Badge développeur Madmit -->
+    <div class="flex items-center justify-center gap-1 text-xs text-gray-300 bg-neutral-900/80 border border-neutral-800 rounded-lg px-3 py-1 mt-4 mx-auto w-fit select-none">
+      <span class="text-sky-400">&lt;/&gt;</span>
+      <span>Développé par</span>
+      <span class="font-semibold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+        Madmit
+      </span>
+    </div>
   </footer>
 </template>
 

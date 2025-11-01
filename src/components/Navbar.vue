@@ -1,7 +1,7 @@
 <template>
-  <!-- Header global -->
+  <!-- Header global - Fixed (toujours en haut) -->
   <header
-    class="sticky top-0 z-50 border-b border-emerald-500/20 bg-gradient-to-r from-neutral-950/80 via-neutral-900/80 to-neutral-950/80 backdrop-blur-xl shadow-lg shadow-emerald-500/5"
+    class="fixed top-0 left-0 right-0 z-50 border-b border-emerald-500/20 bg-gradient-to-r from-neutral-950/95 via-neutral-900/95 to-neutral-950/95 backdrop-blur-xl shadow-lg shadow-emerald-500/5"
     role="banner"
   >
     <nav
@@ -66,9 +66,9 @@
         </RouterLink>
       </div>
 
-      <!-- Burger mobile -->
+      <!-- Burger mobile moderne -->
       <button
-        class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-xl border border-neutral-800 bg-neutral-900 hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+        class="md:hidden inline-flex flex-col items-center justify-center gap-1.5 h-10 w-10 rounded-xl border border-neutral-800 bg-neutral-900 hover:bg-neutral-800 hover:border-emerald-500/40 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all duration-300"
         type="button"
         :aria-expanded="open ? 'true' : 'false'"
         aria-controls="mobile-menu"
@@ -76,88 +76,133 @@
         @keydown.esc="close()"
       >
         <span class="sr-only">Toggle menu</span>
-        <svg v-if="!open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-90" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M4 7h16M4 12h16M4 17h16"/>
-        </svg>
-        <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-90" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M6 6l12 12M6 18L18 6"/>
-        </svg>
+        <!-- Icône hamburger animée (3 lignes) -->
+        <span
+          class="block h-0.5 w-5 rounded-full bg-emerald-400 transition-all duration-300"
+          :class="open ? 'rotate-45 translate-y-2' : ''"
+        ></span>
+        <span
+          class="block h-0.5 w-5 rounded-full bg-emerald-400 transition-all duration-300"
+          :class="open ? 'opacity-0' : 'opacity-100'"
+        ></span>
+        <span
+          class="block h-0.5 w-5 rounded-full bg-emerald-400 transition-all duration-300"
+          :class="open ? '-rotate-45 -translate-y-2' : ''"
+        ></span>
       </button>
     </nav>
+  </header>
 
-    <!-- Panneau mobile -->
-    <transition name="fade">
+  <!-- Menu mobile fullscreen avec drawer - HORS du header pour couvrir 100vh -->
+  <transition name="menu-mobile">
       <div
         v-if="open"
-        id="mobile-menu"
-        class="md:hidden border-t border-neutral-800 bg-neutral-950/95"
+        class="fixed inset-0 z-[100] md:hidden"
+        @click="close()"
       >
-        <nav class="max-w-6xl mx-auto px-4 py-4 space-y-4" aria-label="Mobile">
-          <!-- Liens primaires -->
-          <ul class="space-y-2">
-            <li v-for="item in navItems" :key="'m-'+item.to">
-              <RouterLink
-                :to="item.to"
-                :class="mobileLinkClass(item.to)"
-                :aria-current="isActive(item.to) ? 'page' : undefined"
-                class="block px-3 py-2 rounded-xl border border-neutral-800 bg-neutral-900 hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+        <!-- Overlay backdrop gauche (15% largeur) -->
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-md"></div>
+
+        <!-- Drawer lateral (85% largeur, slide from right) - Hauteur complète -->
+        <div
+          id="mobile-menu"
+          class="absolute inset-y-0 right-0 w-[85%] max-w-sm h-full glass-drawer border-l border-emerald-500/20 shadow-2xl"
+          @click.stop
+        >
+          <nav class="h-full overflow-y-auto flex flex-col px-6 pt-4 pb-4 space-y-4" aria-label="Mobile">
+            <!-- Header du drawer avec bouton close -->
+            <div class="flex items-center justify-between pb-4 border-b border-neutral-800">
+              <span class="text-sm font-semibold text-emerald-400">Menu</span>
+              <button
                 @click="close()"
+                class="p-2 rounded-lg hover:bg-neutral-800 transition-colors"
+                aria-label="Fermer le menu"
               >
-                {{ t(item.key) || item.fallback }}
-              </RouterLink>
-            </li>
-          </ul>
-
-          <!-- Actions secondaires -->
-          <div class="flex items-center gap-2">
-            <RouterLink
-              to="/dataroom"
-              class="flex-1 px-3 py-2 rounded-xl border border-neutral-800 bg-neutral-900 hover:bg-neutral-800 text-center font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-500"
-              @click="close()"
-            >
-              {{ t('nav.dataroom') || 'Espace documentaire' }}
-            </RouterLink>
-            <RouterLink
-              to="/invest"
-              class="flex-1 px-3 py-2 rounded-xl bg-emerald-500/90 hover:bg-emerald-400 text-neutral-900 text-center font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-500"
-              @click="close()"
-            >
-              {{ t('nav.invest') || 'Investir' }}
-            </RouterLink>
-          </div>
-
-          <!-- Sélecteur langue -->
-          <div class="pt-2">
-            <div class="rounded-xl border border-neutral-800 bg-neutral-900 p-1 inline-flex items-center gap-1">
-              <button
-                class="px-2 py-1 text-xs rounded-lg"
-                :class="locale === 'fr' ? 'bg-emerald-500/90 text-neutral-900 font-semibold' : 'opacity-70 hover:opacity-100'"
-                @click="setLocale('fr'); close()"
-                type="button"
-              >
-                FR
-              </button>
-              <button
-                class="px-2 py-1 text-xs rounded-lg"
-                :class="locale === 'en' ? 'bg-emerald-500/90 text-neutral-900 font-semibold' : 'opacity-70 hover:opacity-100'"
-                @click="setLocale('en'); close()"
-                type="button"
-              >
-                EN
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
               </button>
             </div>
-          </div>
-        </nav>
+
+            <!-- Liens primaires avec animation staggered -->
+            <ul class="space-y-2.5 flex-1 overflow-y-auto pr-2 -mr-2">
+              <li
+                v-for="(item, index) in navItems"
+                :key="'m-'+item.to"
+                class="mobile-menu-item"
+                :style="{ animationDelay: `${index * 0.08}s` }"
+              >
+                <RouterLink
+                  :to="item.to"
+                  :class="mobileLinkClass(item.to)"
+                  :aria-current="isActive(item.to) ? 'page' : undefined"
+                  class="block px-4 py-2.5 rounded-xl border bg-neutral-900 hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all duration-300 font-medium text-sm"
+                  @click="close()"
+                >
+                  {{ t(item.key) || item.fallback }}
+                </RouterLink>
+              </li>
+            </ul>
+
+            <!-- Actions secondaires -->
+            <div class="flex items-center gap-3 pt-4 border-t border-neutral-800">
+              <RouterLink
+                to="/dataroom"
+                class="flex-1 px-4 py-2.5 rounded-xl border border-neutral-800 bg-neutral-900 hover:bg-neutral-800 text-center text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all"
+                @click="close()"
+              >
+                {{ t('nav.dataroom') || 'Dataroom' }}
+              </RouterLink>
+              <RouterLink
+                to="/invest"
+                class="flex-1 px-4 py-2.5 rounded-xl bg-emerald-500/90 hover:bg-emerald-400 text-neutral-900 text-center text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all shadow-lg shadow-emerald-500/20"
+                @click="close()"
+              >
+                {{ t('nav.invest') || 'Investir' }}
+              </RouterLink>
+            </div>
+
+            <!-- Sélecteur langue -->
+            <div class="flex justify-center">
+              <div class="rounded-xl border border-neutral-800 bg-neutral-900 p-1 inline-flex items-center gap-1">
+                <button
+                  class="px-3 py-1.5 text-xs rounded-lg transition-all"
+                  :class="locale === 'fr' ? 'bg-emerald-500/90 text-neutral-900 font-semibold' : 'opacity-70 hover:opacity-100'"
+                  @click="setLocale('fr')"
+                  type="button"
+                >
+                  FR
+                </button>
+                <button
+                  class="px-3 py-1.5 text-xs rounded-lg transition-all"
+                  :class="locale === 'en' ? 'bg-emerald-500/90 text-neutral-900 font-semibold' : 'opacity-70 hover:opacity-100'"
+                  @click="setLocale('en')"
+                  type="button"
+                >
+                  EN
+                </button>
+              </div>
+            </div>
+
+            <!-- Badge développeur Madmit (mobile uniquement) -->
+            <div class="flex items-center justify-center gap-1 text-xs text-gray-300 bg-neutral-900 border border-neutral-800 rounded-lg px-3 py-2 select-none">
+              <span class="text-sky-400">&lt;/&gt;</span>
+              <span>Développé par</span>
+              <span class="font-semibold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Madmit
+              </span>
+            </div>
+          </nav>
+        </div>
       </div>
     </transition>
-  </header>
 </template>
 
 <script setup>
 // =========================================
-// Navbar.vue (amélioré) — zéro régression
+// Navbar.vue — Fixed simple toujours visible
 // =========================================
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted, watch } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import logoGpm from '@/assets/images/logoGpm.svg'
@@ -213,7 +258,19 @@ const setLocale = (lng) => {
   } catch (_) { /* silencieux */ }
 }
 
+// Bloquer le scroll du body quand menu ouvert
+watch(open, (newValue) => {
+  if (typeof document !== 'undefined') {
+    if (newValue) {
+      document.body.classList.add('overflow-hidden')
+    } else {
+      document.body.classList.remove('overflow-hidden')
+    }
+  }
+})
+
 onMounted(() => {
+  // Locale persistance
   try {
     if (typeof window !== 'undefined' && window.localStorage) {
       const saved = window.localStorage.getItem('ps_locale')
@@ -223,18 +280,90 @@ onMounted(() => {
     }
   } catch (_) { /* silencieux */ }
 })
+
+onUnmounted(() => {
+  // Cleanup: retirer overflow-hidden si le composant est détruit avec menu ouvert
+  if (typeof document !== 'undefined') {
+    document.body.classList.remove('overflow-hidden')
+  }
+})
 </script>
 
 <style scoped>
-/* Transition simple pour le panneau mobile */
-.fade-enter-active, .fade-leave-active { transition: opacity 0.18s ease; }
-.fade-enter-from, .fade-leave-to { opacity: 0; }
-
-/* Effet moderne sur le header */
-header {
-  position: relative;
+/* ===== Drawer opaque (pas de glassmorphism pour éviter transparence) ===== */
+.glass-drawer {
+  background: linear-gradient(
+    135deg,
+    rgb(10, 10, 10) 0%,
+    rgb(15, 15, 15) 50%,
+    rgb(10, 10, 10) 100%
+  );
+  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.7), inset 1px 0 0 rgba(16, 185, 129, 0.1);
 }
 
+/* ===== Animations menu mobile fullscreen ===== */
+.menu-mobile-enter-active {
+  transition: opacity 0.25s ease-out;
+}
+
+.menu-mobile-leave-active {
+  transition: opacity 0.2s ease-in;
+}
+
+.menu-mobile-enter-from,
+.menu-mobile-leave-to {
+  opacity: 0;
+}
+
+/* Animation du drawer à l'intérieur (slide from right) */
+.menu-mobile-enter-active #mobile-menu {
+  transition: transform 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.menu-mobile-leave-active #mobile-menu {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.menu-mobile-enter-from #mobile-menu {
+  transform: translateX(100%);
+}
+
+.menu-mobile-leave-to #mobile-menu {
+  transform: translateX(100%);
+}
+
+/* ===== Animation staggered des items ===== */
+@keyframes slideInStagger {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu-item {
+  animation: slideInStagger 0.4s cubic-bezier(0.33, 1, 0.68, 1) both;
+}
+
+/* Glow effect sur item actif */
+.border-emerald-500 {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3), inset 0 0 10px rgba(16, 185, 129, 0.1);
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3), inset 0 0 10px rgba(16, 185, 129, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.5), inset 0 0 15px rgba(16, 185, 129, 0.2);
+  }
+}
+
+/* ===== Effet moderne sur le header ===== */
 header::before {
   content: '';
   position: absolute;

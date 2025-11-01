@@ -4,4 +4,16 @@
 
 /* Base sombre */
 :root { color-scheme: dark; }
-html, body, #app { height: 100%; }
+
+/* Permettre le scroll naturel pour sticky */
+html, body {
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Pas de contrainte de hauteur sur #app - laisser le contenu dicter la taille */
+#app {
+  display: flex;
+  flex-direction: column;
+}
