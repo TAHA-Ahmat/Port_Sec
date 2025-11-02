@@ -3,12 +3,16 @@
     <!-- Noise Texture Background -->
     <div class="noise-bg" aria-hidden="true"></div>
 
+    <!-- Header institutionnel binational (position normale, peut scroller hors de vue) -->
+    <InstitutionalHeader />
+
+    <!-- Navbar fixed (reste toujours visible, top dynamique) -->
     <Navbar />
 
-    <!-- Spacer pour compenser la navbar fixed (64px hauteur navbar) -->
+    <!-- Spacer pour compenser navbar fixed (64px hauteur navbar) -->
     <div class="h-16"></div>
 
-    <!-- Scroll Progress Bar - Juste après navbar dans le flux -->
+    <!-- Scroll Progress Bar - Juste après spacer dans le flux -->
     <ScrollProgressBar />
     <main class="flex-1 relative z-10">
       <router-view :key="$route.fullPath" />
@@ -25,6 +29,7 @@
 </template>
 
 <script setup>
+import InstitutionalHeader from './components/InstitutionalHeader.vue'
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 import LoadingSpinner from './components/LoadingSpinner.vue'

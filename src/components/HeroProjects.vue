@@ -64,6 +64,36 @@
       </div>
 
     </div>
+
+    <!-- Réseau binational - Emblèmes CM/TD -->
+    <div class="mt-8 flex items-center justify-center gap-4 px-4 py-6 rounded-xl border border-neutral-800 bg-neutral-900/50 backdrop-blur-sm">
+      <div class="flex items-center gap-3 group">
+        <img
+          src="@/assets/images/emblemeCameroun.png"
+          alt="Cameroun"
+          class="sceau-hero sceau-hero-cm h-10 md:h-12 w-10 md:w-12 object-contain"
+        />
+        <span class="text-sm md:text-base font-medium opacity-80">Cameroun</span>
+      </div>
+
+      <div class="h-8 w-px bg-neutral-700"></div>
+
+      <div class="text-center">
+        <div class="text-xs md:text-sm font-semibold text-emerald-400 opacity-90">Réseau binational</div>
+        <div class="text-xs opacity-60">3 projets stratégiques</div>
+      </div>
+
+      <div class="h-8 w-px bg-neutral-700"></div>
+
+      <div class="flex items-center gap-3 group">
+        <span class="text-sm md:text-base font-medium opacity-80">Tchad</span>
+        <img
+          src="@/assets/images/tchad_embleme.png"
+          alt="Tchad"
+          class="sceau-hero h-10 md:h-12 w-10 md:w-12 object-contain"
+        />
+      </div>
+    </div>
   </section>
 </template>
 
@@ -179,5 +209,16 @@ onUnmounted(() => {
 
 section {
   animation: fadeIn 0.8s ease-out;
+}
+
+/* Égalisation sceaux - CORRECTION CRITIQUE Cameroun 0.7x plus petit */
+.sceau-hero {
+  transition: none;
+}
+
+.sceau-hero-cm {
+  transform: scale(1.43);
+  transform-origin: center;
+  filter: brightness(1.15) contrast(1.1);
 }
 </style>

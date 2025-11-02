@@ -1,5 +1,8 @@
 <template>
-  <section class="max-w-6xl mx-auto p-6 space-y-12">
+  <!-- Watermarks institutionnels -->
+  <WatermarkSeals />
+
+  <section class="max-w-6xl mx-auto p-6 space-y-12 relative z-10">
     <!-- =========================
          1) En-tête
     ========================== -->
@@ -213,6 +216,7 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { RouterLink } from 'vue-router'
 
+import WatermarkSeals from '../components/WatermarkSeals.vue'
 import KpiStrip from '../components/KpiStrip.vue'
 import ProjectHighlights from '../components/ProjectHighlights.vue'
 

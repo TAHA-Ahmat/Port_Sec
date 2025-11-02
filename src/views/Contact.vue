@@ -1,5 +1,8 @@
 <template>
-  <section class="max-w-3xl mx-auto p-6 space-y-8">
+  <!-- Watermarks institutionnels -->
+  <WatermarkSeals />
+
+  <section class="max-w-3xl mx-auto p-6 space-y-8 relative z-10">
     <header class="space-y-2 text-center">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-800 bg-neutral-900 text-xs opacity-80">
         <span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
@@ -92,7 +95,7 @@
       <p class="text-xs opacity-60">* Champs obligatoires</p>
     </form>
 
-    <div class="text-sm opacity-70">
+    <div class="text-sm opacity-70 text-center pt-8 border-t border-neutral-800">
       <div class="font-semibold">{{ t('footer.contact.title') }}</div>
       <div>{{ t('footer.contact.addr') }}</div>
       <div class="mt-1">Réponse sous 48h ouvrées.</div>
@@ -105,6 +108,7 @@ import { ref, reactive } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { RouterLink } from 'vue-router'
 import * as yup from 'yup'
+import WatermarkSeals from '../components/WatermarkSeals.vue'
 
 const { t } = useI18n()
 

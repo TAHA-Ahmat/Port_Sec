@@ -1,5 +1,8 @@
 <template>
-  <section class="max-w-6xl mx-auto p-6 space-y-12">
+  <!-- Watermarks institutionnels -->
+  <WatermarkSeals />
+
+  <section class="max-w-6xl mx-auto p-6 space-y-12 relative z-10">
     <header class="space-y-2">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-800 bg-neutral-900 text-xs opacity-80">
         <span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
@@ -51,6 +54,8 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
 import { RouterLink } from 'vue-router'
+import WatermarkSeals from '../components/WatermarkSeals.vue'
+
 const { t } = useI18n()
 const Step = { props:{n:String,title:String,desc:String}, template:`<li class="p-5 rounded-xl border border-neutral-800 bg-neutral-900"><div class="text-2xl">{{n}}️⃣</div><div class="font-semibold mt-1">{{title}}</div><p class="text-sm opacity-80 mt-1">{{desc}}</p></li>`}
 const Doc  = { props:{name:String,desc:String}, template:`<div class="p-5 rounded-xl border border-neutral-800 bg-neutral-900"><div class="font-semibold">{{name}}</div><p class="text-sm opacity-80 mt-1">{{desc}}</p></div>`}
