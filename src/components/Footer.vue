@@ -3,7 +3,7 @@
     <!-- Logo GPM Text en haut centré -->
     <div class="max-w-6xl mx-auto px-4 mb-8 text-center">
       <img
-        src="@/assets/images/gpmLogoText.svg"
+        src="@/assets/images/gpmlogoText.svg"
         alt="Genesis Port Management"
         class="h-12 mx-auto opacity-90"
       />
