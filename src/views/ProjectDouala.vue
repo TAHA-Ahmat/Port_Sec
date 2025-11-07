@@ -56,28 +56,30 @@
 
       <!-- Section Vidéo Officielle -->
       <div class="video-section">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="flex items-center gap-2">
-            <svg class="w-6 h-6 text-emerald-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <!-- Header responsive : row desktop, column mobile -->
+        <div class="video-header">
+          <div class="flex items-center gap-2 flex-1">
+            <svg class="video-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
             </svg>
-            <h3 class="text-xl font-bold text-emerald-100">
+            <h3 class="video-title">
               {{ t('projectsPage.douala.video.title', 'Découvrez le Port en vidéo') }}
             </h3>
           </div>
-          <span class="px-2 py-1 rounded-full text-xs bg-red-900/30 text-red-300 border border-red-700/50 flex items-center gap-1">
-            <span class="inline-block w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-            LIVE
+          <span class="video-badge">
+            <span class="video-badge-dot"></span>
+            <span class="video-badge-text">LIVE</span>
           </span>
         </div>
 
-        <p class="text-sm opacity-80 mb-4">
+        <p class="video-description">
           {{ t('projectsPage.douala.video.subtitle', 'Plongez au cœur du Port Sec de Douala : infrastructures modernes, flux logistiques et opérations en temps réel.') }}
         </p>
 
+        <!-- Container vidéo optimisé mobile -->
         <div class="video-container-project">
           <iframe
-            src="https://www.youtube.com/embed/pWHDVTSn-5k?modestbranding=1&rel=0&showinfo=0&color=white&iv_load_policy=3&cc_load_policy=0&fs=1"
+            src="https://www.youtube.com/embed/pWHDVTSn-5k?modestbranding=1&rel=0&showinfo=0&color=white&iv_load_policy=3&cc_load_policy=0&fs=1&playsinline=1"
             class="video-iframe-project"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -680,7 +682,7 @@ const legalItems = computed(() => {
   outline: none;
 }
 
-/* ===== VIDEO SECTION ===== */
+/* ===== VIDEO SECTION - DESKTOP FIRST ===== */
 .video-section {
   margin: 3rem 0;
   padding: 2rem;
@@ -712,6 +714,65 @@ const legalItems = computed(() => {
   opacity: 0.5;
 }
 
+/* Header vidéo */
+.video-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.video-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: rgb(52, 211, 153);
+  flex-shrink: 0;
+}
+
+.video-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: rgb(209, 250, 229);
+  line-height: 1.3;
+}
+
+.video-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  background: rgba(127, 29, 29, 0.3);
+  color: rgb(252, 165, 165);
+  border: 1px solid rgba(185, 28, 28, 0.5);
+  flex-shrink: 0;
+}
+
+.video-badge-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: rgb(239, 68, 68);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.video-badge-text {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.video-description {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Container vidéo */
 .video-container-project {
   position: relative;
   width: 100%;
@@ -724,10 +785,13 @@ const legalItems = computed(() => {
   transition: all 0.3s ease-in-out;
 }
 
-.video-container-project:hover {
-  border-color: rgba(5, 150, 105, 0.5);
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(16, 185, 129, 0.2);
-  transform: translateY(-2px);
+/* Hover uniquement sur desktop (pointer: fine = souris) */
+@media (hover: hover) and (pointer: fine) {
+  .video-container-project:hover {
+    border-color: rgba(5, 150, 105, 0.5);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(16, 185, 129, 0.2);
+    transform: translateY(-2px);
+  }
 }
 
 .video-iframe-project {
@@ -739,11 +803,166 @@ const legalItems = computed(() => {
   border: none;
 }
 
-/* Responsive */
+/* ===== RESPONSIVE MOBILE - BREAKPOINTS GRANULAIRES ===== */
+
+/* Tablettes et petits laptops (641px - 1024px) */
+@media (max-width: 1024px) {
+  .video-section {
+    margin: 2.5rem 0;
+    padding: 1.75rem;
+  }
+}
+
+/* Tablettes portrait (641px - 768px) */
 @media (max-width: 768px) {
   .video-section {
-    padding: 1.5rem;
     margin: 2rem 0;
+    padding: 1.25rem;
+    border-radius: 1rem;
+  }
+
+  .video-section::before {
+    border-radius: 1rem;
+    opacity: 0.3; /* Réduit animation sur mobile pour performance */
+  }
+
+  .video-title {
+    font-size: 1.125rem; /* text-lg */
+  }
+
+  .video-description {
+    font-size: 0.8125rem; /* Légèrement plus petit */
+    margin-bottom: 0.875rem;
+  }
+
+  .video-container-project {
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(16, 185, 129, 0.08);
+  }
+}
+
+/* Téléphones standards (481px - 640px) */
+@media (max-width: 640px) {
+  .video-section {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border-radius: 0.875rem;
+  }
+
+  .video-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .video-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .video-title {
+    font-size: 1rem; /* text-base */
+    line-height: 1.4;
+  }
+
+  .video-badge {
+    padding: 0.25rem 0.625rem;
+    font-size: 0.6875rem; /* Légèrement plus petit */
+  }
+
+  .video-badge-dot {
+    width: 0.375rem;
+    height: 0.375rem;
+  }
+
+  .video-description {
+    font-size: 0.75rem; /* text-xs */
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .video-container-project {
+    padding-top: 56.25%; /* Garde 16:9 */
+    border-radius: 0.625rem;
+    border-width: 1px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4), 0 0 12px rgba(16, 185, 129, 0.06);
+  }
+}
+
+/* Petits téléphones (361px - 480px) - iPhone SE, Galaxy S8 */
+@media (max-width: 480px) {
+  .video-section {
+    margin: 1.25rem 0;
+    padding: 0.875rem;
+    border-radius: 0.75rem;
+  }
+
+  .video-section::before {
+    display: none; /* Retire animation border pour performance */
+  }
+
+  .video-header {
+    gap: 0.625rem;
+    margin-bottom: 0.625rem;
+  }
+
+  .video-title {
+    font-size: 0.9375rem; /* 15px */
+  }
+
+  .video-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limite à 2 lignes sur petits écrans */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .video-container-project {
+    padding-top: 56.25%; /* Garde 16:9 pour contrôles YouTube */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  }
+}
+
+/* Très petits téléphones (<360px) - iPhone SE 1st gen */
+@media (max-width: 360px) {
+  .video-section {
+    margin: 1rem 0;
+    padding: 0.75rem;
+    border-radius: 0.625rem;
+  }
+
+  .video-header {
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .video-icon {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+
+  .video-title {
+    font-size: 0.875rem; /* text-sm */
+    line-height: 1.3;
+  }
+
+  .video-badge {
+    padding: 0.1875rem 0.5rem;
+    font-size: 0.625rem; /* 10px */
+  }
+
+  .video-description {
+    font-size: 0.6875rem; /* 11px */
+    -webkit-line-clamp: 2;
+  }
+
+  .video-container-project {
+    padding-top: 56.25%;
+    border-radius: 0.5rem;
+    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.3);
   }
 }
 </style>
