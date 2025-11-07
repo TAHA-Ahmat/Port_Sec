@@ -242,38 +242,38 @@
 
     <!-- Corridors et villes (uniquement en mode interactive) -->
     <template v-if="mode === 'interactive'">
-      <!-- Corridor Douala-N'Djamena -->
+      <!-- Corridor Douala-N'Djamena (RED) -->
       <line
         :x1="cities.douala.x"
         :y1="cities.douala.y"
         :x2="cities.ngaoundere.x"
         :y2="cities.ngaoundere.y"
-        stroke="rgba(52, 211, 153, 0.4)"
-        stroke-width="2"
+        stroke="rgba(255, 59, 59, 0.6)"
+        stroke-width="2.5"
         stroke-dasharray="6,4"
-        class="corridor-line corridor-emerald"
+        class="corridor-line corridor-red"
       />
       <line
         :x1="cities.ngaoundere.x"
         :y1="cities.ngaoundere.y"
         :x2="cities.ndjamena.x"
         :y2="cities.ndjamena.y"
-        stroke="rgba(234, 179, 8, 0.3)"
-        stroke-width="2"
+        stroke="rgba(255, 59, 59, 0.6)"
+        stroke-width="2.5"
         stroke-dasharray="6,4"
-        class="corridor-line corridor-yellow"
+        class="corridor-line corridor-red"
       />
 
-      <!-- Ligne Douala-Kribi -->
+      <!-- Ligne Douala-Kribi (RED) -->
       <line
         :x1="cities.douala.x"
         :y1="cities.douala.y"
         :x2="cities.kribi.x"
         :y2="cities.kribi.y"
-        stroke="rgba(234, 179, 8, 0.3)"
-        stroke-width="2"
+        stroke="rgba(255, 59, 59, 0.6)"
+        stroke-width="2.5"
         stroke-dasharray="6,4"
-        class="corridor-line corridor-yellow"
+        class="corridor-line corridor-red"
       />
 
       <!-- Points des villes -->
@@ -333,15 +333,16 @@
         <text x="0" y="29" fill="rgba(255,255,255,0.8)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">Corridor ferro.</text>
       </g>
 
-      <!-- N'Djamena -->
-      <g :transform="`translate(${cities.ndjamena.x + 12}, ${cities.ndjamena.y - 48})`" class="city-label">
-        <rect x="-4" y="-4" width="87" height="38" rx="4" fill="rgba(23,23,23,0.95)" stroke="rgba(115,115,115,0.4)" stroke-width="1.5"/>
+      <!-- N'Djamena (Siège Social GPM) -->
+      <g :transform="`translate(${cities.ndjamena.x + 12}, ${cities.ndjamena.y - 58})`" class="city-label">
+        <rect x="-4" y="-4" width="145" height="48" rx="4" fill="rgba(23,23,23,0.95)" stroke="rgba(255,59,59,0.5)" stroke-width="1.5"/>
         <text x="0" y="8" fill="white" font-size="11" font-weight="700" style="text-shadow: 0 2px 30px rgba(0,0,0,0.95);">N'Djamena</text>
         <g transform="translate(0, 16)">
-          <circle cx="3" cy="0" r="2.5" fill="#737373" fill-opacity="0.7"/>
-          <text x="9" y="3" fill="#9CA3AF" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">Référence</text>
+          <circle cx="3" cy="0" r="2.5" fill="#ff3b3b" fill-opacity="0.9"/>
+          <text x="9" y="3" fill="#ff3b3b" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">Siège Social</text>
         </g>
-        <text x="0" y="29" fill="rgba(255,255,255,0.7)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">Capitale Tchad</text>
+        <text x="0" y="29" fill="rgba(255,255,255,0.9)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">GPM Headquarters</text>
+        <text x="0" y="39" fill="rgba(255,255,255,0.7)" font-size="7" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">Capitale Tchad</text>
       </g>
     </template>
   </svg>
@@ -437,13 +438,18 @@ onUnmounted(() => {
 
 /* Hover effects sur les corridors - renforce la visibilité */
 .corridor-line {
-  transition: stroke-opacity 0.3s ease, stroke-width 0.3s ease;
+  transition: stroke-opacity 0.3s ease, stroke-width 0.3s ease, filter 0.3s ease;
   cursor: pointer;
 }
 
 .corridor-line:hover {
-  stroke-opacity: 0.8 !important;
-  stroke-width: 3;
+  stroke-opacity: 1 !important;
+  stroke-width: 3.5;
+}
+
+.corridor-red:hover {
+  stroke: rgba(255, 59, 59, 0.9) !important;
+  filter: drop-shadow(0 0 8px rgba(255, 59, 59, 0.6));
 }
 
 .corridor-emerald:hover {

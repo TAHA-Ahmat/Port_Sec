@@ -15,9 +15,9 @@
 
     <!-- Timeline horizontal -->
     <div class="relative">
-      <!-- Ligne de connexion (desktop uniquement) -->
+      <!-- Ligne de connexion animée (desktop uniquement) -->
       <div
-        class="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-neutral-800"
+        class="hidden md:block absolute top-12 left-0 right-0 h-1 bg-gradient-to-r from-red-600/40 via-red-500/60 to-red-600/40 rounded-full timeline-pulse"
         aria-hidden="true"
       ></div>
 
@@ -37,7 +37,7 @@
           <!-- Point sur la timeline (desktop) -->
           <div
             class="hidden md:flex absolute top-12 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full border-2 items-center justify-center z-10"
-            :class="statusClass(item.status)"
+            :class="statusClass(item.status, item.color)"
             aria-hidden="true"
           >
             <span class="text-xs">{{ item.statusIcon || '•' }}</span>
@@ -46,13 +46,13 @@
           <!-- Carte -->
           <div
             class="rounded-2xl border bg-neutral-900 p-4 md:pt-16 hover:border-emerald-700/40 transition-colors focus-within:ring-2 focus-within:ring-emerald-500"
-            :class="borderClass(item.status)"
+            :class="borderClass(item.status, item.color)"
           >
             <!-- Badge statut (mobile) -->
             <div class="flex items-center justify-between mb-3 md:hidden">
               <span
                 class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium"
-                :class="statusBadgeClass(item.status)"
+                :class="statusBadgeClass(item.status, item.color)"
               >
                 <span>{{ item.statusIcon }}</span>
                 <span>{{ item.status }}</span>
@@ -72,7 +72,7 @@
             <div class="hidden md:flex mt-3">
               <span
                 class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium"
-                :class="statusBadgeClass(item.status)"
+                :class="statusBadgeClass(item.status, item.color)"
               >
                 <span>{{ item.statusIcon }}</span>
                 <span>{{ item.status }}</span>
@@ -153,38 +153,71 @@ const gridClass = computed(() => {
   return 'grid-cols-1 md:grid-cols-3'
 })
 
-// Classes de statut pour le point sur la ligne
-const statusClass = (status) => {
+// Classes de couleur pour le point sur la ligne
+const statusClass = (status, color) => {
+  const c = color?.toLowerCase() || ''
+  if (c === 'yellow') {
+    return 'border-yellow-500 bg-yellow-500/20 text-yellow-300'
+  }
+  if (c === 'green') {
+    return 'border-emerald-500 bg-emerald-500/20 text-emerald-300'
+  }
+  if (c === 'blue') {
+    return 'border-blue-500 bg-blue-500/20 text-blue-300'
+  }
+  if (c === 'red') {
+    return 'border-red-500 bg-red-500/20 text-red-300'
+  }
+  // Fallback basé sur le statut
   const s = status?.toLowerCase() || ''
   if (s.includes('cours') || s.includes('progress')) {
     return 'border-emerald-500 bg-emerald-500/20 text-emerald-300'
-  }
-  if (s.includes('planif') || s.includes('plan')) {
-    return 'border-yellow-500 bg-yellow-500/20 text-yellow-300'
   }
   return 'border-blue-500 bg-blue-500/20 text-blue-300'
 }
 
 // Classes pour la bordure de la carte
-const borderClass = (status) => {
+const borderClass = (status, color) => {
+  const c = color?.toLowerCase() || ''
+  if (c === 'yellow') {
+    return 'border-yellow-800/40'
+  }
+  if (c === 'green') {
+    return 'border-emerald-800/40'
+  }
+  if (c === 'blue') {
+    return 'border-blue-800/40'
+  }
+  if (c === 'red') {
+    return 'border-red-800/40'
+  }
+  // Fallback
   const s = status?.toLowerCase() || ''
   if (s.includes('cours') || s.includes('progress')) {
     return 'border-emerald-800/40'
-  }
-  if (s.includes('planif') || s.includes('plan')) {
-    return 'border-yellow-800/40'
   }
   return 'border-blue-800/40'
 }
 
 // Classes pour le badge de statut
-const statusBadgeClass = (status) => {
+const statusBadgeClass = (status, color) => {
+  const c = color?.toLowerCase() || ''
+  if (c === 'yellow') {
+    return 'bg-yellow-900/30 text-yellow-300 border border-yellow-700/50'
+  }
+  if (c === 'green') {
+    return 'bg-emerald-900/30 text-emerald-300 border border-emerald-700/50'
+  }
+  if (c === 'blue') {
+    return 'bg-blue-900/30 text-blue-300 border border-blue-700/50'
+  }
+  if (c === 'red') {
+    return 'bg-red-900/30 text-red-300 border border-red-700/50'
+  }
+  // Fallback
   const s = status?.toLowerCase() || ''
   if (s.includes('cours') || s.includes('progress')) {
     return 'bg-emerald-900/30 text-emerald-300 border border-emerald-700/50'
-  }
-  if (s.includes('planif') || s.includes('plan')) {
-    return 'bg-yellow-900/30 text-yellow-300 border border-yellow-700/50'
   }
   return 'bg-blue-900/30 text-blue-300 border border-blue-700/50'
 }
@@ -199,5 +232,22 @@ const statusBadgeClass = (status) => {
 .group:hover .rounded-2xl {
   transform: translateY(-2px);
   transition: transform 0.2s ease-out;
+}
+
+/* Animation pulsation ligne rouge */
+.timeline-pulse {
+  animation: timelinePulse 3s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
+}
+
+@keyframes timelinePulse {
+  0%, 100% {
+    opacity: 0.6;
+    box-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.6);
+  }
 }
 </style>

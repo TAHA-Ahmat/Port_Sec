@@ -29,9 +29,14 @@
     "intro": "GPM is a Chadian company based in N'Djamena. It supports the national trade facilitation policy by developing modern infrastructure: dry ports, logistics zones and multimodal platforms.",
     "badges": [
       {
-        "icon": "🇹🇩",
-        "title": "Based in N'Djamena",
+        "icon": "td.svg",
+        "title": "Based in N'Djamena – Head Office",
         "text": "Chadian company serving the national economy"
+      },
+      {
+        "icon": "cm.svg",
+        "title": "Douala Branch",
+        "text": "Regional subsidiary supporting Cameroon operations"
       },
       {
         "icon": "⚙️",
@@ -39,36 +44,47 @@
         "text": "Development and management of modern logistics infrastructure"
       },
       {
-        "icon": "🌍",
+        "icon": "africa.svg",
         "title": "CEMAC regional coverage",
         "text": "Strategic platform for Chad-Cameroon-Regional trade"
       }
     ]
   },
   "vision": {
-    "title": "Our Vision 2030",
-    "intro": "By 2030, GPM aims to build an integrated logistics network connecting Douala, Kribi, Ngaoundéré and N'Djamena, to make Chad a regional CEMAC transit hub.",
+    "title": "Our Vision 2032",
+    "intro": "By 2032, GPM will deploy an integrated logistics corridor connecting Douala, Kribi, Ngaoundéré and N'Djamena. This multimodal network will support the national trade facilitation policy and make Chad a regional CEMAC transit hub. This ambition is structured around four successive development phases.",
     "timeline": [
       {
-        "period": "2024–2025",
-        "title": "Chad Dry Port in Douala",
+        "period": "2024 – 2026",
+        "title": "Studies & Technical Partnerships",
         "status": "In progress",
-        "statusIcon": "✅",
-        "description": "Commissioning of the first Chadian logistics platform in Cameroon"
+        "statusIcon": "🟨",
+        "description": "Completion of technical, architectural and environmental studies, and establishment of technical and industrial partnerships.",
+        "color": "yellow"
       },
       {
-        "period": "2026–2028",
-        "title": "Digitalization & logistics expansion",
+        "period": "2025 – 2028",
+        "title": "Construction & Commissioning",
+        "status": "In progress",
+        "statusIcon": "🟩",
+        "description": "Financing mobilization, construction work, team training and commissioning of the Chad Dry Port in Douala.",
+        "color": "green"
+      },
+      {
+        "period": "2028 – 2030",
+        "title": "Modernization & Multimodal Interconnection",
         "status": "Planned",
-        "statusIcon": "⚙️",
-        "description": "Full digital integration and expanded processing capacity"
+        "statusIcon": "🟦",
+        "description": "Adoption of ESG/CSR best practices, on-site banking and development of the interconnected multimodal network.",
+        "color": "blue"
       },
       {
-        "period": "2028–2030",
-        "title": "Ngaoundéré / Northern Chad",
+        "period": "2030 – 2032",
+        "title": "Regional Integration Kribi / Ngaoundéré",
         "status": "Scheduled",
-        "statusIcon": "🔵",
-        "description": "Development of new regional hubs and national interconnection"
+        "statusIcon": "🟥",
+        "description": "Network expansion to future Chad dry ports, the deep-water port of Kribi and the Ngaoundéré rail terminal.",
+        "color": "red"
       }
     ]
   },
@@ -175,41 +191,35 @@
   },
   "impactKpis": {
     "title": "Our concrete results",
+    "subtitle": "Projected figures for 2030",
     "items": [
       {
-        "label": "Logistics cost reduction",
-        "value": "−40",
-        "unit": "%",
-        "note": "Gains on the Douala–N'Djamena corridor",
-        "icon": "💰"
-      },
-      {
-        "label": "Average transit time",
-        "value": "−25",
-        "unit": "days",
-        "note": "Port time reduction",
-        "icon": "⏱️"
-      },
-      {
-        "label": "Developed area",
-        "value": "100,000",
-        "unit": "m²",
-        "note": "Douala site",
+        "label": "Total area",
+        "value": "70",
+        "unit": "ha",
+        "note": "Complete GPM network",
         "icon": "🏗️"
       },
       {
-        "label": "Jobs created",
-        "value": "500",
-        "unit": "+",
-        "note": "Total at maturity (≈140 direct)",
-        "icon": "👷"
+        "label": "Annual capacity",
+        "value": "133,000",
+        "unit": "TEU",
+        "note": "Container handling/year",
+        "icon": "📦"
       },
       {
-        "label": "Coverage",
-        "value": "3",
-        "unit": "countries",
-        "note": "Chad – Cameroon – CEMAC",
-        "icon": "🌍"
+        "label": "Total investment",
+        "value": "≈ 100",
+        "unit": "Bn XAF",
+        "note": "Vision 2030",
+        "icon": "💰"
+      },
+      {
+        "label": "Direct jobs",
+        "value": "760",
+        "unit": "+",
+        "note": "Skilled job creation",
+        "icon": "👷"
       }
     ]
   },
@@ -235,6 +245,26 @@
         "date": "2026",
         "title": "Kribi–Ngaoundéré study",
         "text": "Preparation of rail connection and Ngaoundéré hub development"
+      }
+    ]
+  },
+  "milestones": {
+    "title": "Project progress",
+    "items": [
+      {
+        "date": "March 2025",
+        "title": "Douala–Kribi protocol signing",
+        "description": "Completion of technical studies and launch of the logistics partnership between Douala and the deep-water port of Kribi."
+      },
+      {
+        "date": "2025–2028",
+        "title": "Douala Dry Port development works",
+        "description": "Construction phase, equipment installation and progressive commissioning of the logistics site."
+      },
+      {
+        "date": "2028",
+        "title": "Kribi–Ngaoundéré studies and interconnection",
+        "description": "Preparation of the rail connection and integration of the future Ngaoundéré multimodal hub into the Chad–Cameroon corridor."
       }
     ]
   },

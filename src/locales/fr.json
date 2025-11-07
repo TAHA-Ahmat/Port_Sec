@@ -29,9 +29,14 @@
     "intro": "GPM est une société de droit tchadien basée à N'Djamena. Elle accompagne la politique nationale de facilitation du commerce en développant des infrastructures modernes : ports secs, zones logistiques et plateformes multimodales.",
     "badges": [
       {
-        "icon": "🇹🇩",
-        "title": "Basée à N'Djamena",
-        "text": "Société de droit tchadien au service de l'économie nationale"
+        "icon": "td.svg",
+        "title": "Basée à N'Djamena – Siège Social",
+        "text": "Société tchadienne au service de l'économie nationale"
+      },
+      {
+        "icon": "cm.svg",
+        "title": "Succursale de Douala",
+        "text": "Filiale régionale soutenant les opérations au Cameroun"
       },
       {
         "icon": "⚙️",
@@ -39,36 +44,47 @@
         "text": "Développement et gestion d'infrastructures logistiques modernes"
       },
       {
-        "icon": "🌍",
+        "icon": "africa.svg",
         "title": "Couverture régionale CEMAC",
         "text": "Plateforme stratégique pour les échanges Tchad-Cameroun-Région"
       }
     ]
   },
   "vision": {
-    "title": "Notre Vision 2030",
-    "intro": "D'ici 2030, GPM ambitionne de bâtir un réseau logistique intégré reliant Douala, Kribi, Ngaoundéré et N'Djamena, pour faire du Tchad un hub régional du transit CEMAC.",
+    "title": "Notre Vision 2032",
+    "intro": "D'ici 2032, GPM déploiera un corridor logistique intégré reliant Douala, Kribi, Ngaoundéré et N'Djamena. Ce réseau multimodal soutiendra la politique nationale de facilitation du commerce et fera du Tchad un hub régional du transit CEMAC. Cette ambition s'articule autour de quatre phases de développement successives.",
     "timeline": [
       {
-        "period": "2024–2025",
-        "title": "Port Sec du Tchad à Douala",
+        "period": "2024 – 2026",
+        "title": "Études & Partenariats techniques",
         "status": "En cours",
-        "statusIcon": "✅",
-        "description": "Mise en service de la première plateforme logistique tchadienne au Cameroun"
+        "statusIcon": "🟨",
+        "description": "Finalisation des études techniques, architecturales et environnementales, et établissement des partenariats techniques et industriels.",
+        "color": "yellow"
       },
       {
-        "period": "2026–2028",
-        "title": "Digitalisation & extension logistique",
+        "period": "2025 – 2028",
+        "title": "Construction & Mise en exploitation",
+        "status": "En cours",
+        "statusIcon": "🟩",
+        "description": "Mobilisation des financements, réalisation des travaux, formation des équipes et mise en exploitation du Port Sec du Tchad à Douala.",
+        "color": "green"
+      },
+      {
+        "period": "2028 – 2030",
+        "title": "Modernisation & Interconnexion multimodale",
         "status": "Planifié",
-        "statusIcon": "⚙️",
-        "description": "Intégration digitale complète et extension des capacités de traitement"
+        "statusIcon": "🟦",
+        "description": "Adoption des meilleures pratiques ESG/RSE, bancarisation sur site et développement du réseau interconnecté multimodal.",
+        "color": "blue"
       },
       {
-        "period": "2028–2030",
-        "title": "Ngaoundéré / Nord Tchad",
+        "period": "2030 – 2032",
+        "title": "Intégration régionale Kribi / Ngaoundéré",
         "status": "Prévu",
-        "statusIcon": "🔵",
-        "description": "Développement de nouveaux hubs régionaux et interconnexion nationale"
+        "statusIcon": "🟥",
+        "description": "Extension du réseau vers les futurs ports secs du Tchad, le port en eau profonde de Kribi et le terminal ferroviaire de Ngaoundéré.",
+        "color": "red"
       }
     ]
   },
@@ -175,41 +191,35 @@
   },
   "impactKpis": {
     "title": "Nos résultats concrets",
+    "subtitle": "Chiffres prévisionnels à l'horizon 2030",
     "items": [
       {
-        "label": "Réduction coûts logistiques",
-        "value": "−40",
-        "unit": "%",
-        "note": "Gains sur le corridor Douala–N'Djamena",
-        "icon": "💰"
-      },
-      {
-        "label": "Délai moyen de transit",
-        "value": "−25",
-        "unit": "jours",
-        "note": "Réduction des temps portuaires",
-        "icon": "⏱️"
-      },
-      {
-        "label": "Superficie aménagée",
-        "value": "100 000",
-        "unit": "m²",
-        "note": "Site Douala",
+        "label": "Surface totale",
+        "value": "70",
+        "unit": "ha",
+        "note": "Réseau complet GPM",
         "icon": "🏗️"
       },
       {
-        "label": "Emplois créés",
-        "value": "500",
-        "unit": "+",
-        "note": "Total à maturité (≈140 directs)",
-        "icon": "👷"
+        "label": "Capacité annuelle",
+        "value": "133 000",
+        "unit": "EVP",
+        "note": "Traitement conteneurs/an",
+        "icon": "📦"
       },
       {
-        "label": "Couverture",
-        "value": "3",
-        "unit": "pays",
-        "note": "Tchad – Cameroun – CEMAC",
-        "icon": "🌍"
+        "label": "Investissement total",
+        "value": "≈ 100",
+        "unit": "Mds XAF",
+        "note": "Vision 2030",
+        "icon": "💰"
+      },
+      {
+        "label": "Emplois directs",
+        "value": "760",
+        "unit": "+",
+        "note": "Création d'emplois qualifiés",
+        "icon": "👷"
       }
     ]
   },
@@ -235,6 +245,26 @@
         "date": "2026",
         "title": "Étude Kribi–Ngaoundéré",
         "text": "Préparation de la connexion ferroviaire et développement du hub de Ngaoundéré"
+      }
+    ]
+  },
+  "milestones": {
+    "title": "Avancées du projet",
+    "items": [
+      {
+        "date": "Mars 2025",
+        "title": "Signature du protocole Douala–Kribi",
+        "description": "Finalisation des études techniques et lancement du partenariat logistique entre Douala et le port en eau profonde de Kribi."
+      },
+      {
+        "date": "2025–2028",
+        "title": "Travaux d'aménagement du Port Sec de Douala",
+        "description": "Phase de construction, installation des équipements et mise en exploitation progressive du site logistique."
+      },
+      {
+        "date": "2028",
+        "title": "Études et interconnexion Kribi–Ngaoundéré",
+        "description": "Préparation de la connexion ferroviaire et intégration du futur hub multimodal de Ngaoundéré dans le corridor Tchad–Cameroun."
       }
     ]
   },

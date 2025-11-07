@@ -119,11 +119,15 @@
         </header>
         <KpiStrip
           mode="impact"
-          :columns="5"
+          :columns="4"
           :show-title="false"
           :animated="true"
           data-testid="kpi-impact"
         />
+        <!-- Subtitle Vision 2030 -->
+        <p class="text-center text-sm opacity-60 pt-2">
+          {{ t('impactKpis.subtitle', 'Chiffres prévisionnels à l\'horizon 2030') }}
+        </p>
       </div>
 
       <!-- Réseau visuel -->
@@ -179,14 +183,156 @@
     </section>
 
     <!-- =========================
-         8. ACTUALITÉS & AVANCEMENT
+         8. AVANCÉES DU PROJET - Roadmap 2025-2032
          ========================= -->
-    <NewsCarousel
-      data-testid="home-news"
-      :title="t('news.title', 'Avancées du projet')"
-      :autoplay="true"
-      :autoplay-delay="5000"
-    />
+    <section class="max-w-6xl mx-auto p-6 space-y-6" data-testid="home-milestones">
+      <!-- Header -->
+      <header class="flex items-center gap-2 text-sm opacity-80">
+        <span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
+        <h2 class="font-semibold">{{ t('milestones.title', 'Avancées du projet') }}</h2>
+      </header>
+
+      <!-- Timeline vertical avec connecteur rouge -->
+      <div class="relative">
+        <!-- Ligne verticale rouge (desktop) -->
+        <div
+          class="hidden md:block absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-red-600/40 via-red-500/60 to-red-600/40 rounded-full milestone-pulse"
+          aria-hidden="true"
+        ></div>
+
+        <!-- Milestones -->
+        <div class="space-y-6">
+          <!-- Milestone 1: Mars 2025 -->
+          <article
+            class="relative group pl-0 md:pl-16"
+            role="article"
+            tabindex="0"
+          >
+            <!-- Point sur la ligne (desktop) -->
+            <div
+              class="hidden md:flex absolute left-3 top-6 w-6 h-6 rounded-full bg-red-500/20 border-2 border-red-500 items-center justify-center z-10"
+              aria-hidden="true"
+            >
+              <span class="text-xs">📜</span>
+            </div>
+
+            <!-- Carte -->
+            <div
+              class="rounded-2xl border border-red-800/40 bg-gradient-to-br from-red-900/10 to-neutral-900 p-6 hover:border-red-700/60 hover:scale-[1.01] transition-all duration-300 focus-within:ring-2 focus-within:ring-red-500"
+            >
+              <!-- Date + Icon mobile -->
+              <div class="flex items-center justify-between mb-3 md:hidden">
+                <span class="text-2xl">📜</span>
+                <span class="text-sm font-bold" style="color: #ff3b3b;">Mars 2025</span>
+              </div>
+
+              <!-- Date desktop -->
+              <p class="hidden md:block text-sm font-bold mb-2" style="color: #ff3b3b;">
+                {{ t('milestones.items[0].date', 'Mars 2025') }}
+              </p>
+
+              <!-- Titre -->
+              <h3 class="font-bold text-lg mb-2 text-red-300">
+                {{ t('milestones.items[0].title', 'Signature du protocole Douala–Kribi') }}
+              </h3>
+
+              <!-- Description -->
+              <p class="text-sm opacity-90 leading-relaxed">
+                {{ t('milestones.items[0].description', 'Finalisation des études techniques et lancement du partenariat logistique entre Douala et le port en eau profonde de Kribi.') }}
+              </p>
+            </div>
+          </article>
+
+          <!-- Milestone 2: 2025-2028 -->
+          <article
+            class="relative group pl-0 md:pl-16"
+            role="article"
+            tabindex="0"
+          >
+            <!-- Point sur la ligne (desktop) -->
+            <div
+              class="hidden md:flex absolute left-3 top-6 w-6 h-6 rounded-full bg-red-500/20 border-2 border-red-500 items-center justify-center z-10"
+              aria-hidden="true"
+            >
+              <span class="text-xs">🏗️</span>
+            </div>
+
+            <!-- Carte -->
+            <div
+              class="rounded-2xl border border-red-800/40 bg-gradient-to-br from-red-900/10 to-neutral-900 p-6 hover:border-red-700/60 hover:scale-[1.01] transition-all duration-300 focus-within:ring-2 focus-within:ring-red-500"
+            >
+              <!-- Date + Icon mobile -->
+              <div class="flex items-center justify-between mb-3 md:hidden">
+                <span class="text-2xl">🏗️</span>
+                <span class="text-sm font-bold" style="color: #ff3b3b;">2025–2028 (En cours)</span>
+              </div>
+
+              <!-- Date desktop + Badge -->
+              <div class="hidden md:flex items-center gap-3 mb-2">
+                <p class="text-sm font-bold" style="color: #ff3b3b;">
+                  {{ t('milestones.items[1].date', '2025–2028') }}
+                </p>
+                <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-emerald-900/30 text-emerald-300 border border-emerald-700/50">
+                  <span class="inline-block h-2 w-2 rounded-full bg-emerald-400 mr-1.5"></span>
+                  En cours
+                </span>
+              </div>
+
+              <!-- Titre -->
+              <h3 class="font-bold text-lg mb-2 text-red-300">
+                {{ t('milestones.items[1].title', 'Travaux d\'aménagement du Port Sec de Douala') }}
+              </h3>
+
+              <!-- Description -->
+              <p class="text-sm opacity-90 leading-relaxed">
+                {{ t('milestones.items[1].description', 'Phase de construction, installation des équipements et mise en exploitation progressive du site logistique.') }}
+              </p>
+            </div>
+          </article>
+
+          <!-- Milestone 3: 2028 -->
+          <article
+            class="relative group pl-0 md:pl-16"
+            role="article"
+            tabindex="0"
+          >
+            <!-- Point sur la ligne (desktop) -->
+            <div
+              class="hidden md:flex absolute left-3 top-6 w-6 h-6 rounded-full bg-red-500/20 border-2 border-red-500 items-center justify-center z-10"
+              aria-hidden="true"
+            >
+              <span class="text-xs">🚆</span>
+            </div>
+
+            <!-- Carte -->
+            <div
+              class="rounded-2xl border border-red-800/40 bg-gradient-to-br from-red-900/10 to-neutral-900 p-6 hover:border-red-700/60 hover:scale-[1.01] transition-all duration-300 focus-within:ring-2 focus-within:ring-red-500"
+            >
+              <!-- Date + Icon mobile -->
+              <div class="flex items-center justify-between mb-3 md:hidden">
+                <span class="text-2xl">🚆</span>
+                <span class="text-sm font-bold" style="color: #ff3b3b;">2028</span>
+              </div>
+
+              <!-- Date desktop -->
+              <p class="hidden md:block text-sm font-bold mb-2" style="color: #ff3b3b;">
+                {{ t('milestones.items[2].date', '2028') }}
+              </p>
+
+              <!-- Titre -->
+              <h3 class="font-bold text-lg mb-2 text-red-300">
+                {{ t('milestones.items[2].title', 'Études et interconnexion Kribi–Ngaoundéré') }}
+              </h3>
+
+              <!-- Description -->
+              <p class="text-sm opacity-90 leading-relaxed">
+                {{ t('milestones.items[2].description', 'Préparation de la connexion ferroviaire et intégration du futur hub multimodal de Ngaoundéré dans le corridor Tchad–Cameroun.') }}
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <!-- =========================
          10. SECTION FINALE – Appel à action
@@ -221,7 +367,6 @@ import Timeline from '../components/Timeline.vue'
 import ProjectHighlights from '../components/ProjectHighlights.vue'
 import KpiStrip from '../components/KpiStrip.vue'
 import LogoCarousel from '../components/LogoCarousel.vue'
-import NewsCarousel from '../components/NewsCarousel.vue'
 import InvestorCTA from '../components/InvestorCTA.vue'
 
 const { t, tm } = useI18n()
@@ -256,6 +401,23 @@ const expertiseItems = computed(() => {
 /* Espacement entre sections */
 main {
   padding-bottom: 4rem;
+}
+
+/* ===== Milestones Timeline - Animation ligne rouge ===== */
+.milestone-pulse {
+  animation: milestonePulse 3s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
+}
+
+@keyframes milestonePulse {
+  0%, 100% {
+    opacity: 0.6;
+    box-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.6);
+  }
 }
 
 /* ===== Scroll Reveal Animations - DÉSACTIVÉ TEMPORAIREMENT ===== */

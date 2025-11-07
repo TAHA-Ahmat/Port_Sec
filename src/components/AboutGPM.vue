@@ -28,13 +28,22 @@
           role="article"
         >
           <div class="flex items-start gap-3">
-            <!-- Icône -->
+            <!-- Icône (SVG ou emoji) -->
             <span
               v-if="badge.icon"
-              class="inline-flex items-center justify-center h-10 w-10 rounded-lg bg-neutral-800 text-2xl"
+              class="inline-flex items-center justify-center h-10 w-10 rounded-lg bg-neutral-800"
+              :class="isSvgIcon(badge.icon) ? '' : 'text-2xl'"
               aria-hidden="true"
             >
-              <component :is="badge.icon" v-if="isComponent(badge.icon)" />
+              <!-- Image SVG -->
+              <img
+                v-if="isSvgIcon(badge.icon)"
+                :src="getImagePath(badge.icon)"
+                :alt="badge.title"
+                class="w-6 h-6 object-contain"
+              />
+              <!-- Component Vue ou emoji -->
+              <component :is="badge.icon" v-else-if="isComponent(badge.icon)" />
               <span v-else>{{ badge.icon }}</span>
             </span>
 
@@ -114,8 +123,16 @@ const badgesGridClass = computed(() => {
   return 'grid-cols-1 gap-4'
 })
 
-// Utilitaire
+// Utilitaires
 const isComponent = (x) => typeof x === 'object' || typeof x === 'function'
+
+// Vérifier si c'est un fichier SVG
+const isSvgIcon = (icon) => typeof icon === 'string' && icon.endsWith('.svg')
+
+// Obtenir le chemin complet de l'image
+const getImagePath = (filename) => {
+  return new URL(`../assets/images/${filename}`, import.meta.url).href
+}
 </script>
 
 <style scoped>
