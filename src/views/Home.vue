@@ -25,20 +25,24 @@
     <!-- =========================
          2. PRÉSENTATION GPM – "Qui sommes-nous ?"
          ========================= -->
-    <AboutGPM
-      data-testid="home-about-gpm"
-      :title="t('gpm.title', 'Un opérateur tchadien de référence')"
-      :intro="t('gpm.intro', '')"
-    />
+    <div class="w-full bg-gradient-to-b from-neutral-900/60 via-neutral-900/40 to-transparent py-12">
+      <AboutGPM
+        data-testid="home-about-gpm"
+        :title="t('gpm.title', 'Un opérateur tchadien de référence')"
+        :intro="t('gpm.intro', '')"
+      />
+    </div>
 
     <!-- =========================
          3. VISION 2030 – Frise stratégique
          ========================= -->
-    <Timeline
-      data-testid="home-vision"
-      :title="t('vision.title', 'Notre Vision 2030')"
-      :intro="t('vision.intro', '')"
-    />
+    <div class="w-full bg-gradient-to-r from-neutral-900/50 via-neutral-900/70 to-neutral-900/50 border-y border-neutral-800/30 py-12">
+      <Timeline
+        data-testid="home-vision"
+        :title="t('vision.title', 'Notre Vision 2030')"
+        :intro="t('vision.intro', '')"
+      />
+    </div>
 
     <!-- =========================
          4. DOMAINES D'EXPERTISE – 6 cartes iconiques
@@ -110,7 +114,8 @@
     <!-- =========================
          7. IMPACT & RÉSEAU – KPIs + Partenaires
          ========================= -->
-    <section class="max-w-6xl mx-auto p-6 space-y-8">
+    <div class="w-full bg-gradient-to-b from-neutral-900/60 via-neutral-900/50 to-neutral-900/40 border-t border-neutral-800/60 py-12">
+      <section class="max-w-6xl mx-auto p-6 space-y-8">
       <!-- KPIs -->
       <div class="space-y-3">
         <header class="flex items-center gap-2 text-sm opacity-80 mb-3">
@@ -181,11 +186,13 @@
         </div>
       </div>
     </section>
+    </div>
 
     <!-- =========================
          8. AVANCÉES DU PROJET - Roadmap 2025-2032
          ========================= -->
-    <section class="max-w-6xl mx-auto p-6 space-y-6" data-testid="home-milestones">
+    <div class="w-full bg-gradient-to-br from-red-900/15 via-neutral-900/50 to-neutral-950 border-t border-red-800/20 py-12">
+      <section class="max-w-6xl mx-auto p-6 space-y-6" data-testid="home-milestones">
       <!-- Header -->
       <header class="flex items-center gap-2 text-sm opacity-80">
         <span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
@@ -333,6 +340,7 @@
         </div>
       </div>
     </section>
+    </div>
 
     <!-- =========================
          10. SECTION FINALE – Appel à action

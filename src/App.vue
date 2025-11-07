@@ -3,6 +3,9 @@
     <!-- Noise Texture Background -->
     <div class="noise-bg" aria-hidden="true"></div>
 
+    <!-- Emblèmes institutionnels en watermark background -->
+    <WatermarkSeals />
+
     <!-- Header institutionnel binational (position normale, peut scroller hors de vue) -->
     <InstitutionalHeader />
 
@@ -34,6 +37,7 @@ import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 import LoadingSpinner from './components/LoadingSpinner.vue'
 import ScrollProgressBar from './components/ScrollProgressBar.vue'
+import WatermarkSeals from './components/WatermarkSeals.vue'
 import { useSeo } from './composables/useSeo'
 import { useLoading } from './composables/useLoading'
 

@@ -2,203 +2,38 @@
   <!-- Watermarks institutionnels -->
   <WatermarkSeals />
 
-  <section class="max-w-6xl mx-auto p-6 space-y-12 relative z-10">
+  <section class="max-w-6xl mx-auto p-6 space-y-12 relative z-10 dataroom-container">
     <!-- =========================
          1) En-tête
     ========================== -->
-    <header class="space-y-2 text-left">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-800 bg-neutral-900 text-xs opacity-80">
-        <span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
+    <header class="space-y-2 text-left animate-fade-in">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-800 bg-neutral-900 text-xs opacity-80 hover:border-emerald-700/60 hover:bg-neutral-800 transition-all duration-300">
+        <span class="inline-block h-2 w-2 rounded-full bg-emerald-400 pulse-dot"></span>
         <span>{{ t('nav.dataroom') || 'Espace documentaire' }}</span>
       </div>
 
-      <h1 class="text-2xl md:text-3xl font-bold leading-tight">
-        <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-white to-emerald-300">
+      <h1 class="text-2xl md:text-3xl font-bold leading-tight animate-slide-up">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-white to-emerald-300 animate-gradient">
           {{ t('invest.title') || 'Opportunité d\'investissement' }}
         </span>
       </h1>
 
-      <p class="opacity-80 max-w-3xl">
+      <p class="opacity-80 max-w-3xl animate-slide-up animation-delay-100">
         {{ t('invest.pitch') || 'Un actif logistique stratégique au PAD (Douala), au service des flux Tchad–CEMAC.' }}
       </p>
     </header>
 
     <!-- =========================
-         2) Capacités & ressources (Opérationnel)
+         FORMULAIRE D'ACCÈS - PRIORITÉ #1
     ========================== -->
-    <section aria-label="Capacités et ressources" class="space-y-3">
-      <h2 class="section-title">
-        <span class="dot" aria-hidden="true"></span>
-        {{ t('home.kpiOps.title', 'Capacités & ressources') }}
-      </h2>
-
-      <ul role="list" class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[1fr]">
-        <li role="listitem" class="card h-full">
-          <p class="kpi-label">{{ t('home.kpiOps.areaHa', 'Superficie (ha)') }}</p>
-          <p class="kpi-value">
-            {{ t('home.kpiOps.values.areaHa', t('home.kpiOps.areaHaValue', '')) }}
-          </p>
-        </li>
-
-        <li role="listitem" class="card h-full">
-          <p class="kpi-label">{{ t('home.kpiOps.capacityEvp', 'Capacité (EVP/an)') }}</p>
-          <p class="kpi-value">
-            {{ t('home.kpiOps.values.capacityEvp', t('home.kpiOps.capacityEvpValue', '')) }}
-          </p>
-        </li>
-
-        <li role="listitem" class="card h-full">
-          <p class="kpi-label">{{ t('home.kpiOps.railFleet', 'Matériel ferroviaire') }}</p>
-          <p class="kpi-value">
-            {{ t('home.kpiOps.values.railFleet', t('home.kpiOps.railFleetValue', '')) }}
-          </p>
-        </li>
-
-        <li role="listitem" class="card h-full">
-          <p class="kpi-label">{{ t('home.kpiOps.jobsDirect', 'Emplois directs') }}</p>
-          <p class="kpi-value">
-            {{ t('home.kpiOps.values.jobsDirect', t('home.kpiOps.jobsDirectValue', '')) }}
-          </p>
-        </li>
-      </ul>
-
-      <!-- CTA après Opérations -->
-      <div class="flex flex-wrap gap-3">
-        <RouterLink to="/contact" class="btn-primary">
-          {{ t('hero.ctaContact', 'Nous contacter') }}
-        </RouterLink>
-      </div>
-    </section>
-
-    <!-- =========================
-         3) Vidéo officielle du Port de Douala
-    ========================== -->
-    <section aria-label="Vidéo du Port de Douala" class="space-y-4">
-      <h2 class="section-title">
-        <span class="dot" aria-hidden="true"></span>
-        {{ t('dataroom.video.title', 'Vidéo officielle du Port de Douala') }}
-      </h2>
-
-      <p class="opacity-80 text-sm max-w-3xl">
-        {{ t('dataroom.video.subtitle', 'Découvrez en images le Port Autonome de Douala (PAD), infrastructure stratégique au cœur du projet Port Sec du Tchad.') }}
-      </p>
-
-      <div class="video-container">
-        <iframe
-          src="https://www.youtube.com/embed/pWHDVTSn-5k?modestbranding=1&rel=0&showinfo=0&color=white&iv_load_policy=3&cc_load_policy=0&fs=1"
-          class="video-iframe"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          loading="lazy"
-          title="Vidéo officielle du Port de Douala"
-        ></iframe>
-      </div>
-    </section>
-
-    <!-- =========================
-         4) Points forts
-    ========================== -->
-    <section aria-label="Points forts" class="space-y-4">
-      <h2 class="section-title">
-        <span class="dot" aria-hidden="true"></span>
-        Points forts du projet
-      </h2>
-
-      <ul role="list" class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[1fr]">
-        <li role="listitem" class="card h-full flex items-start gap-3">
-          <span class="text-emerald-400 text-xl mt-1">🎯</span>
-          <span class="leading-relaxed">Position stratégique au cœur du corridor Douala–N'Djamena</span>
-        </li>
-        <li role="listitem" class="card h-full flex items-start gap-3">
-          <span class="text-emerald-400 text-xl mt-1">⚖️</span>
-          <span class="leading-relaxed">Cadre légal sécurisé et appui étatique</span>
-        </li>
-        <li role="listitem" class="card h-full flex items-start gap-3">
-          <span class="text-emerald-400 text-xl mt-1">💼</span>
-          <span class="leading-relaxed">Rentabilité soutenue par un marché captif</span>
-        </li>
-        <li role="listitem" class="card h-full flex items-start gap-3">
-          <span class="text-emerald-400 text-xl mt-1">📈</span>
-          <span class="leading-relaxed">Impact économique et social positif</span>
-        </li>
-      </ul>
-    </section>
-
-    <!-- =========================
-         5) Process 3 étapes (sans clés interdites)
-    ========================== -->
-    <section aria-label="Processus d'investissement" class="space-y-4">
-      <h2 class="section-title">
-        <span class="dot" aria-hidden="true"></span>
-        <!-- Texte direct pour éviter d'introduire une clé non listée -->
-        Processus d'investissement (3 étapes)
-      </h2>
-
-      <ol class="grid gap-4 grid-cols-1 sm:grid-cols-3 auto-rows-[1fr]">
-        <Step n="1" :title="t('invest.step1', 'Prise de contact')" />
-        <Step n="2" :title="t('invest.step2', 'Accès dataroom & échanges')" />
-        <Step n="3" :title="t('invest.step3', 'Term sheet & closing')" />
-      </ol>
-
-      <!-- micro-CTA -->
-      <div class="flex flex-wrap gap-3">
-        <RouterLink to="/contact" class="btn-primary">
-          {{ t('hero.ctaContact', 'Nous contacter') }}
-        </RouterLink>
-        <a href="#dataroom" class="btn-secondary">
-          {{ t('dataroom.open', 'Accéder à la dataroom') }}
-        </a>
-      </div>
-    </section>
-
-    <!-- =========================
-         6) Cadre légal (version courte)
-    ========================== -->
-    <section aria-label="Cadre légal" class="space-y-3">
-      <h2 class="section-title">
-        <span class="dot" aria-hidden="true"></span>
-        {{ t('home.legal.title', 'Cadre légal & institutionnel') }}
-      </h2>
-
-      <ul role="list" class="grid gap-4 grid-cols-1 sm:grid-cols-3 auto-rows-[1fr]">
-        <li v-for="(it, i) in legalList" :key="`legal-${i}`"
-            role="listitem"
-            class="card h-full flex items-start gap-3">
-          <span class="text-emerald-400 mt-1">✔</span>
-          <span class="leading-relaxed">{{ it }}</span>
-        </li>
-      </ul>
-    </section>
-
-    <!-- =========================
-         7) Opportunité investisseurs
-    ========================== -->
-    <section aria-label="Opportunité investisseurs" class="space-y-3">
-      <h2 class="section-title">
-        <span class="dot" aria-hidden="true"></span>
-        {{ t('investPlus.opportunity.title', 'Opportunité pour les investisseurs') }}
-      </h2>
-
-      <ul role="list" class="grid gap-4 grid-cols-1 sm:grid-cols-3 auto-rows-[1fr]">
-        <li v-for="(b, i) in oppoBullets" :key="`oppo-${i}`" role="listitem" class="card h-full">
-          <div class="font-medium">{{ b }}</div>
-        </li>
-      </ul>
-
-    </section>
-
-    <!-- =========================
-         8) Demander l'accès à l'espace documentaire
-    ========================== -->
-    <section id="dataroom" aria-label="Demande d'accès espace documentaire" class="space-y-8 border-t border-neutral-800/60 pt-12">
+    <section id="dataroom" aria-label="Demande d'accès espace documentaire" class="space-y-8 border-t border-emerald-800/30 pt-12 animate-slide-up animation-delay-200">
       <header class="space-y-2">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-800 bg-neutral-900 text-xs opacity-80">
-          <span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-800 bg-neutral-900 text-xs opacity-80 hover:border-emerald-700/60 hover:bg-neutral-800 transition-all duration-300">
+          <span class="inline-block h-2 w-2 rounded-full bg-emerald-400 pulse-dot"></span>
           <span>Formulaire d'accès</span>
         </div>
         <h2 class="text-2xl md:text-3xl font-bold">
-          <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-white to-emerald-300">
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-white to-emerald-300 animate-gradient">
             Demander l'accès aux documents
           </span>
         </h2>
@@ -206,33 +41,43 @@
       </header>
 
       <!-- Message de succès -->
-      <div v-if="formState === 'success'" class="p-6 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
-        <div class="flex items-center gap-3 font-semibold mb-2 text-lg">
-          <span class="text-2xl">✓</span>
-          Demande envoyée avec succès !
+      <Transition name="success-slide">
+        <div v-if="formState === 'success'" class="p-6 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 success-message">
+          <div class="flex items-center gap-3 font-semibold mb-2 text-lg">
+            <span class="text-2xl success-icon">✓</span>
+            Demande envoyée avec succès !
+          </div>
+          <p class="opacity-90">
+            Nous allons examiner votre demande et vous enverrons les accès à l'espace documentaire sous 48h ouvrées.
+          </p>
         </div>
-        <p class="opacity-90">
-          Nous allons examiner votre demande et vous enverrons les accès à l'espace documentaire sous 48h ouvrées.
-        </p>
-      </div>
+      </Transition>
 
       <!-- Message d'erreur -->
-      <div v-if="formState === 'error'" class="p-6 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400">
-        <div class="flex items-center gap-3 font-semibold mb-2">
-          <span class="text-xl">✕</span>
-          Erreur lors de l'envoi
+      <Transition name="error-shake">
+        <div v-if="formState === 'error'" class="p-6 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 error-message">
+          <div class="flex items-center gap-3 font-semibold mb-2">
+            <span class="text-xl error-icon">✕</span>
+            Erreur lors de l'envoi
+          </div>
+          <p class="opacity-90">{{ errorMessage }}</p>
         </div>
-        <p class="opacity-90">{{ errorMessage }}</p>
-      </div>
+      </Transition>
 
       <!-- Formulaire de demande d'accès -->
-      <div v-if="formState !== 'success'" class="space-y-4">
+      <div v-if="formState !== 'success'" class="space-y-6">
         <div class="flex items-center justify-between">
           <h3 class="text-xl md:text-2xl font-bold">Formulaire de demande d'accès</h3>
           <span class="text-xs opacity-60">* Champs obligatoires</span>
         </div>
 
-        <form @submit.prevent="handleSubmit" class="space-y-6">
+        <!-- Form wrapper avec design moderne -->
+        <div class="relative rounded-2xl border border-emerald-800/40 bg-gradient-to-br from-emerald-900/10 via-neutral-900 to-neutral-950 p-6 md:p-8 overflow-hidden form-premium">
+          <!-- Glow effect -->
+          <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent pointer-events-none glow-effect"></div>
+          <div class="absolute -top-20 -right-20 w-40 h-40 bg-emerald-500/10 rounded-full blur-3xl floating-orb"></div>
+
+          <form @submit.prevent="handleSubmit" class="space-y-6 relative z-10">
           <!-- Nom et Prénom -->
           <div class="grid md:grid-cols-2 gap-4">
             <div>
@@ -353,77 +198,58 @@
             <button
               type="submit"
               :disabled="isSubmitting"
-              class="px-6 py-3 rounded-lg bg-emerald-500 text-black font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed"
-              :class="isSubmitting ? 'opacity-70' : 'hover:scale-[1.02]'"
+              class="px-6 py-3 rounded-lg bg-gradient-to-r from-emerald-500 to-emerald-600 text-black font-semibold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-emerald-500/20 btn-submit-premium"
+              :class="isSubmitting ? 'opacity-70 scale-95' : 'hover:scale-[1.02] hover:shadow-emerald-500/40 hover:shadow-2xl'"
             >
-              <span v-if="isSubmitting">Envoi en cours...</span>
-              <span v-else>Envoyer ma demande</span>
+              <span v-if="isSubmitting" class="flex items-center justify-center gap-2">
+                <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Envoi en cours...
+              </span>
+              <span v-else class="flex items-center justify-center gap-2">
+                Envoyer ma demande
+                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+              </span>
             </button>
             <RouterLink
               to="/contact"
-              class="px-6 py-3 rounded-lg border border-neutral-700 font-semibold hover:bg-neutral-800 transition text-center"
+              class="px-6 py-3 rounded-lg border border-neutral-700 font-semibold hover:bg-neutral-800 hover:border-emerald-700/40 transition-all duration-300 text-center group hover:scale-[1.01]"
             >
               Nous contacter directement
             </RouterLink>
           </div>
         </form>
-      </div>
-
-      <!-- Documents disponibles -->
-      <div class="space-y-3">
-        <h3 class="text-xl md:text-2xl font-bold">Documents disponibles après validation</h3>
-        <div class="grid md:grid-cols-3 gap-4">
-          <Doc name="Pitch deck" desc="Présentation synthétique du projet"/>
-          <Doc name="Études techniques" desc="Détails techniques et d'avancement"/>
-          <Doc name="Cadre juridique" desc="Cadre légal, conformité et risques"/>
-          <Doc name="Modèle financier" desc="Structure de financement et projections"/>
-          <Doc name="Gouvernance" desc="Organisation, équipe et calendrier"/>
-          <Doc name="Due diligence" desc="Rapports d'audit et de conformité"/>
         </div>
       </div>
 
-      <!-- Comment ça marche -->
-      <div class="space-y-3">
-        <h3 class="text-xl md:text-2xl font-bold">Comment ça marche ?</h3>
-        <ol class="grid md:grid-cols-3 gap-4">
-          <StepDataroom n="1" title="Demande" desc="Remplissez le formulaire ci-dessus"/>
-          <StepDataroom n="2" title="Validation" desc="Examen sous 48h ouvrées"/>
-          <StepDataroom n="3" title="Accès" desc="Réception des identifiants par email"/>
-        </ol>
-      </div>
-
       <!-- Règles -->
-      <div class="space-y-3 p-6 rounded-xl border border-neutral-800 bg-neutral-900/50">
-        <h3 class="text-lg font-bold">Règles d'utilisation</h3>
+      <div class="space-y-3 p-6 rounded-xl border border-neutral-800 bg-neutral-900/50 hover:border-emerald-700/40 hover:bg-neutral-800/70 transition-all duration-300">
+        <h3 class="text-lg font-bold flex items-center gap-2">
+          <span class="text-xl">📋</span>
+          Règles d'utilisation
+        </h3>
         <ul class="space-y-2 opacity-80 text-sm">
-          <li class="flex items-start gap-2">
+          <li class="flex items-start gap-2 hover:opacity-100 transition-opacity">
             <span class="text-emerald-400 mt-0.5">✓</span>
             <span>Accès accordé uniquement après validation de votre profil</span>
           </li>
-          <li class="flex items-start gap-2">
+          <li class="flex items-start gap-2 hover:opacity-100 transition-opacity">
             <span class="text-emerald-400 mt-0.5">✓</span>
             <span>Documents en lecture seule, protégés par mot de passe</span>
           </li>
-          <li class="flex items-start gap-2">
+          <li class="flex items-start gap-2 hover:opacity-100 transition-opacity">
             <span class="text-emerald-400 mt-0.5">✓</span>
             <span>Accord de confidentialité (NDA) requis pour certains documents sensibles</span>
           </li>
-          <li class="flex items-start gap-2">
+          <li class="flex items-start gap-2 hover:opacity-100 transition-opacity">
             <span class="text-emerald-400 mt-0.5">✓</span>
             <span>Usage strictement limité à l'évaluation du projet d'investissement</span>
           </li>
         </ul>
       </div>
     </section>
-
-    <!-- =========================
-         9) CTA finaux
-    ========================== -->
-    <footer class="flex flex-wrap gap-3 border-t border-neutral-800/60 pt-6 mt-12">
-      <RouterLink to="/contact" class="btn-primary">
-        {{ t('hero.ctaContact', 'Nous contacter') }}
-      </RouterLink>
-    </footer>
   </section>
 </template>
 
@@ -437,21 +263,6 @@ import WatermarkSeals from '../components/WatermarkSeals.vue'
 
 const { t, tm } = useI18n()
 
-// Cadre légal (3 clés courtes uniquement)
-const legalList = computed(() => {
-  const items = [
-    t('home.legal.mou', ''),
-    t('home.legal.nyConvention', ''),
-    t('home.legal.bilateral', '')
-  ].filter(Boolean)
-  return items
-})
-
-// Opportunité investisseurs (3 bullets)
-const oppoBullets = computed(() => {
-  const arr = tm('investPlus.opportunity.bullets') || []
-  return Array.isArray(arr) ? arr.filter(Boolean) : []
-})
 
 // État du formulaire
 const formState = ref('idle')
@@ -548,44 +359,267 @@ const handleSubmit = async () => {
     isSubmitting.value = false
   }
 }
-
-// Petit composant interne pour les étapes processus d'investissement
-const Step = {
-  props: { n: String, title: String },
-  template: `
-    <li class="card h-full">
-      <div class="text-2xl">{{ n }}️⃣</div>
-      <div class="font-semibold mt-1">{{ title }}</div>
-    </li>
-  `
-}
-
-// Composant pour les étapes de la dataroom
-const StepDataroom = {
-  props: { n: String, title: String, desc: String },
-  template: `
-    <li class="p-5 rounded-xl border border-neutral-800 bg-neutral-900">
-      <div class="text-2xl mb-2">{{ n }}️⃣</div>
-      <div class="font-semibold mb-1">{{ title }}</div>
-      <p class="text-sm opacity-80">{{ desc }}</p>
-    </li>
-  `
-}
-
-// Composant pour les documents
-const Doc = {
-  props: { name: String, desc: String },
-  template: `
-    <div class="p-5 rounded-xl border border-neutral-800 bg-neutral-900">
-      <div class="font-semibold mb-1">{{ name }}</div>
-      <p class="text-sm opacity-80">{{ desc }}</p>
-    </div>
-  `
-}
 </script>
 
 <style scoped>
-/* Entêtes homogènes */
+/* ========================================
+   ANIMATIONS & KEYFRAMES
+======================================== */
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide up animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gradient animation */
+@keyframes gradientFlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Pulse dot */
+@keyframes pulseDot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+/* Floating orb */
+@keyframes floatingOrb {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: translate(20px, -20px) scale(1.1);
+    opacity: 0.15;
+  }
+}
+
+/* Glow pulse */
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 0.15;
+  }
+}
+
+/* Success icon pop */
+@keyframes successPop {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Error shake */
+@keyframes errorShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+/* Apply animations */
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientFlow 8s ease infinite;
+}
+
+.pulse-dot {
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
+.floating-orb {
+  animation: floatingOrb 8s ease-in-out infinite;
+}
+
+.glow-effect {
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+/* Animation delays */
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+/* Success/Error Transitions */
+.success-slide-enter-active {
+  animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.success-slide-leave-active {
+  animation: fadeIn 0.3s reverse;
+}
+
+.error-shake-enter-active {
+  animation: errorShake 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.error-shake-leave-active {
+  animation: fadeIn 0.3s reverse;
+}
+
+.success-icon {
+  display: inline-block;
+  animation: successPop 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.error-icon {
+  display: inline-block;
+  animation: errorShake 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.success-message,
+.error-message {
+  box-shadow: 0 10px 40px -10px currentColor;
+}
+
+/* ========================================
+   FORM PREMIUM EFFECTS
+======================================== */
+
+.form-premium {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-premium:hover {
+  border-color: rgba(52, 211, 153, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 60px -20px rgba(52, 211, 153, 0.3);
+}
+
+/* ========================================
+   BUTTON PREMIUM EFFECTS
+======================================== */
+
+.btn-submit-premium {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-submit-premium::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-submit-premium:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-submit-premium:active {
+  transform: scale(0.98);
+}
+
+/* ========================================
+   CARD EFFECTS
+======================================== */
+
+.doc-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.doc-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.doc-card:hover::before {
+  left: 100%;
+}
+
+.doc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px -10px rgba(52, 211, 153, 0.3);
+}
+
+/* ========================================
+   CONTAINER PARALLAX
+======================================== */
+
+.dataroom-container {
+  perspective: 1000px;
+}
+
+/* ========================================
+   ENTÊTES HOMOGÈNES
+======================================== */
 .section-head {
   display: flex;
   flex-direction: column;
@@ -680,53 +714,112 @@ const Doc = {
   border-radius: 0.5rem;
   background-color: rgb(23 23 23);
   border: 1px solid rgb(38 38 38);
-  transition: all 0.15s ease-in-out;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   color: white;
+  position: relative;
 }
 
 .form-input:focus {
   outline: none;
   border-color: rgb(52 211 153);
   background-color: rgb(38 38 38);
+  box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.1), 0 10px 30px -10px rgba(52, 211, 153, 0.2);
+  transform: translateY(-2px) scale(1.005);
+}
+
+.form-input:hover:not(:focus) {
+  border-color: rgb(64, 64, 64);
+  background-color: rgb(30, 30, 30);
+  transform: translateY(-1px);
 }
 
 .form-input::placeholder {
   color: rgb(115 115 115);
+  transition: color 0.3s;
+}
+
+.form-input:focus::placeholder {
+  color: rgb(140 140 140);
 }
 
 select.form-input {
   cursor: pointer;
 }
 
+textarea.form-input {
+  resize: vertical;
+  min-height: 120px;
+}
+
+textarea.form-input:focus {
+  min-height: 150px;
+}
+
+/* ========================================
+   SMOOTH SCROLL & PERFORMANCE
+======================================== */
+
+.dataroom-container {
+  scroll-behavior: smooth;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ========================================
+   CARD HOVER 3D EFFECT
+======================================== */
+
+.card {
+  transform-style: preserve-3d;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  transform: translateZ(10px);
+}
+
+/* ========================================
+   LOADING STATE SHIMMER
+======================================== */
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.btn-submit-premium:disabled {
+  background: linear-gradient(90deg, #059669 0%, #10b981 50%, #059669 100%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+/* ========================================
+   FOCUS VISIBLE IMPROVEMENTS
+======================================== */
+
+*:focus-visible {
+  outline: 2px solid rgba(52, 211, 153, 0.5);
+  outline-offset: 4px;
+  border-radius: 0.375rem;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline-color: rgba(52, 211, 153, 0.8);
+}
+
 /* Thème sombre conservé (aucune régression visuelle) */
-
-/* Conteneur vidéo responsive avec iframe YouTube */
-.video-container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 56.25%; /* Aspect ratio 16:9 */
-  border-radius: 1rem;
-  overflow: hidden;
-  background-color: rgb(23 23 23);
-  border: 1px solid rgb(38 38 38);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease-in-out;
-}
-
-.video-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* Effet hover sur le conteneur */
-.video-container:hover {
-  border-color: rgb(52 211 153);
-  box-shadow: 0 10px 40px rgba(52, 211, 153, 0.2);
-}
 </style>

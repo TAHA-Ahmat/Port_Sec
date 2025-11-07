@@ -135,10 +135,6 @@
                   <img :src="logoGpm" alt="GPM" class="h-8 w-auto" />
                   <div class="logo-ring"></div>
                 </div>
-                <div class="flex flex-col">
-                  <span class="text-sm font-bold text-emerald-400">GPM</span>
-                  <span class="text-xs text-neutral-500">Navigation</span>
-                </div>
               </div>
               <!-- Bouton close avec rotation -->
               <button
