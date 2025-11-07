@@ -7,6 +7,7 @@ export default createRouter({
   routes: [
     { path: '/', component: Home, meta: { title: 'Accueil' } },
     { path: '/projects', component: () => import('../views/Projects.vue'), meta: { title: 'Nos Projets' } },
+    { path: '/projects/douala', component: () => import('../views/ProjectDouala.vue'), meta: { title: 'Port Sec de Douala' } },
     { path: '/projects/kribi', component: () => import('../views/ProjectKribi.vue'), meta: { title: 'Port Sec de Kribi' } },
     { path: '/projects/ngaoundere', component: () => import('../views/ProjectNgaoundere.vue'), meta: { title: 'Port Sec de Ngaoundéré' } },
     {

@@ -4,12 +4,12 @@
     "projects": "Projects",
     "project": "Project",
     "impact": "Impact",
-    "dataroom": "Document room",
+    "dataroom": "Data Room",
     "contact": "Contact",
     "invest": "Invest"
   },
   "hero": {
-    "tag": "FS 75% • NDP 2026–2030",
+    "tag": "ODA 75% • NDP 2026–2030",
     "title": "Dry Port of Douala: the logistics hub of tomorrow",
     "subtitle": "A key project to boost trade and development between Chad and the region.",
     "ctaInvest": "Invest",
@@ -133,6 +133,46 @@
       }
     ]
   },
+  "whyGpm": {
+    "title": "Why GPM?",
+    "items": [
+      {
+        "icon": "🎯",
+        "title": "National exclusivity",
+        "text": "Exclusive operator mandated by the Chadian State for national freight management via the Douala Dry Port."
+      },
+      {
+        "icon": "💰",
+        "title": "Cost reduction",
+        "text": "Up to -40% on logistics costs and -50% on transit times for economic operators."
+      },
+      {
+        "icon": "⚖️",
+        "title": "Solid legal framework",
+        "text": "Signed BOT Convention, Chad-Cameroon bilateral agreements and international protection (New York Convention 1967)."
+      }
+    ]
+  },
+  "network": {
+    "title": "Our logistics network",
+    "sites": [
+      {
+        "name": "Douala",
+        "status": "Dry Port • Operational",
+        "capacity": "10 ha • 3.5K TEU"
+      },
+      {
+        "name": "Kribi",
+        "status": "Maritime platform • Q2 2026",
+        "capacity": "25 ha • 45K TEU"
+      },
+      {
+        "name": "Ngaoundéré",
+        "status": "Rail hub • Q4 2026",
+        "capacity": "35 ha • 60K TEU"
+      }
+    ]
+  },
   "impactKpis": {
     "title": "Our concrete results",
     "items": [
@@ -205,12 +245,39 @@
     "secondaryLabel": "Request investor access"
   },
   "projectsPage": {
+    "breadcrumb": "Projects",
     "hero": {
       "title": "Our Projects — Building the logistics infrastructure of the future",
       "intro": "GPM develops a network of dry ports and logistics platforms to connect Chad to the sea and reduce external trade costs.",
       "ctaPrimary": "See Chad Dry Port in Douala",
+      "ctaDiscover": "Discover our projects",
       "ctaSecondary": "Contact us",
       "mapAlt": "Map of Chad-Cameroon logistics corridor"
+    },
+    "portfolio": {
+      "title": "Portfolio Overview",
+      "totalArea": "Total planned area",
+      "totalCapacity": "Total annual capacity",
+      "totalInvestment": "Total investment (XAF)",
+      "totalJobs": "Direct jobs created"
+    },
+    "roadmap": {
+      "title": "Deployment Roadmap",
+      "phase1": {
+        "period": "Phase 1 • 2024-2025",
+        "description": "Launch of first Dry Port",
+        "status": "In progress"
+      },
+      "phase2": {
+        "period": "Phase 2 • 2026-2028",
+        "description": "Port expansion and export",
+        "status": "Launch Q2 2026"
+      },
+      "phase3": {
+        "period": "Phase 3 • 2028-2030",
+        "description": "Multimodal rail hub",
+        "status": "Launch Q4 2026"
+      }
     },
     "overview": {
       "title": "An integrated logistics network serving Chad",
@@ -219,8 +286,33 @@
     "grid": {
       "title": "Project Portfolio",
       "seeDetails": "See details",
+      "discoverMain": "Discover the flagship project",
+      "learnMore": "Learn more about this project",
       "comingSoon": "Coming soon",
       "inPreparation": "In preparation"
+    },
+    "comparison": {
+      "title": "Site Comparison",
+      "criteria": "Criteria",
+      "area": "Area",
+      "capacity": "Annual capacity",
+      "investment": "Investment",
+      "jobs": "Direct jobs",
+      "phase": "Phase / Launch",
+      "advantages": "Key advantages",
+      "doualaAdvantages": ["PAD proximity", "Integrated services", "1st operational"],
+      "kribiAdvantages": ["Deep-water port", "Export-focused", "Maritime connection"],
+      "ngaoundereAdvantages": ["Rail hub", "Central position", "Multimodal rail+road"],
+      "status": "Status",
+      "launch": "Launch",
+      "ongoing": "In progress",
+      "q2": "Q2",
+      "q4": "Q4"
+    },
+    "badges": {
+      "active": "✓ In progress",
+      "kribiPrep": "○ In preparation • Launch Q2 2026",
+      "ngaoundereStudy": "○ Under study • Launch Q4 2026"
     },
     "douala": {
       "title": "Chad Dry Port in Douala",
@@ -264,6 +356,10 @@
         "strategy": {
           "title": "Development Strategy 2024–2030"
         }
+      },
+      "video": {
+        "title": "Discover the Port in video",
+        "subtitle": "Dive into the heart of the Douala Dry Port: modern infrastructure, logistics flows and real-time operations."
       }
     },
     "beforeAfter": {
@@ -283,7 +379,7 @@
           "gain": "− 25 days"
         },
         {
-          "indicator": "Handlings",
+          "indicator": "Handling operations",
           "before": "≥ 4",
           "after": "1",
           "gain": "− 3 operations"
@@ -297,7 +393,7 @@
         {
           "indicator": "Services",
           "before": "Scattered",
-          "after": "Centralized (one-stop desk)",
+          "after": "Centralized (one-stop shop)",
           "gain": "—"
         }
       ],
@@ -323,7 +419,7 @@
       "Significant socio-economic impact",
       "Strong institutional partnerships",
       "Structural reduction in logistics costs",
-      "One-stop desk and PAD/Customs integration",
+      "One-stop shop and PAD/Customs integration",
       "End-to-end traceability (customs & GPS)",
       "Digitized formalities and payments",
       "Banking & customs facilitation",
@@ -335,7 +431,7 @@
     "capex": "CAPEX",
     "equity": "Equity",
     "debt": "Debt",
-    "apd": "FS"
+    "apd": "ODA"
   },
   "kpiValues": {
     "capexXaf": "XAF 58 bn",
@@ -370,8 +466,14 @@
     "a3": "Progressive rollout aligned with Vision 2030."
   },
   "dataroom": {
-    "open": "Document room",
-    "cta": "Request access"
+    "open": "Data Room",
+    "cta": "Request access",
+    "video": {
+      "title": "Official Video of the Port of Douala",
+      "subtitle": "Discover the Autonomous Port of Douala (PAD), the strategic infrastructure at the heart of the Chad Dry Port project.",
+      "watchBtn": "Watch video",
+      "cta": "Click to open in new tab"
+    }
   },
   "location": {
     "title": "Location",
@@ -385,38 +487,38 @@
     "title": "Financial structure",
     "equity": "Equity",
     "debt": "Debt",
-    "grants": "Grants / FS"
+    "grants": "Grants / ODA"
   },
   "home": {
     "problem": {
-      "intro": "Chad is largely dependent on the PAD: breaks in load, scattered formalities and long delays weigh on costs and competitiveness.",
-      "title": "Context & pain points",
+      "intro": "Chad heavily depends on the Port of Douala (PAD): multiple transshipment points, fragmented procedures, and extended delays drive up costs and undermine competitiveness.",
+      "title": "Context & Challenges",
       "bullets": [
         "Landlocked country, 1,850 km from the Atlantic",
-        "80–90% of Chad’s trade goes via the Port of Douala (CEMAC)",
+        "80–90% of external trade transits through the Port of Douala (CEMAC)",
         "Current lead times: 21–30 days",
-        "≈ 4 handlings, scattered formalities",
+        "≈ 4 cargo handling operations, fragmented procedures",
         "High logistics costs",
-        "Limited visibility on flows and documents",
-        "Lower competitiveness for Chadian importers",
-        "Unsecured flows (losses, pilferage)"
+        "Limited visibility into cargo flows and documentation",
+        "Reduced competitiveness for Chadian importers",
+        "Cargo security not guaranteed (losses, theft, and tampering)"
       ]
     },
     "solution": {
       "title": "The Dry Port solution",
       "features": [
-        "22-ha dedicated zone in Douala – Bonaberi",
-        "One-stop window: Chadian Customs, BNFT, banks, freight forwarders",
+        "Dedicated 22-hectare zone in Douala – Bonaberi",
+        "One-stop shop: Chadian Customs, BNFT, banks, freight forwarders",
         "Digitalization: GPS, scanners, e-invoicing",
-        "Multimodal connection: road + rail (2-km extension)",
+        "Multimodal connection: road + rail (2 km extension)",
         "Target outcome: 5 days (costs −30 to −40%)",
-        "Integrated Customs & forwarder workflows",
+        "Integrated Customs & transit operations (unified workflows)",
         "Near-real-time customs & GPS traceability",
         "Dedicated SLAs and priority channel to Chad",
-        "Lower disputes and pilferage",
+        "Reduced disputes and cargo tampering",
         "Integrated banking support for payments",
         "Regional interoperability (CEMAC)",
-        "Optimized disputes through fast arbitration"
+        "Streamlined dispute resolution through rapid arbitration"
       ]
     },
     "beforeAfter": {
@@ -425,16 +527,16 @@
         "before": "Before",
         "after": "After"
       },
-      "metric": "Metric",
+      "metric": "Indicator",
       "rows": [
-        { "metric": "Lead time", "before": "≈ 30 days", "after": "≈ 5 days" },
-        { "metric": "Handlings", "before": ">= 4", "after": "1" },
-        { "metric": "Services", "before": "Scattered", "after": "Centralized (one-stop)" },
+        { "metric": "Lead times", "before": "≈ 30 days", "after": "≈ 5 days" },
+        { "metric": "Handling operations", "before": ">= 4", "after": "1" },
+        { "metric": "Services", "before": "Scattered", "after": "Centralized (one-stop shop)" },
         { "metric": "Costs", "before": "High", "after": "−30 to −40 %" }
       ],
       "notes": [
         "Indicative targets to be confirmed in operations.",
-        "Progressive optimizations via digitization and integration."
+        "Gradual optimizations through digitalization and integration."
       ],
       "handle": "@dryport-avant-apres",
       "assets": {
@@ -443,7 +545,7 @@
       }
     },
     "kpiOps": {
-      "title": "Capacity & resources",
+      "title": "Capacities & resources",
       "areaHa": "10 ha",
       "capacityEvp": "3,500 TEU",
       "railFleet": "2 locomotives + 8 wagons",
@@ -451,9 +553,9 @@
     },
     "legal": {
       "title": "Legal & institutional framework",
-      "mou": "Memorandum of Understanding signed on 23 June 2022",
-      "nyConvention": "New York Convention (1965) — access to the sea for landlocked states",
-      "bilateral": "Chad–Cameroon bilateral agreements: Chadian customs zone in Douala"
+      "mou": "Memorandum of Understanding signed June 23, 2022",
+      "nyConvention": "UN Convention on Transit Trade of Land-locked States (New York, 1965) — guaranteeing sea access for landlocked countries",
+      "bilateral": "Chad–Cameroon bilateral agreements: recognition of a Chadian customs jurisdiction zone in Douala"
     }
   },
   "investPlus": {
@@ -462,7 +564,7 @@
       "bullets": [
         "Integrated and secure logistics platform",
         "Lead time: 30 → 5 days; costs −30 to −40 %",
-        "One-stop desk & GPS/scanner traceability",
+        "One-stop shop & GPS/scanner traceability",
         "2,400 TEU capacity; 2-km rail"
       ]
     },
@@ -482,7 +584,7 @@
     "services": {
       "title": "Services & operational benefits",
       "items": [
-        "One-stop window (Customs, BNFT, banks, forwarders)",
+        "One-stop shop (Customs, BNFT, banks, forwarders)",
         "Real-time digital tracking (GPS)",
         "E-invoicing & harmonized procedures",
         "Enhanced security and fraud reduction"
@@ -522,7 +624,7 @@
     }
   },
   "dataroomPlus": {
-    "title": "Document room",
+    "title": "Data Room",
     "filters": {
       "all": "All",
       "legal": "Legal",
@@ -553,7 +655,8 @@
     "copyright": "© 2025 Genesis Port Management (GPM). All rights reserved.",
     "tagline": "Genesis Port Management",
     "links": {
-      "project": "Project",
+      "home": "Home",
+      "project": "Projects",
       "impact": "Impact",
       "invest": "Invest",
       "dataroom": "Data Room",

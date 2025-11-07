@@ -53,12 +53,12 @@
           :style="{ transform: `translateY(${parallaxCtas}px)` }"
         >
           <RouterLink
-            to="/contact"
+            to="/projects/douala"
             ref="ctaPrimaryRef"
             class="cta-primary px-6 py-3 rounded-xl bg-emerald-500 text-neutral-900 font-bold hover:bg-emerald-400 shadow-2xl shadow-black/60 hover:shadow-emerald-500/40 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-600 text-base md:text-lg inline-block"
-            :aria-label="t('projectsPage.hero.ctaPrimary', 'Nous contacter')"
+            :aria-label="t('projectsPage.hero.ctaPrimary', 'Voir le Port Sec de Douala')"
           >
-            {{ t('projectsPage.hero.ctaPrimary', 'Nous contacter') }}
+            {{ t('projectsPage.hero.ctaPrimary', 'Voir le Port Sec de Douala') }}
           </RouterLink>
         </div>
       </div>

@@ -31,7 +31,7 @@
     </header>
 
     <!-- Bento Grid -->
-    <div class="bento-grid relative z-10 mb-12">
+    <div class="bento-grid max-w-5xl mx-auto relative z-10 mb-12">
 
       <!-- EMAIL CARD (Large XL) - Priority -->
       <div class="bento-card email-card xl-card" style="animation-delay: 0.2s">
@@ -148,7 +148,7 @@
       </div>
 
       <!-- SOCIAL MEDIA CARD (Wide) -->
-      <div class="bento-card social-card" style="animation-delay: 0.35s; grid-column: span 2;">
+      <div class="bento-card social-card" style="animation-delay: 0.35s;">
         <div class="card-glow social-glow"></div>
         <div class="card-content">
           <div class="flex items-center gap-3 mb-4">
@@ -206,75 +206,6 @@
         </div>
       </div>
 
-    </div>
-
-    <!-- FAQ SECTION -->
-    <div class="relative z-20 mt-16 animate-fade-in" style="animation-delay: 0.6s">
-      <div class="text-center space-y-3 mb-10">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-neutral-800 bg-neutral-900/50 text-xs opacity-80 backdrop-blur-sm">
-          <span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
-          <span>Questions fréquentes</span>
-        </div>
-        <h2 class="text-2xl sm:text-3xl font-bold">
-          <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-white to-emerald-300">
-            FAQ
-          </span>
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-4">
-        <!-- FAQ 1 -->
-        <div class="p-5 rounded-xl border border-neutral-800 bg-neutral-900 hover:border-emerald-700/50 transition-all">
-          <h3 class="font-semibold text-emerald-300 mb-2 flex items-start gap-2">
-            <svg class="w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-            <span>Quel est le délai de réponse moyen ?</span>
-          </h3>
-          <p class="text-sm opacity-80 leading-relaxed pl-7">
-            Nous répondons sous 48h ouvrées pour les emails, et sous 2h pour WhatsApp pendant les horaires d'ouverture.
-          </p>
-        </div>
-
-        <!-- FAQ 2 -->
-        <div class="p-5 rounded-xl border border-neutral-800 bg-neutral-900 hover:border-emerald-700/50 transition-all">
-          <h3 class="font-semibold text-emerald-300 mb-2 flex items-start gap-2">
-            <svg class="w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-            <span>Comment accéder à l'espace documentaire ?</span>
-          </h3>
-          <p class="text-sm opacity-80 leading-relaxed pl-7">
-            Contactez-nous via email ou WhatsApp avec vos coordonnées professionnelles. Accès réservé aux investisseurs institutionnels et partenaires.
-          </p>
-        </div>
-
-        <!-- FAQ 3 -->
-        <div class="p-5 rounded-xl border border-neutral-800 bg-neutral-900 hover:border-emerald-700/50 transition-all">
-          <h3 class="font-semibold text-emerald-300 mb-2 flex items-start gap-2">
-            <svg class="w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-            <span>Puis-je visiter vos bureaux ?</span>
-          </h3>
-          <p class="text-sm opacity-80 leading-relaxed pl-7">
-            Oui, sur rendez-vous uniquement. Contactez-nous pour planifier une visite de nos locaux à N'Djamena.
-          </p>
-        </div>
-
-        <!-- FAQ 4 -->
-        <div class="p-5 rounded-xl border border-neutral-800 bg-neutral-900 hover:border-emerald-700/50 transition-all">
-          <h3 class="font-semibold text-emerald-300 mb-2 flex items-start gap-2">
-            <svg class="w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-            <span>Dans quelles langues pouvez-vous communiquer ?</span>
-          </h3>
-          <p class="text-sm opacity-80 leading-relaxed pl-7">
-            Nous communiquons en français et en anglais. Notre équipe peut également assurer des échanges en arabe.
-          </p>
-        </div>
-      </div>
     </div>
 
     <!-- Footer Info -->
@@ -566,6 +497,7 @@ const copyEmail = async () => {
 /* Social Media Card */
 .social-card {
   --glow-color: rgba(139, 92, 246, 0.6);
+  grid-column: span 2;
   animation-delay: 0.35s;
   animation-duration: 6s;
 }
@@ -954,7 +886,8 @@ const copyEmail = async () => {
     grid-auto-rows: auto;
   }
 
-  .xl-card {
+  .xl-card,
+  .social-card {
     grid-column: span 1;
     padding: 1.75rem;
     min-height: auto !important;

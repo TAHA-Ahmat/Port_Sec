@@ -71,7 +71,33 @@
     </section>
 
     <!-- =========================
-         3) Points forts
+         3) Vidéo officielle du Port de Douala
+    ========================== -->
+    <section aria-label="Vidéo du Port de Douala" class="space-y-4">
+      <h2 class="section-title">
+        <span class="dot" aria-hidden="true"></span>
+        {{ t('dataroom.video.title', 'Vidéo officielle du Port de Douala') }}
+      </h2>
+
+      <p class="opacity-80 text-sm max-w-3xl">
+        {{ t('dataroom.video.subtitle', 'Découvrez en images le Port Autonome de Douala (PAD), infrastructure stratégique au cœur du projet Port Sec du Tchad.') }}
+      </p>
+
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/pWHDVTSn-5k?modestbranding=1&rel=0&showinfo=0&color=white&iv_load_policy=3&cc_load_policy=0&fs=1"
+          class="video-iframe"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy"
+          title="Vidéo officielle du Port de Douala"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- =========================
+         4) Points forts
     ========================== -->
     <section aria-label="Points forts" class="space-y-4">
       <h2 class="section-title">
@@ -100,7 +126,7 @@
     </section>
 
     <!-- =========================
-         4) Process 3 étapes (sans clés interdites)
+         5) Process 3 étapes (sans clés interdites)
     ========================== -->
     <section aria-label="Processus d'investissement" class="space-y-4">
       <h2 class="section-title">
@@ -127,7 +153,7 @@
     </section>
 
     <!-- =========================
-         5) Cadre légal (version courte)
+         6) Cadre légal (version courte)
     ========================== -->
     <section aria-label="Cadre légal" class="space-y-3">
       <h2 class="section-title">
@@ -146,7 +172,7 @@
     </section>
 
     <!-- =========================
-         6) Opportunité investisseurs
+         7) Opportunité investisseurs
     ========================== -->
     <section aria-label="Opportunité investisseurs" class="space-y-3">
       <h2 class="section-title">
@@ -163,7 +189,7 @@
     </section>
 
     <!-- =========================
-         7) Demander l'accès à l'espace documentaire
+         8) Demander l'accès à l'espace documentaire
     ========================== -->
     <section id="dataroom" aria-label="Demande d'accès espace documentaire" class="space-y-8 border-t border-neutral-800/60 pt-12">
       <header class="space-y-2">
@@ -391,7 +417,7 @@
     </section>
 
     <!-- =========================
-         8) CTA finaux
+         9) CTA finaux
     ========================== -->
     <footer class="flex flex-wrap gap-3 border-t border-neutral-800/60 pt-6 mt-12">
       <RouterLink to="/contact" class="btn-primary">
@@ -673,4 +699,34 @@ select.form-input {
 }
 
 /* Thème sombre conservé (aucune régression visuelle) */
+
+/* Conteneur vidéo responsive avec iframe YouTube */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 56.25%; /* Aspect ratio 16:9 */
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: rgb(23 23 23);
+  border: 1px solid rgb(38 38 38);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Effet hover sur le conteneur */
+.video-container:hover {
+  border-color: rgb(52 211 153);
+  box-shadow: 0 10px 40px rgba(52, 211, 153, 0.2);
+}
 </style>

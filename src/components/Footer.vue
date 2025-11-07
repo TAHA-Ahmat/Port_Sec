@@ -10,17 +10,26 @@
       <p class="text-xs opacity-60 mt-2">Genesis Port Management</p>
     </div>
 
-    <div class="max-w-6xl mx-auto px-4 grid gap-8 md:grid-cols-3">
+    <div class="max-w-6xl mx-auto px-4 grid gap-8 md:grid-cols-4">
 
-      <!-- Liens -->
+      <!-- Navigation -->
       <div>
-        <h4 class="text-sm font-semibold mb-2 text-gray-100">
-          {{ $t('nav.project') }}
+        <h4 class="text-sm font-semibold mb-3 text-gray-100">
+          Navigation
         </h4>
-        <ul class="space-y-1 text-sm">
-          <li><RouterLink to="/" class="hover:text-emerald-400 transition">{{ $t('footer.links.project') }}</RouterLink></li>
+        <ul class="space-y-2 text-sm">
+          <li><RouterLink to="/" class="hover:text-emerald-400 transition">{{ $t('footer.links.home') }}</RouterLink></li>
+          <li><RouterLink to="/projects" class="hover:text-emerald-400 transition">{{ $t('footer.links.project') }}</RouterLink></li>
           <li><RouterLink to="/impact" class="hover:text-emerald-400 transition">{{ $t('footer.links.impact') }}</RouterLink></li>
-          <li><RouterLink to="/dataroom" class="hover:text-emerald-400 transition">{{ $t('footer.links.invest') }}</RouterLink></li>
+        </ul>
+      </div>
+
+      <!-- Investisseurs -->
+      <div>
+        <h4 class="text-sm font-semibold mb-3 text-gray-100">
+          Investisseurs
+        </h4>
+        <ul class="space-y-2 text-sm">
           <li><RouterLink to="/dataroom" class="hover:text-emerald-400 transition">{{ $t('footer.links.dataroom') }}</RouterLink></li>
           <li><RouterLink to="/contact" class="hover:text-emerald-400 transition">{{ $t('footer.links.contact') }}</RouterLink></li>
         </ul>
@@ -28,23 +37,23 @@
 
       <!-- Contact -->
       <div>
-        <h4 class="text-sm font-semibold mb-2 text-gray-100">
+        <h4 class="text-sm font-semibold mb-3 text-gray-100">
           {{ $t('footer.contact.title') }}
         </h4>
-        <p class="text-sm opacity-80">
+        <p class="text-sm opacity-80 leading-relaxed">
           {{ $t('footer.contact.addr') }}
         </p>
       </div>
 
       <!-- Légal -->
       <div>
-        <h4 class="text-sm font-semibold mb-2 text-gray-100">
+        <h4 class="text-sm font-semibold mb-3 text-gray-100">
           {{ $t('footer.legal.mentions') }}
         </h4>
-        <p class="text-xs opacity-80">
+        <p class="text-xs opacity-80 leading-relaxed">
           {{ $t('footer.legal.cookies') }}
         </p>
-        <p class="text-xs mt-4 opacity-60">
+        <p class="text-xs mt-3 opacity-60">
           {{ $t('footer.updated') }}
         </p>
       </div>
