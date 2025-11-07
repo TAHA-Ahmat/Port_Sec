@@ -86,7 +86,79 @@
     />
 
     <!-- =========================
-         6. IMPACT & RÉSEAU – KPIs + Partenaires
+         6. POURQUOI GPM ? – Avantages compétitifs
+         ========================= -->
+    <section class="max-w-6xl mx-auto p-6 space-y-6">
+      <header class="flex items-center gap-2 text-sm opacity-80">
+        <span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
+        <h2 class="font-semibold">{{ t('advantages.title', 'Pourquoi GPM ?') }}</h2>
+      </header>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Avantage 1 -->
+        <div class="p-6 rounded-xl border border-emerald-800/40 bg-gradient-to-br from-emerald-900/20 to-neutral-900 hover:border-emerald-700/60 transition-all group">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+              🎯
+            </div>
+            <div class="flex-1">
+              <h3 class="font-bold text-lg mb-2 text-emerald-300">{{ t('advantages.exclusivity.title', 'Exclusivité nationale') }}</h3>
+              <p class="text-sm opacity-90 leading-relaxed">
+                {{ t('advantages.exclusivity.text', 'Opérateur exclusif mandaté par l\'État tchadien pour la gestion du fret national via le Port Sec de Douala.') }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avantage 2 -->
+        <div class="p-6 rounded-xl border border-blue-800/40 bg-gradient-to-br from-blue-900/20 to-neutral-900 hover:border-blue-700/60 transition-all group">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+              🔗
+            </div>
+            <div class="flex-1">
+              <h3 class="font-bold text-lg mb-2 text-blue-300">{{ t('advantages.network.title', 'Réseau intégré CEMAC') }}</h3>
+              <p class="text-sm opacity-90 leading-relaxed">
+                {{ t('advantages.network.text', 'Trois plateformes complémentaires (Douala, Kribi, Ngaoundéré) pour un maillage logistique optimal.') }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avantage 3 -->
+        <div class="p-6 rounded-xl border border-amber-800/40 bg-gradient-to-br from-amber-900/20 to-neutral-900 hover:border-amber-700/60 transition-all group">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-500/20 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+              💰
+            </div>
+            <div class="flex-1">
+              <h3 class="font-bold text-lg mb-2 text-amber-300">{{ t('advantages.cost.title', 'Réduction des coûts') }}</h3>
+              <p class="text-sm opacity-90 leading-relaxed">
+                {{ t('advantages.cost.text', 'Jusqu\'à -40% sur les coûts logistiques et -50% sur les délais de transit pour les opérateurs économiques.') }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avantage 4 -->
+        <div class="p-6 rounded-xl border border-purple-800/40 bg-gradient-to-br from-purple-900/20 to-neutral-900 hover:border-purple-700/60 transition-all group">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+              ⚖️
+            </div>
+            <div class="flex-1">
+              <h3 class="font-bold text-lg mb-2 text-purple-300">{{ t('advantages.legal.title', 'Cadre juridique solide') }}</h3>
+              <p class="text-sm opacity-90 leading-relaxed">
+                {{ t('advantages.legal.text', 'Convention BOT signée, accords bilatéraux Tchad-Cameroun et protection internationale (Convention de New York 1967).') }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         7. IMPACT & RÉSEAU – KPIs + Partenaires
          ========================= -->
     <section class="max-w-6xl mx-auto p-6 space-y-8">
       <header class="flex items-center gap-2 text-sm opacity-80">
@@ -106,6 +178,57 @@
         />
       </div>
 
+      <!-- Réseau visuel -->
+      <div class="p-8 rounded-2xl border border-neutral-800 bg-gradient-to-br from-neutral-900 to-neutral-950">
+        <h3 class="text-lg font-semibold opacity-90 mb-6 text-center">{{ t('network.title', 'Notre réseau logistique') }}</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Douala -->
+          <div class="text-center space-y-3">
+            <div class="relative inline-block">
+              <div class="w-20 h-20 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center text-3xl shadow-lg shadow-emerald-500/30">
+                🏗️
+              </div>
+              <div class="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-emerald-400 border-2 border-neutral-950 flex items-center justify-center text-xs font-bold">1</div>
+            </div>
+            <div>
+              <div class="font-bold text-emerald-300">Douala</div>
+              <div class="text-xs text-neutral-400">Port Sec • Opérationnel</div>
+              <div class="text-xs text-neutral-500 mt-1">10 ha • 3.5K EVP</div>
+            </div>
+          </div>
+
+          <!-- Kribi -->
+          <div class="text-center space-y-3">
+            <div class="relative inline-block">
+              <div class="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-3xl shadow-lg shadow-blue-500/30">
+                ⚓
+              </div>
+              <div class="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-yellow-400 border-2 border-neutral-950 flex items-center justify-center text-xs font-bold">2</div>
+            </div>
+            <div>
+              <div class="font-bold text-blue-300">Kribi</div>
+              <div class="text-xs text-neutral-400">Plateforme maritime • T2 2026</div>
+              <div class="text-xs text-neutral-500 mt-1">25 ha • 45K EVP</div>
+            </div>
+          </div>
+
+          <!-- Ngaoundéré -->
+          <div class="text-center space-y-3">
+            <div class="relative inline-block">
+              <div class="w-20 h-20 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-3xl shadow-lg shadow-purple-500/30">
+                🚂
+              </div>
+              <div class="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-blue-400 border-2 border-neutral-950 flex items-center justify-center text-xs font-bold">3</div>
+            </div>
+            <div>
+              <div class="font-bold text-purple-300">Ngaoundéré</div>
+              <div class="text-xs text-neutral-400">Hub ferroviaire • T4 2026</div>
+              <div class="text-xs text-neutral-500 mt-1">35 ha • 60K EVP</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Partenaires -->
       <div class="space-y-3">
         <h3 class="text-lg font-semibold opacity-90">{{ t('partners.title', 'Ils nous accompagnent') }}</h3>
@@ -120,7 +243,83 @@
     </section>
 
     <!-- =========================
-         7. ACTUALITÉS & AVANCEMENT
+         8. TÉMOIGNAGES & CONFIANCE
+         ========================= -->
+    <section class="max-w-6xl mx-auto p-6 space-y-6">
+      <header class="flex items-center gap-2 text-sm opacity-80">
+        <span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
+        <h2 class="font-semibold">{{ t('testimonials.title', 'Ils nous font confiance') }}</h2>
+      </header>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Témoignage 1 -->
+        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center text-2xl">
+              💼
+            </div>
+            <div class="flex-1">
+              <h3 class="font-semibold text-emerald-300">Opérateurs économiques tchadiens</h3>
+              <p class="text-xs text-neutral-400">Secteur Import/Export</p>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 italic leading-relaxed">
+            "{{ t('testimonials.operators', 'Le Port Sec de Douala a transformé notre chaîne logistique. Nos délais sont réduits de moitié et nos coûts ont baissé de 35%.') }}"
+          </p>
+        </div>
+
+        <!-- Témoignage 2 -->
+        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-2xl">
+              🏛️
+            </div>
+            <div class="flex-1">
+              <h3 class="font-semibold text-blue-300">Autorités portuaires</h3>
+              <p class="text-xs text-neutral-400">Partenaires CEMAC</p>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 italic leading-relaxed">
+            "{{ t('testimonials.authorities', 'GPM apporte une solution moderne et professionnelle qui fluidifie le transit régional tout en respectant les normes internationales.') }}"
+          </p>
+        </div>
+
+        <!-- Témoignage 3 -->
+        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-500/20 flex items-center justify-center text-2xl">
+              🏢
+            </div>
+            <div class="flex-1">
+              <h3 class="font-semibold text-amber-300">Investisseurs institutionnels</h3>
+              <p class="text-xs text-neutral-400">Partenaires financiers</p>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 italic leading-relaxed">
+            "{{ t('testimonials.investors', 'Un projet solide, rentable et stratégique. Le cadre juridique est robuste et la vision à long terme est claire.') }}"
+          </p>
+        </div>
+
+        <!-- Témoignage 4 -->
+        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-2xl">
+              🌍
+            </div>
+            <div class="flex-1">
+              <h3 class="font-semibold text-purple-300">Organisations internationales</h3>
+              <p class="text-xs text-neutral-400">Bailleurs et ONG</p>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 italic leading-relaxed">
+            "{{ t('testimonials.international', 'GPM démontre qu\'il est possible de développer des infrastructures modernes en Afrique centrale avec impact social positif.') }}"
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         9. ACTUALITÉS & AVANCEMENT
          ========================= -->
     <NewsCarousel
       data-testid="home-news"
@@ -130,7 +329,7 @@
     />
 
     <!-- =========================
-         8. SECTION FINALE – Appel à action
+         10. SECTION FINALE – Appel à action
          ========================= -->
     <InvestorCTA
       data-testid="home-final-cta"
@@ -147,8 +346,8 @@
 
 <script setup>
 // =========================================
-// Home.vue — Nouvelle structure GPM optimisée
-// 8 sections : Hero, About, Vision, Projects (CTA), Expertise, Impact & Réseau, News, CTA
+// Home.vue — Structure GPM complète et optimisée
+// 10 sections : Hero, About, Vision, Projects (CTA), Expertise, Avantages, Impact & Réseau, Témoignages, News, CTA
 // =========================================
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'

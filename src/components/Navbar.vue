@@ -59,12 +59,12 @@
           </button>
         </div>
 
-        <!-- CTA Invest (optionnel, non bloquant) -->
+        <!-- CTA Documentation (plus subtil et professionnel) -->
         <RouterLink
-          to="/invest"
+          to="/dataroom"
           class="px-3 py-1.5 rounded-xl bg-emerald-500/90 hover:bg-emerald-400 text-neutral-900 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-500"
         >
-          {{ t('hero.ctaInvest') || 'Investir' }}
+          {{ t('nav.dataroom') || 'Documentation' }}
         </RouterLink>
       </div>
 
@@ -195,17 +195,10 @@
             <div class="flex items-center gap-3 pt-4 border-t border-neutral-800">
               <RouterLink
                 to="/dataroom"
-                class="flex-1 px-4 py-2.5 rounded-xl border border-neutral-800 bg-neutral-900 hover:bg-neutral-800 text-center text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all"
-                @click="close()"
-              >
-                {{ t('nav.dataroom') || 'Dataroom' }}
-              </RouterLink>
-              <RouterLink
-                to="/invest"
                 class="flex-1 px-4 py-2.5 rounded-xl bg-emerald-500/90 hover:bg-emerald-400 text-neutral-900 text-center text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all shadow-lg shadow-emerald-500/20"
                 @click="close()"
               >
-                {{ t('nav.invest') || 'Investir' }}
+                {{ t('nav.dataroom') || 'Documentation' }}
               </RouterLink>
             </div>
 
@@ -295,12 +288,6 @@ const navItems = [
     fallback: 'Nos Projets',
     to: '/projects',
     icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4'
-  },
-  {
-    key: 'nav.invest',
-    fallback: 'Investir',
-    to: '/invest',
-    icon: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6'
   },
   {
     key: 'nav.dataroom',

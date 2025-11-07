@@ -98,7 +98,7 @@
       <RouterLink
         to="/dataroom"
         class="inline-flex items-center gap-2 text-xs px-3 py-1.5 rounded-lg border border-neutral-800 hover:bg-neutral-900"
-        aria-label="Ouvrir l’espace documentaire"
+        aria-label="Ouvrir l'espace documentaire"
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M5 4h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-7l-4 3v-3H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
         <span>{{ dataroomCta }}</span>

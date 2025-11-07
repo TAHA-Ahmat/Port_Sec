@@ -20,7 +20,7 @@
         <ul class="space-y-1 text-sm">
           <li><RouterLink to="/" class="hover:text-emerald-400 transition">{{ $t('footer.links.project') }}</RouterLink></li>
           <li><RouterLink to="/impact" class="hover:text-emerald-400 transition">{{ $t('footer.links.impact') }}</RouterLink></li>
-          <li><RouterLink to="/invest" class="hover:text-emerald-400 transition">{{ $t('footer.links.invest') }}</RouterLink></li>
+          <li><RouterLink to="/dataroom" class="hover:text-emerald-400 transition">{{ $t('footer.links.invest') }}</RouterLink></li>
           <li><RouterLink to="/dataroom" class="hover:text-emerald-400 transition">{{ $t('footer.links.dataroom') }}</RouterLink></li>
           <li><RouterLink to="/contact" class="hover:text-emerald-400 transition">{{ $t('footer.links.contact') }}</RouterLink></li>
         </ul>

@@ -1,5 +1,5 @@
 <template>
-  <main class="space-y-8 pb-16">
+  <main class="space-y-12 pb-16">
     <!-- Breadcrumbs -->
     <Breadcrumbs :items="[
       { label: 'Accueil', to: '/' },
@@ -7,88 +7,376 @@
       { label: 'Port Sec de Ngaoundéré' }
     ]" />
 
-    <!-- Card centrée sobre -->
-    <section class="max-w-3xl mx-auto p-6">
-      <div class="rounded-2xl border border-neutral-800 bg-neutral-900 p-8 md:p-12 space-y-6">
-
-        <!-- Badge statut -->
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/30 border border-blue-700/40 text-xs">
-          <span class="inline-block h-2 w-2 rounded-full bg-blue-500"></span>
-          <span class="text-blue-400 font-medium">{{ t('project.status', 'EN ÉTUDE') }}</span>
-        </div>
-
-        <!-- Titre -->
-        <h1 class="text-3xl md:text-4xl font-bold text-white">
-          Port Sec de Ngaoundéré
-        </h1>
-
-        <!-- Description courte -->
-        <p class="text-lg text-neutral-300 leading-relaxed">
-          {{ t('ngaoundere.description', 'Hub logistique multimodal stratégique au carrefour des corridors ferroviaires et routiers, ce projet constituera la porte d\'entrée du Tchad depuis le Cameroun.') }}
-        </p>
-
-        <!-- Date de lancement -->
-        <div class="flex items-center gap-2 text-neutral-400">
-          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-          <span class="font-medium">{{ t('ngaoundere.launch', 'Lancement prévu : T4 2026') }}</span>
-        </div>
-
-        <!-- Séparateur -->
-        <div class="border-t border-neutral-800"></div>
-
-        <!-- Newsletter simple -->
-        <div class="space-y-4">
-          <h2 class="text-lg font-semibold text-white">
-            {{ t('ngaoundere.newsletter.title', 'Recevoir les actualités du projet') }}
-          </h2>
-
-          <form @submit.prevent="handleSubscribe" class="space-y-3">
-            <div class="flex gap-2">
-              <input
-                v-model="email"
-                type="email"
-                placeholder="votre@email.com"
-                required
-                class="flex-1 px-4 py-3 rounded-lg bg-neutral-950 border border-neutral-700 text-white placeholder-neutral-500 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition"
-              />
-              <button
-                type="submit"
-                class="px-6 py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-500 transition focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                {{ t('ngaoundere.newsletter.cta', 'S\'inscrire') }}
-              </button>
+    <!-- Hero Section avec visuel -->
+    <section class="max-w-6xl mx-auto px-6">
+      <div class="rounded-2xl border border-blue-700/40 bg-gradient-to-br from-blue-950/20 via-neutral-900 to-neutral-950 overflow-hidden">
+        <!-- Image placeholder -->
+        <div class="aspect-[21/9] bg-gradient-to-br from-blue-900/20 to-neutral-800 relative overflow-hidden">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center space-y-4 p-8">
+              <div class="text-7xl opacity-40">🚂</div>
+              <p class="text-sm text-neutral-400">Hub multimodal ferroviaire-routier de Ngaoundéré</p>
             </div>
+          </div>
+          <!-- Badge statut superposé -->
+          <div class="absolute top-6 left-6">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-950/80 backdrop-blur-sm border border-blue-700/40 text-sm">
+              <span class="inline-block h-2.5 w-2.5 rounded-full bg-blue-500 animate-pulse"></span>
+              <span class="text-blue-300 font-semibold">{{ t('project.status', 'EN ÉTUDE') }}</span>
+            </div>
+          </div>
+        </div>
 
-            <p class="text-xs text-neutral-500">
-              {{ t('ngaoundere.newsletter.privacy', 'Aucun spam, désabonnement à tout moment.') }}
-            </p>
-          </form>
+        <!-- Contenu Hero -->
+        <div class="p-8 md:p-12 space-y-6">
+          <h1 class="text-3xl md:text-5xl font-bold">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-white to-blue-300">
+              Port Sec de Ngaoundéré
+            </span>
+          </h1>
 
-          <div v-if="subscribed" class="p-3 rounded-lg bg-emerald-950/30 border border-emerald-700/40 text-emerald-400 text-sm">
-            ✓ {{ t('ngaoundere.newsletter.success', 'Merci ! Vous serez informé des avancées du projet.') }}
+          <p class="text-lg md:text-xl text-neutral-300 leading-relaxed max-w-3xl">
+            {{ t('ngaoundere.description', 'Hub logistique multimodal stratégique au carrefour des corridors ferroviaires et routiers, ce projet constituera la porte d\'entrée du Tchad depuis le Cameroun.') }}
+          </p>
+
+          <!-- Méta informations -->
+          <div class="flex flex-wrap gap-6 text-neutral-400">
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span class="font-medium">Ngaoundéré, Cameroun</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span class="font-medium">{{ t('ngaoundere.launch', 'Lancement prévu : T4 2026') }}</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="font-medium">Durée: 24 mois</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Autres projets -->
-    <section class="max-w-6xl mx-auto p-6">
-      <OtherProjects current-project="ngaoundere" />
+    <!-- Pourquoi Ngaoundéré? -->
+    <section class="max-w-6xl mx-auto px-6 space-y-6">
+      <header class="flex items-center gap-2 text-sm opacity-80">
+        <span class="inline-block h-2 w-2 rounded-full bg-blue-400"></span>
+        <h2 class="font-semibold">Positionnement stratégique</h2>
+      </header>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900 space-y-3">
+          <div class="text-3xl">🚂</div>
+          <h3 class="text-lg font-semibold text-blue-300">Terminus ferroviaire</h3>
+          <p class="text-sm text-neutral-400 leading-relaxed">
+            Dernière gare de la liaison Douala-Ngaoundéré, point d'accès au réseau ferré camerounais
+          </p>
+        </div>
+        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900 space-y-3">
+          <div class="text-3xl">🗺️</div>
+          <h3 class="text-lg font-semibold text-blue-300">Carrefour multimodal</h3>
+          <p class="text-sm text-neutral-400 leading-relaxed">
+            Jonction stratégique des corridors routiers et ferroviaires vers le Tchad et la RCA
+          </p>
+        </div>
+        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900 space-y-3">
+          <div class="text-3xl">🎯</div>
+          <h3 class="text-lg font-semibold text-blue-300">Proximité frontalière</h3>
+          <p class="text-sm text-neutral-400 leading-relaxed">
+            À 350km de la frontière tchadienne, hub idéal pour la massification des flux
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- Retour -->
-    <section class="max-w-6xl mx-auto p-6">
-      <RouterLink
-        to="/projects"
-        class="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M19 12H5M12 19l-7-7 7-7"/>
-        </svg>
-        <span>{{ t('ngaoundere.back', 'Retour à nos projets') }}</span>
-      </RouterLink>
+    <!-- KPIs du projet -->
+    <section class="max-w-6xl mx-auto px-6 space-y-6">
+      <header class="flex items-center gap-2 text-sm opacity-80">
+        <span class="inline-block h-2 w-2 rounded-full bg-blue-400"></span>
+        <h2 class="font-semibold">Caractéristiques techniques</h2>
+      </header>
+
+      <div class="grid md:grid-cols-4 gap-4">
+        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900">
+          <p class="text-xs text-neutral-500 uppercase tracking-wider">Superficie</p>
+          <p class="text-3xl font-bold mt-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-white">
+            35 ha
+          </p>
+        </div>
+        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900">
+          <p class="text-xs text-neutral-500 uppercase tracking-wider">Capacité annuelle</p>
+          <p class="text-3xl font-bold mt-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-white">
+            60K EVP
+          </p>
+        </div>
+        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900">
+          <p class="text-xs text-neutral-500 uppercase tracking-wider">Investissement</p>
+          <p class="text-3xl font-bold mt-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-white">
+            42 Mds
+          </p>
+          <p class="text-xs text-neutral-500 mt-1">XAF</p>
+        </div>
+        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900">
+          <p class="text-xs text-neutral-500 uppercase tracking-wider">Emplois créés</p>
+          <p class="text-3xl font-bold mt-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-white">
+            320+
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline de développement -->
+    <section class="max-w-6xl mx-auto px-6 space-y-6">
+      <header class="flex items-center gap-2 text-sm opacity-80">
+        <span class="inline-block h-2 w-2 rounded-full bg-blue-400"></span>
+        <h2 class="font-semibold">Calendrier de réalisation</h2>
+      </header>
+
+      <div class="relative">
+        <!-- Ligne de temps -->
+        <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-blue-700 to-transparent"></div>
+
+        <div class="space-y-8">
+          <!-- Phase 1 -->
+          <div class="flex gap-6 items-start">
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-blue-500/20 border-2 border-blue-500 flex items-center justify-center font-bold text-blue-300 relative z-10">
+              T0
+            </div>
+            <div class="flex-1 pt-3">
+              <h3 class="text-lg font-semibold text-white mb-2">T4 2026 : Études de faisabilité</h3>
+              <p class="text-neutral-400 text-sm">Études techniques approfondies, négociations foncières, études d'impact environnemental et social</p>
+            </div>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="flex gap-6 items-start">
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-neutral-900 border-2 border-blue-600 flex items-center justify-center font-bold text-blue-400 relative z-10">
+              T1
+            </div>
+            <div class="flex-1 pt-3">
+              <h3 class="text-lg font-semibold text-white mb-2">T2 2027 : Sécurisation & Préparation</h3>
+              <p class="text-neutral-400 text-sm">Acquisition terrain, autorisations, conception détaillée, appel d'offres travaux et équipements</p>
+            </div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="flex gap-6 items-start">
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-neutral-900 border-2 border-blue-700 flex items-center justify-center font-bold text-blue-500 relative z-10">
+              T2
+            </div>
+            <div class="flex-1 pt-3">
+              <h3 class="text-lg font-semibold text-white mb-2">T4 2027 : Construction infrastructure</h3>
+              <p class="text-neutral-400 text-sm">Travaux de génie civil, voiries, embranchement ferré, zones de stockage, bâtiments</p>
+            </div>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="flex gap-6 items-start">
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-neutral-900 border-2 border-blue-800 flex items-center justify-center font-bold text-blue-600 relative z-10">
+              T3
+            </div>
+            <div class="flex-1 pt-3">
+              <h3 class="text-lg font-semibold text-white mb-2">T3 2028 : Équipement & Lancement</h3>
+              <p class="text-neutral-400 text-sm">Installation systèmes IT, matériel de manutention, formation personnel, phase pilote, ouverture</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partenaires & Soutiens -->
+    <section class="max-w-6xl mx-auto px-6 space-y-6">
+      <header class="flex items-center gap-2 text-sm opacity-80">
+        <span class="inline-block h-2 w-2 rounded-full bg-blue-400"></span>
+        <h2 class="font-semibold">Partenaires & Soutiens institutionnels</h2>
+      </header>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900 text-center space-y-3">
+          <div class="text-4xl">🇹🇩</div>
+          <h3 class="font-semibold">État du Tchad</h3>
+          <p class="text-xs text-neutral-500">Soutien stratégique et garanties souveraines</p>
+        </div>
+        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900 text-center space-y-3">
+          <div class="text-4xl">🇨🇲</div>
+          <h3 class="font-semibold">État du Cameroun</h3>
+          <p class="text-xs text-neutral-500">Facilitation administrative et accès ferroviaire</p>
+        </div>
+        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900 text-center space-y-3">
+          <div class="text-4xl">🏦</div>
+          <h3 class="font-semibold">Institutions financières</h3>
+          <p class="text-xs text-neutral-500">Banques de développement et bailleurs CEMAC</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact attendu -->
+    <section class="max-w-6xl mx-auto px-6 space-y-6">
+      <header class="flex items-center gap-2 text-sm opacity-80">
+        <span class="inline-block h-2 w-2 rounded-full bg-blue-400"></span>
+        <h2 class="font-semibold">Impact socio-économique attendu</h2>
+      </header>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900 space-y-4">
+          <h3 class="text-lg font-semibold text-blue-300">Bénéfices économiques</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-neutral-300">Réduction de 40% du coût transport fer vs route</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-neutral-300">Hub de transbordement fer-route optimisé</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-neutral-300">Desserte RCA et Nigéria via corridors régionaux</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-neutral-300">Désenclavement économique du Nord-Cameroun</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900 space-y-4">
+          <h3 class="text-lg font-semibold text-blue-300">Impact social</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-neutral-300">320+ emplois directs qualifiés</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-neutral-300">800+ emplois indirects (transport, services)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-neutral-300">Centre de formation logistique CEMAC</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-neutral-300">Renforcement de l'intégration sous-régionale</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter inscription -->
+    <section class="max-w-3xl mx-auto px-6">
+      <div class="rounded-2xl border border-blue-700/40 bg-gradient-to-br from-blue-950/20 to-neutral-900 p-8 md:p-12 space-y-6">
+        <div class="text-center space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/50 border border-blue-700/40 text-xs">
+            <span class="inline-block h-2 w-2 rounded-full bg-blue-400"></span>
+            <span class="text-blue-300">Restez informé</span>
+          </div>
+          <h2 class="text-2xl md:text-3xl font-bold text-white">
+            Suivre l'avancement du projet
+          </h2>
+          <p class="text-neutral-400">
+            Recevez les actualités des études, jalons et opportunités liées au Port Sec de Ngaoundéré
+          </p>
+        </div>
+
+        <form @submit.prevent="handleSubscribe" class="space-y-4">
+          <div class="flex flex-col sm:flex-row gap-3">
+            <input
+              v-model="email"
+              type="email"
+              placeholder="votre@email.com"
+              required
+              class="flex-1 px-5 py-3.5 rounded-xl bg-neutral-950 border border-neutral-700 text-white placeholder-neutral-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition"
+            />
+            <button
+              type="submit"
+              :disabled="isSubmitting"
+              class="px-8 py-3.5 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-500 transition focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {{ isSubmitting ? 'Inscription...' : "S'inscrire" }}
+            </button>
+          </div>
+
+          <p class="text-xs text-neutral-500 text-center">
+            {{ t('ngaoundere.newsletter.privacy', 'Aucun spam, désabonnement à tout moment. Vos données sont protégées.') }}
+          </p>
+        </form>
+
+        <div v-if="subscribed" class="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-center">
+          <div class="flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="font-semibold">{{ t('ngaoundere.newsletter.success', 'Merci ! Vous serez informé des avancées du projet.') }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA & Navigation -->
+    <section class="max-w-6xl mx-auto px-6 space-y-6">
+      <!-- CTA principal -->
+      <div class="p-8 rounded-2xl border border-neutral-800 bg-neutral-900 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 text-center md:text-left">
+          <h3 class="text-xl font-bold">Intéressé par ce projet ?</h3>
+          <p class="text-neutral-400 text-sm">Découvrez les opportunités d'investissement et partenariat</p>
+        </div>
+        <div class="flex flex-wrap gap-3 justify-center">
+          <RouterLink
+            to="/dataroom"
+            class="px-6 py-3 rounded-xl bg-emerald-500 text-neutral-900 font-semibold hover:bg-emerald-400 transition focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          >
+            Documentation investisseurs
+          </RouterLink>
+          <RouterLink
+            to="/contact"
+            class="px-6 py-3 rounded-xl border border-neutral-700 font-semibold hover:bg-neutral-800 transition focus:outline-none focus:ring-2 focus:ring-neutral-500"
+          >
+            Nous contacter
+          </RouterLink>
+        </div>
+      </div>
+
+      <!-- Autres projets -->
+      <OtherProjects current-project="ngaoundere" />
+
+      <!-- Retour -->
+      <div class="pt-6">
+        <RouterLink
+          to="/projects"
+          class="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          <span>{{ t('ngaoundere.back', 'Retour à nos projets') }}</span>
+        </RouterLink>
+      </div>
     </section>
   </main>
 </template>
@@ -104,11 +392,20 @@ const { t } = useI18n()
 
 const email = ref('')
 const subscribed = ref(false)
+const isSubmitting = ref(false)
 
-const handleSubscribe = () => {
+const handleSubscribe = async () => {
+  if (!email.value) return
+
+  isSubmitting.value = true
+
+  // Simuler l'envoi (remplacer par votre API)
+  await new Promise(resolve => setTimeout(resolve, 1000))
+
   console.log('Newsletter subscription:', email.value)
   subscribed.value = true
   email.value = ''
+  isSubmitting.value = false
 
   setTimeout(() => {
     subscribed.value = false
@@ -117,8 +414,19 @@ const handleSubscribe = () => {
 </script>
 
 <style scoped>
-/* Espacement entre sections */
+/* Animations au scroll (optionnel) */
 main {
-  padding-bottom: 4rem;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>
