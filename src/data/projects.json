@@ -4,7 +4,7 @@
       "id": "douala",
       "name": "Port Sec du Tchad à Douala",
       "status": "active",
-      "phase": "2024–2025",
+      "phase": "2025–2028",
       "location": {
         "city": "Douala",
         "country": "Cameroun",
@@ -19,7 +19,7 @@
         "transitTime": "≈ 5 jours",
         "jobsDirect": "≈ 140",
         "jobsTotal": "500+",
-        "launchDate": "2026"
+        "launchDate": "2028"
       },
       "description": "Premier terminal logistique tchadien au Cameroun. 10 ha – 3 500 EVP – services douaniers intégrés.",
       "image": "",
@@ -37,19 +37,19 @@
         "governance": "GPM assure le pilotage du projet à travers un conseil d'administration, une direction expérimentée et des comités techniques, financiers et juridiques. Des indicateurs de performance (temps de transit, volumes, sécurité, satisfaction clients) sont suivis pour garantir une exploitation optimale.",
         "strategy": [
           {
-            "period": "2024–2025",
-            "title": "Mise en service",
-            "description": "Études techniques et mise en service initiale à Douala"
-          },
-          {
-            "period": "2026–2028",
-            "title": "Modernisation",
-            "description": "Digitalisation et meilleures pratiques ESG"
+            "period": "2025–2028",
+            "title": "Construction et mise en exploitation",
+            "description": "Finalisation études techniques, bouclage financements, réalisation travaux et mise en exploitation progressive du Port Sec de Douala"
           },
           {
             "period": "2028–2030",
-            "title": "Extension réseau",
-            "description": "Extension vers Kribi, Ngaoundéré et Nigéria"
+            "title": "Modernisation et optimisation",
+            "description": "Digitalisation complète, meilleures pratiques ESG et optimisation des flux logistiques"
+          },
+          {
+            "period": "2030–2032",
+            "title": "Extension réseau régional",
+            "description": "Études et interconnexion Kribi–Ngaoundéré, intégration du hub multimodal dans le corridor Tchad–Cameroun"
           }
         ]
       }
@@ -58,7 +58,7 @@
       "id": "kribi",
       "name": "Plateforme logistique de Kribi",
       "status": "planned",
-      "phase": "2026–2028",
+      "phase": "2030–2032",
       "location": {
         "city": "Kribi",
         "country": "Cameroun",
@@ -73,7 +73,7 @@
       "id": "ngaoundere",
       "name": "Hub ferroviaire de Ngaoundéré",
       "status": "planned",
-      "phase": "2028–2030",
+      "phase": "2030–2032",
       "location": {
         "city": "Ngaoundéré",
         "country": "Cameroun",

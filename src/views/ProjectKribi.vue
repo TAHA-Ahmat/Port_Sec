@@ -52,13 +52,13 @@
               <svg class="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              <span class="font-medium">{{ t('kribi.launch', 'Lancement prévu : T2 2026') }}</span>
+              <span class="font-medium">{{ t('kribi.launch', 'Lancement prévu : 2030-2032') }}</span>
             </div>
             <div class="flex items-center gap-2">
               <svg class="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span class="font-medium">Durée: 18 mois</span>
+              <span class="font-medium">Phase: Études préliminaires</span>
             </div>
           </div>
         </div>
@@ -148,44 +148,44 @@
           <!-- Phase 1 -->
           <div class="flex gap-6 items-start">
             <div class="flex-shrink-0 w-16 h-16 rounded-full bg-amber-500/20 border-2 border-amber-500 flex items-center justify-center font-bold text-amber-300 relative z-10">
-              T0
+              1
             </div>
             <div class="flex-1 pt-3">
-              <h3 class="text-lg font-semibold text-white mb-2">T2 2026 : Sécurisation foncière</h3>
-              <p class="text-neutral-400 text-sm">Acquisition du terrain, études d'impact environnemental, autorisations administratives</p>
+              <h3 class="text-lg font-semibold text-white mb-2">2030 : Études de faisabilité</h3>
+              <p class="text-neutral-400 text-sm">Études techniques détaillées, études d'impact environnemental, sécurisation foncière</p>
             </div>
           </div>
 
           <!-- Phase 2 -->
           <div class="flex gap-6 items-start">
             <div class="flex-shrink-0 w-16 h-16 rounded-full bg-neutral-900 border-2 border-amber-600 flex items-center justify-center font-bold text-amber-400 relative z-10">
-              T1
+              2
             </div>
             <div class="flex-1 pt-3">
-              <h3 class="text-lg font-semibold text-white mb-2">T3 2026 : Travaux infrastructure</h3>
-              <p class="text-neutral-400 text-sm">Terrassement, voiries, réseaux, bâtiments administratifs et techniques</p>
+              <h3 class="text-lg font-semibold text-white mb-2">2030-2031 : Préparation et financements</h3>
+              <p class="text-neutral-400 text-sm">Bouclage financements, autorisations administratives, validation des partenaires</p>
             </div>
           </div>
 
           <!-- Phase 3 -->
           <div class="flex gap-6 items-start">
             <div class="flex-shrink-0 w-16 h-16 rounded-full bg-neutral-900 border-2 border-amber-700 flex items-center justify-center font-bold text-amber-500 relative z-10">
-              T2
+              3
             </div>
             <div class="flex-1 pt-3">
-              <h3 class="text-lg font-semibold text-white mb-2">T1 2027 : Équipements & Systèmes</h3>
-              <p class="text-neutral-400 text-sm">Installation matériel de manutention, systèmes IT, formation des équipes</p>
+              <h3 class="text-lg font-semibold text-white mb-2">2031-2032 : Construction infrastructure</h3>
+              <p class="text-neutral-400 text-sm">Terrassement, voiries, réseaux, bâtiments administratifs et équipements de manutention</p>
             </div>
           </div>
 
           <!-- Phase 4 -->
           <div class="flex gap-6 items-start">
             <div class="flex-shrink-0 w-16 h-16 rounded-full bg-neutral-900 border-2 border-amber-800 flex items-center justify-center font-bold text-amber-600 relative z-10">
-              T3
+              4
             </div>
             <div class="flex-1 pt-3">
-              <h3 class="text-lg font-semibold text-white mb-2">T4 2027 : Mise en service</h3>
-              <p class="text-neutral-400 text-sm">Phase pilote, certification, ouverture commerciale progressive</p>
+              <h3 class="text-lg font-semibold text-white mb-2">Fin 2032 : Mise en service progressive</h3>
+              <p class="text-neutral-400 text-sm">Installation systèmes IT, formation équipes, phase pilote et ouverture commerciale</p>
             </div>
           </div>
         </div>

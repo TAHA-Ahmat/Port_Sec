@@ -52,7 +52,7 @@
               <svg class="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              <span class="font-medium">{{ t('ngaoundere.launch', 'Lancement prévu : T4 2026') }}</span>
+              <span class="font-medium">{{ t('ngaoundere.launch', 'Lancement prévu : 2030-2032') }}</span>
             </div>
             <div class="flex items-center gap-2">
               <svg class="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -148,10 +148,10 @@
           <!-- Phase 1 -->
           <div class="flex gap-6 items-start">
             <div class="flex-shrink-0 w-16 h-16 rounded-full bg-blue-500/20 border-2 border-blue-500 flex items-center justify-center font-bold text-blue-300 relative z-10">
-              T0
+              1
             </div>
             <div class="flex-1 pt-3">
-              <h3 class="text-lg font-semibold text-white mb-2">T4 2026 : Études de faisabilité</h3>
+              <h3 class="text-lg font-semibold text-white mb-2">2030 : Études de faisabilité</h3>
               <p class="text-neutral-400 text-sm">Études techniques approfondies, négociations foncières, études d'impact environnemental et social</p>
             </div>
           </div>
@@ -159,33 +159,33 @@
           <!-- Phase 2 -->
           <div class="flex gap-6 items-start">
             <div class="flex-shrink-0 w-16 h-16 rounded-full bg-neutral-900 border-2 border-blue-600 flex items-center justify-center font-bold text-blue-400 relative z-10">
-              T1
+              2
             </div>
             <div class="flex-1 pt-3">
-              <h3 class="text-lg font-semibold text-white mb-2">T2 2027 : Sécurisation & Préparation</h3>
-              <p class="text-neutral-400 text-sm">Acquisition terrain, autorisations, conception détaillée, appel d'offres travaux et équipements</p>
+              <h3 class="text-lg font-semibold text-white mb-2">2030-2031 : Sécurisation & Préparation</h3>
+              <p class="text-neutral-400 text-sm">Acquisition terrain, autorisations, conception détaillée, bouclage financements et validation partenaires</p>
             </div>
           </div>
 
           <!-- Phase 3 -->
           <div class="flex gap-6 items-start">
             <div class="flex-shrink-0 w-16 h-16 rounded-full bg-neutral-900 border-2 border-blue-700 flex items-center justify-center font-bold text-blue-500 relative z-10">
-              T2
+              3
             </div>
             <div class="flex-1 pt-3">
-              <h3 class="text-lg font-semibold text-white mb-2">T4 2027 : Construction infrastructure</h3>
-              <p class="text-neutral-400 text-sm">Travaux de génie civil, voiries, embranchement ferré, zones de stockage, bâtiments</p>
+              <h3 class="text-lg font-semibold text-white mb-2">2031-2032 : Construction infrastructure</h3>
+              <p class="text-neutral-400 text-sm">Travaux de génie civil, voiries, embranchement ferré, zones de stockage conteneurs, bâtiments administratifs</p>
             </div>
           </div>
 
           <!-- Phase 4 -->
           <div class="flex gap-6 items-start">
             <div class="flex-shrink-0 w-16 h-16 rounded-full bg-neutral-900 border-2 border-blue-800 flex items-center justify-center font-bold text-blue-600 relative z-10">
-              T3
+              4
             </div>
             <div class="flex-1 pt-3">
-              <h3 class="text-lg font-semibold text-white mb-2">T3 2028 : Équipement & Lancement</h3>
-              <p class="text-neutral-400 text-sm">Installation systèmes IT, matériel de manutention, formation personnel, phase pilote, ouverture</p>
+              <h3 class="text-lg font-semibold text-white mb-2">Fin 2032 : Équipement & Lancement</h3>
+              <p class="text-neutral-400 text-sm">Installation systèmes IT, matériel de manutention, formation personnel, phase pilote et ouverture commerciale</p>
             </div>
           </div>
         </div>
