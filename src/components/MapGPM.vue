@@ -301,48 +301,47 @@
       <!-- Labels des villes -->
       <!-- Douala (projet principal - maximum de visibilité) -->
       <g :transform="`translate(${cities.douala.x + 12}, ${cities.douala.y - 50})`" class="city-label">
-        <rect x="-4" y="-4" width="110" height="54" rx="4" fill="rgba(23,23,23,0.95)" stroke="rgba(52,211,153,0.5)" stroke-width="1.5"/>
+        <rect x="-4" y="-4" width="120" height="54" rx="4" fill="rgba(23,23,23,0.95)" stroke="rgba(52,211,153,0.5)" stroke-width="1.5"/>
         <text x="0" y="8" fill="white" font-size="11" font-weight="700" style="text-shadow: 0 2px 30px rgba(0,0,0,0.95);">Douala</text>
         <g transform="translate(0, 16)">
           <circle cx="3" cy="0" r="2.5" fill="#34D399"/>
           <text x="9" y="3" fill="#34D399" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">En cours</text>
         </g>
-        <text x="0" y="29" fill="rgba(255,255,255,0.9)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">12 ha | 50K EVP/an</text>
+        <text x="0" y="29" fill="rgba(255,255,255,0.9)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">10 ha / 3,5K EVP</text>
         <text x="0" y="39" fill="rgba(255,255,255,0.8)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">300+ emplois</text>
       </g>
 
       <!-- Kribi -->
       <g :transform="`translate(${cities.kribi.x + 12}, ${cities.kribi.y - 10})`" class="city-label">
-        <rect x="-4" y="-4" width="102" height="44" rx="4" fill="rgba(23,23,23,0.95)" stroke="rgba(234,179,8,0.5)" stroke-width="1.5"/>
+        <rect x="-4" y="-4" width="130" height="44" rx="4" fill="rgba(23,23,23,0.95)" stroke="rgba(234,179,8,0.5)" stroke-width="1.5"/>
         <text x="0" y="8" fill="white" font-size="11" font-weight="700" style="text-shadow: 0 2px 30px rgba(0,0,0,0.95);">Kribi</text>
         <g transform="translate(0, 16)">
           <circle cx="3" cy="0" r="2.5" fill="#EAB308" fill-opacity="0.9"/>
-          <text x="9" y="3" fill="#EAB308" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">Prévu 2026-28</text>
+          <text x="9" y="3" fill="#EAB308" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">Prévu 2030-2032</text>
         </g>
-        <text x="0" y="29" fill="rgba(255,255,255,0.8)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">Port côtier</text>
+        <text x="0" y="29" fill="rgba(255,255,255,0.8)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">Port en eau profonde</text>
       </g>
 
       <!-- Ngaoundéré -->
       <g :transform="`translate(${cities.ngaoundere.x + 12}, ${cities.ngaoundere.y - 58})`" class="city-label">
-        <rect x="-4" y="-4" width="112" height="44" rx="4" fill="rgba(23,23,23,0.95)" stroke="rgba(234,179,8,0.5)" stroke-width="1.5"/>
+        <rect x="-4" y="-4" width="140" height="44" rx="4" fill="rgba(23,23,23,0.95)" stroke="rgba(234,179,8,0.5)" stroke-width="1.5"/>
         <text x="0" y="8" fill="white" font-size="11" font-weight="700" style="text-shadow: 0 2px 30px rgba(0,0,0,0.95);">Ngaoundéré</text>
         <g transform="translate(0, 16)">
           <circle cx="3" cy="0" r="2.5" fill="#EAB308" fill-opacity="0.9"/>
-          <text x="9" y="3" fill="#EAB308" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">Prévu 2028-30</text>
+          <text x="9" y="3" fill="#EAB308" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">Prévu 2030-2032</text>
         </g>
-        <text x="0" y="29" fill="rgba(255,255,255,0.8)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">Corridor ferro.</text>
+        <text x="0" y="29" fill="rgba(255,255,255,0.8)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">Corridor ferroviaire</text>
       </g>
 
       <!-- N'Djamena (Siège Social GPM) -->
       <g :transform="`translate(${cities.ndjamena.x + 12}, ${cities.ndjamena.y - 58})`" class="city-label">
-        <rect x="-4" y="-4" width="145" height="48" rx="4" fill="rgba(23,23,23,0.95)" stroke="rgba(255,59,59,0.5)" stroke-width="1.5"/>
+        <rect x="-4" y="-4" width="145" height="38" rx="4" fill="rgba(23,23,23,0.95)" stroke="rgba(255,59,59,0.5)" stroke-width="1.5"/>
         <text x="0" y="8" fill="white" font-size="11" font-weight="700" style="text-shadow: 0 2px 30px rgba(0,0,0,0.95);">N'Djamena</text>
         <g transform="translate(0, 16)">
           <circle cx="3" cy="0" r="2.5" fill="#ff3b3b" fill-opacity="0.9"/>
           <text x="9" y="3" fill="#ff3b3b" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">Siège Social</text>
         </g>
         <text x="0" y="29" fill="rgba(255,255,255,0.9)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">GPM Headquarters</text>
-        <text x="0" y="39" fill="rgba(255,255,255,0.7)" font-size="7" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">Capitale Tchad</text>
       </g>
     </template>
   </svg>
