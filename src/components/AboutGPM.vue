@@ -16,6 +16,15 @@
       <div class="space-y-3">
         <p class="opacity-90">{{ resolvedIntro }}</p>
         <slot name="extra-text" />
+
+        <!-- Logo GPM avec animations motion design -->
+        <div class="flex items-center justify-center pt-4 pb-2">
+          <img
+            :src="gpmLogoPath"
+            alt="GPM Logo"
+            class="w-48 md:w-64 lg:w-full lg:max-w-xs h-auto opacity-70 hover:opacity-100 transition-all duration-700 hover:scale-105 logo-float"
+          />
+        </div>
       </div>
 
       <!-- Badges avec icônes -->
@@ -133,10 +142,39 @@ const isSvgIcon = (icon) => typeof icon === 'string' && icon.endsWith('.svg')
 const getImagePath = (filename) => {
   return new URL(`../assets/images/${filename}`, import.meta.url).href
 }
+
+// Logo GPM
+const gpmLogoPath = new URL('../assets/images/gpm_logo_2.svg', import.meta.url).href
 </script>
 
 <style scoped>
 :focus-visible {
   outline: none;
+}
+
+/* Animation flottante moderne */
+.logo-float {
+  animation: float 6s ease-in-out infinite;
+  filter: drop-shadow(0 4px 12px rgba(16, 185, 129, 0.2));
+}
+
+.logo-float:hover {
+  animation-play-state: paused;
+  filter: drop-shadow(0 8px 24px rgba(16, 185, 129, 0.4));
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+  75% {
+    transform: translateY(-15px) rotate(0.5deg);
+  }
 }
 </style>

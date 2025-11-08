@@ -34,12 +34,12 @@
     </div>
 
     <!-- =========================
-         3. VISION 2030 – Frise stratégique
+         3. VISION 2032 – Frise stratégique
          ========================= -->
     <div class="w-full bg-gradient-to-r from-neutral-900/50 via-neutral-900/70 to-neutral-900/50 border-y border-neutral-800/30 py-12">
       <Timeline
         data-testid="home-vision"
-        :title="t('vision.title', 'Notre Vision 2030')"
+        :title="t('vision.title', 'Notre Vision 2032')"
         :intro="t('vision.intro', '')"
       />
     </div>
@@ -129,15 +129,30 @@
           :animated="true"
           data-testid="kpi-impact"
         />
-        <!-- Subtitle Vision 2030 -->
+        <!-- Subtitle Vision 2032 -->
         <p class="text-center text-sm opacity-60 pt-2">
-          {{ t('impactKpis.subtitle', 'Chiffres prévisionnels à l\'horizon 2030') }}
+          {{ t('impactKpis.subtitle', 'Chiffres prévisionnels à l\'horizon 2032') }}
         </p>
       </div>
 
       <!-- Réseau visuel -->
-      <div class="p-8 rounded-2xl border border-neutral-800 bg-gradient-to-br from-neutral-900 to-neutral-950">
-        <h3 class="text-lg font-semibold opacity-90 mb-6 text-center">{{ t('network.title', 'Notre réseau logistique') }}</h3>
+      <div class="rounded-2xl border border-neutral-800 relative overflow-hidden">
+        <!-- Background image -->
+        <div
+          class="absolute inset-0 z-0"
+          :style="{
+            backgroundImage: `url(${imgLaterale5})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }"
+        ></div>
+
+        <!-- Overlay sombre pour lisibilité (optimisé pour voir l'image + textes lisibles) -->
+        <div class="absolute inset-0 bg-gradient-to-br from-black/65 via-black/60 to-black/55 z-0"></div>
+
+        <!-- Contenu avec z-index supérieur -->
+        <div class="relative z-10 p-8">
+        <h3 class="text-lg font-bold mb-6 text-center text-white text-shadow-strong">{{ t('network.title', 'Notre réseau logistique') }}</h3>
         <div class="grid md:grid-cols-3 gap-6">
           <!-- Douala -->
           <div class="text-center space-y-3">
@@ -148,9 +163,9 @@
               <div class="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-emerald-400 border-2 border-neutral-950 flex items-center justify-center text-xs font-bold">1</div>
             </div>
             <div>
-              <div class="font-bold text-emerald-300">{{ tArray('network.sites')[0]?.name || 'Douala' }}</div>
-              <div class="text-xs text-neutral-400">{{ tArray('network.sites')[0]?.status || 'Port Sec • Opérationnel' }}</div>
-              <div class="text-xs text-neutral-500 mt-1">{{ tArray('network.sites')[0]?.capacity || '10 ha • 3.5K EVP' }}</div>
+              <div class="font-bold text-emerald-300 text-shadow-strong">{{ tArray('network.sites')[0]?.name || 'Douala' }}</div>
+              <div class="text-xs text-neutral-100 text-shadow-strong">{{ tArray('network.sites')[0]?.status || 'Port Sec • Opérationnel' }}</div>
+              <div class="text-xs text-neutral-200 text-shadow-strong mt-1">{{ tArray('network.sites')[0]?.capacity || '10 ha • 3.5K EVP' }}</div>
             </div>
           </div>
 
@@ -163,9 +178,9 @@
               <div class="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-yellow-400 border-2 border-neutral-950 flex items-center justify-center text-xs font-bold">2</div>
             </div>
             <div>
-              <div class="font-bold text-blue-300">{{ tArray('network.sites')[1]?.name || 'Kribi' }}</div>
-              <div class="text-xs text-neutral-400">{{ tArray('network.sites')[1]?.status || 'Plateforme maritime • T2 2026' }}</div>
-              <div class="text-xs text-neutral-500 mt-1">{{ tArray('network.sites')[1]?.capacity || '25 ha • 45K EVP' }}</div>
+              <div class="font-bold text-blue-300 text-shadow-strong">{{ tArray('network.sites')[1]?.name || 'Kribi' }}</div>
+              <div class="text-xs text-neutral-100 text-shadow-strong">{{ tArray('network.sites')[1]?.status || 'Plateforme maritime • T2 2026' }}</div>
+              <div class="text-xs text-neutral-200 text-shadow-strong mt-1">{{ tArray('network.sites')[1]?.capacity || '25 ha • 45K EVP' }}</div>
             </div>
           </div>
 
@@ -178,11 +193,12 @@
               <div class="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-blue-400 border-2 border-neutral-950 flex items-center justify-center text-xs font-bold">3</div>
             </div>
             <div>
-              <div class="font-bold text-purple-300">{{ tArray('network.sites')[2]?.name || 'Ngaoundéré' }}</div>
-              <div class="text-xs text-neutral-400">{{ tArray('network.sites')[2]?.status || 'Hub ferroviaire • T4 2026' }}</div>
-              <div class="text-xs text-neutral-500 mt-1">{{ tArray('network.sites')[2]?.capacity || '35 ha • 60K EVP' }}</div>
+              <div class="font-bold text-purple-300 text-shadow-strong">{{ tArray('network.sites')[2]?.name || 'Ngaoundéré' }}</div>
+              <div class="text-xs text-neutral-100 text-shadow-strong">{{ tArray('network.sites')[2]?.status || 'Hub ferroviaire • T4 2026' }}</div>
+              <div class="text-xs text-neutral-200 text-shadow-strong mt-1">{{ tArray('network.sites')[2]?.capacity || '35 ha • 60K EVP' }}</div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>
@@ -209,48 +225,7 @@
 
         <!-- Milestones -->
         <div class="space-y-6">
-          <!-- Milestone 1: Mars 2025 -->
-          <article
-            class="relative group pl-0 md:pl-16"
-            role="article"
-            tabindex="0"
-          >
-            <!-- Point sur la ligne (desktop) -->
-            <div
-              class="hidden md:flex absolute left-3 top-6 w-6 h-6 rounded-full bg-red-500/20 border-2 border-red-500 items-center justify-center z-10"
-              aria-hidden="true"
-            >
-              <span class="text-xs">📜</span>
-            </div>
-
-            <!-- Carte -->
-            <div
-              class="rounded-2xl border border-red-800/40 bg-gradient-to-br from-red-900/10 to-neutral-900 p-6 hover:border-red-700/60 hover:scale-[1.01] transition-all duration-300 focus-within:ring-2 focus-within:ring-red-500"
-            >
-              <!-- Date + Icon mobile -->
-              <div class="flex items-center justify-between mb-3 md:hidden">
-                <span class="text-2xl">📜</span>
-                <span class="text-sm font-bold" style="color: #ff3b3b;">Mars 2025</span>
-              </div>
-
-              <!-- Date desktop -->
-              <p class="hidden md:block text-sm font-bold mb-2" style="color: #ff3b3b;">
-                {{ t('milestones.items[0].date', 'Mars 2025') }}
-              </p>
-
-              <!-- Titre -->
-              <h3 class="font-bold text-lg mb-2 text-red-300">
-                {{ t('milestones.items[0].title', 'Signature du protocole Douala–Kribi') }}
-              </h3>
-
-              <!-- Description -->
-              <p class="text-sm opacity-90 leading-relaxed">
-                {{ t('milestones.items[0].description', 'Finalisation des études techniques et lancement du partenariat logistique entre Douala et le port en eau profonde de Kribi.') }}
-              </p>
-            </div>
-          </article>
-
-          <!-- Milestone 2: 2025-2028 -->
+          <!-- Milestone 1: 2025-2028 -->
           <article
             class="relative group pl-0 md:pl-16"
             role="article"
@@ -277,7 +252,7 @@
               <!-- Date desktop + Badge -->
               <div class="hidden md:flex items-center gap-3 mb-2">
                 <p class="text-sm font-bold" style="color: #ff3b3b;">
-                  {{ t('milestones.items[1].date', '2025–2028') }}
+                  {{ t('milestones.items[0].date', '2025–2028') }}
                 </p>
                 <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-emerald-900/30 text-emerald-300 border border-emerald-700/50">
                   <span class="inline-block h-2 w-2 rounded-full bg-emerald-400 mr-1.5"></span>
@@ -287,17 +262,17 @@
 
               <!-- Titre -->
               <h3 class="font-bold text-lg mb-2 text-red-300">
-                {{ t('milestones.items[1].title', 'Travaux d\'aménagement du Port Sec de Douala') }}
+                {{ t('milestones.items[0].title', 'Finalisation des études techniques, bouclage des financements, réalisation des travaux du Port Sec de Douala') }}
               </h3>
 
               <!-- Description -->
               <p class="text-sm opacity-90 leading-relaxed">
-                {{ t('milestones.items[1].description', 'Phase de construction, installation des équipements et mise en exploitation progressive du site logistique.') }}
+                {{ t('milestones.items[0].description', 'Phase de construction, installation des équipements et mise en exploitation progressive du site logistique.') }}
               </p>
             </div>
           </article>
 
-          <!-- Milestone 3: 2028 -->
+          <!-- Milestone 2: 2030-2032 -->
           <article
             class="relative group pl-0 md:pl-16"
             role="article"
@@ -318,22 +293,22 @@
               <!-- Date + Icon mobile -->
               <div class="flex items-center justify-between mb-3 md:hidden">
                 <span class="text-2xl">🚆</span>
-                <span class="text-sm font-bold" style="color: #ff3b3b;">2028</span>
+                <span class="text-sm font-bold" style="color: #ff3b3b;">2030-2032</span>
               </div>
 
               <!-- Date desktop -->
               <p class="hidden md:block text-sm font-bold mb-2" style="color: #ff3b3b;">
-                {{ t('milestones.items[2].date', '2028') }}
+                {{ t('milestones.items[1].date', '2030-2032') }}
               </p>
 
               <!-- Titre -->
               <h3 class="font-bold text-lg mb-2 text-red-300">
-                {{ t('milestones.items[2].title', 'Études et interconnexion Kribi–Ngaoundéré') }}
+                {{ t('milestones.items[1].title', 'Études et interconnexion Kribi–Ngaoundéré') }}
               </h3>
 
               <!-- Description -->
               <p class="text-sm opacity-90 leading-relaxed">
-                {{ t('milestones.items[2].description', 'Préparation de la connexion ferroviaire et intégration du futur hub multimodal de Ngaoundéré dans le corridor Tchad–Cameroun.') }}
+                {{ t('milestones.items[1].description', 'Préparation de la connexion ferroviaire et intégration du futur hub multimodal de Ngaoundéré dans le corridor Tchad–Cameroun.') }}
               </p>
             </div>
           </article>
@@ -381,6 +356,13 @@ const { t, tm } = useI18n()
 
 // Activer les animations scroll reveal - DÉSACTIVÉ TEMPORAIREMENT
 // useScrollReveal()
+
+// Import des images du Port Sec pour milestones et réseau
+const imgHaut = new URL('../assets/images/image_haut.jpg', import.meta.url).href
+const imgLaterale1 = new URL('../assets/images/image_vue_laterale.jpg', import.meta.url).href
+const imgLaterale2 = new URL('../assets/images/image_vue_laterale_second.jpg', import.meta.url).href
+const imgLaterale3 = new URL('../assets/images/image_vue_laterale_third.jpg', import.meta.url).href
+const imgLaterale5 = new URL('../assets/images/image_vue_laterale_5.jpg', import.meta.url).href
 
 // Helper pour extraire les arrays i18n
 const tArray = (path) => {
@@ -431,4 +413,17 @@ main {
 /* ===== Scroll Reveal Animations - DÉSACTIVÉ TEMPORAIREMENT ===== */
 /* Toutes les sections visibles par défaut pour éviter la régression */
 /* L'animation au scroll sera réactivée après vérification */
+
+/* Text shadow pour lisibilité sur images */
+.text-shadow {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Text shadow renforcé pour lisibilité maximale sur images */
+.text-shadow-strong {
+  text-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.9),
+    0 1px 6px rgba(0, 0, 0, 0.95),
+    0 0 20px rgba(0, 0, 0, 0.5);
+}
 </style>

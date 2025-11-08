@@ -93,194 +93,162 @@
         <!-- Accordions avec effets vivants -->
         <div class="accordions-live space-y-3">
           <!-- Objectif -->
-          <div class="accordion-item-live rounded-2xl border border-emerald-600/15 bg-neutral-900 overflow-hidden">
-            <button
-              @click="toggleSection('objective')"
-              class="accordion-button-live w-full px-6 py-4 flex items-center justify-between hover:bg-emerald-950/30 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 group"
-              :aria-expanded="openSections.has('objective')"
-            >
-              <span class="font-semibold text-emerald-100 group-hover:text-emerald-300 transition-colors">{{ t('projectsPage.douala.sections.objective.title', 'Objectif du projet') }}</span>
-              <svg
-                class="w-5 h-5 transition-transform duration-500 text-emerald-400"
-                :class="{ 'rotate-180': openSections.has('objective') }"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M6 9l6 6 6-6"/>
-              </svg>
-            </button>
-            <div
-              v-show="openSections.has('objective')"
-              class="accordion-content-live px-6 pb-4 opacity-90"
-            >
-              <p>{{ t('projectsPage.douala.sections.objective.content', projectData.details.objective) }}</p>
+          <article class="section-magazine rounded-2xl border border-emerald-600/15 bg-neutral-900 overflow-hidden p-6">
+            <!-- Titre de section -->
+            <h3 class="section-title font-semibold text-emerald-100 mb-4 text-lg">
+              {{ t('projectsPage.douala.sections.objective.title', 'Objectif du projet') }}
+            </h3>
+
+            <!-- Layout magazine : Texte gauche + Image droite -->
+            <div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
+              <!-- Texte -->
+              <div class="flex-1 opacity-90">
+                <p class="leading-relaxed">{{ t('projectsPage.douala.sections.objective.content', projectData.details.objective) }}</p>
+              </div>
+              <!-- Image -->
+              <div class="w-full md:w-2/5 shrink-0">
+                <img
+                  :src="imgLaterale5"
+                  alt="Infrastructure du Port Sec de Douala"
+                  class="w-full h-auto rounded-lg shadow-lg object-cover aspect-video"
+                  loading="lazy"
+                />
+              </div>
             </div>
-          </div>
+          </article>
 
           <!-- Contexte & justification -->
-          <div class="accordion-item-live rounded-2xl border border-emerald-600/15 bg-neutral-900 overflow-hidden">
-            <button
-              @click="toggleSection('context')"
-              class="accordion-button-live w-full px-6 py-4 flex items-center justify-between hover:bg-emerald-950/30 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 group"
-              :aria-expanded="openSections.has('context')"
-            >
-              <span class="font-semibold text-emerald-100 group-hover:text-emerald-300 transition-colors">{{ t('projectsPage.douala.sections.context.title', 'Contexte & justification') }}</span>
-              <svg
-                class="w-5 h-5 transition-transform duration-500 text-emerald-400"
-                :class="{ 'rotate-180': openSections.has('context') }"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M6 9l6 6 6-6"/>
-              </svg>
-            </button>
-            <div
-              v-show="openSections.has('context')"
-              class="accordion-content-live px-6 pb-4 opacity-90"
-            >
-              <p>{{ t('projectsPage.douala.sections.context.content', projectData.details.context) }}</p>
+          <article class="section-magazine rounded-2xl border border-emerald-600/15 bg-neutral-900 overflow-hidden p-6">
+            <!-- Titre de section -->
+            <h3 class="section-title font-semibold text-emerald-100 mb-4 text-lg">
+              {{ t('projectsPage.douala.sections.context.title', 'Contexte & justification') }}
+            </h3>
+
+            <!-- Layout magazine inversé : Image gauche + Texte droite -->
+            <div class="flex flex-col md:flex-row-reverse gap-6 items-start md:items-center">
+              <!-- Texte -->
+              <div class="flex-1 opacity-90">
+                <p class="leading-relaxed">{{ t('projectsPage.douala.sections.context.content', projectData.details.context) }}</p>
+              </div>
+              <!-- Image -->
+              <div class="w-full md:w-2/5 shrink-0">
+                <img
+                  :src="imgLaterale1"
+                  alt="Vue d'ensemble du Port Sec de Douala"
+                  class="w-full h-auto rounded-lg shadow-lg object-cover aspect-video"
+                  loading="lazy"
+                />
+              </div>
             </div>
-          </div>
+          </article>
 
           <!-- Cadre légal -->
-          <div class="accordion-item-live rounded-2xl border border-emerald-600/15 bg-neutral-900 overflow-hidden">
-            <button
-              @click="toggleSection('legal')"
-              class="accordion-button-live w-full px-6 py-4 flex items-center justify-between hover:bg-emerald-950/30 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 group"
-              :aria-expanded="openSections.has('legal')"
-            >
-              <span class="font-semibold text-emerald-100 group-hover:text-emerald-300 transition-colors">{{ t('projectsPage.douala.sections.legal.title', 'Cadre légal & institutionnel') }}</span>
-              <svg
-                class="w-5 h-5 transition-transform duration-500 text-emerald-400"
-                :class="{ 'rotate-180': openSections.has('legal') }"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M6 9l6 6 6-6"/>
-              </svg>
-            </button>
-            <div
-              v-show="openSections.has('legal')"
-              class="accordion-content-live px-6 pb-4"
-            >
-              <ul class="space-y-2" role="list">
-                <li
-                  v-for="(item, i) in legalItems"
-                  :key="i"
-                  class="flex items-start gap-2 opacity-90"
-                  role="listitem"
-                >
-                  <span class="inline-block mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span>
-                  <span>{{ item }}</span>
-                </li>
-              </ul>
+          <article class="section-magazine rounded-2xl border border-emerald-600/15 bg-neutral-900 overflow-hidden p-6">
+            <!-- Titre de section -->
+            <h3 class="section-title font-semibold text-emerald-100 mb-4 text-lg">
+              {{ t('projectsPage.douala.sections.legal.title', 'Cadre légal & institutionnel') }}
+            </h3>
+
+            <!-- Layout magazine : Texte gauche + Image droite -->
+            <div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
+              <!-- Texte (liste) -->
+              <div class="flex-1">
+                <ul class="space-y-2" role="list">
+                  <li
+                    v-for="(item, i) in legalItems"
+                    :key="i"
+                    class="flex items-start gap-2 opacity-90"
+                    role="listitem"
+                  >
+                    <span class="inline-block mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                    <span>{{ item }}</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- Image -->
+              <div class="w-full md:w-2/5 shrink-0">
+                <img
+                  :src="imgHaut"
+                  alt="Cadre institutionnel du Port Sec"
+                  class="w-full h-auto rounded-lg shadow-lg object-cover aspect-video"
+                  loading="lazy"
+                />
+              </div>
             </div>
-          </div>
+          </article>
 
           <!-- Description technique -->
-          <div class="accordion-item-live rounded-2xl border border-emerald-600/15 bg-neutral-900 overflow-hidden">
-            <button
-              @click="toggleSection('technical')"
-              class="accordion-button-live w-full px-6 py-4 flex items-center justify-between hover:bg-emerald-950/30 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 group"
-              :aria-expanded="openSections.has('technical')"
-            >
-              <span class="font-semibold text-emerald-100 group-hover:text-emerald-300 transition-colors">{{ t('projectsPage.douala.sections.technical.title', 'Description technique') }}</span>
-              <svg
-                class="w-5 h-5 transition-transform duration-500 text-emerald-400"
-                :class="{ 'rotate-180': openSections.has('technical') }"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M6 9l6 6 6-6"/>
-              </svg>
-            </button>
-            <div
-              v-show="openSections.has('technical')"
-              class="accordion-content-live px-6 pb-4 opacity-90"
-            >
-              <p>{{ t('projectsPage.douala.sections.technical.content', projectData.details.technical) }}</p>
+          <article class="section-magazine rounded-2xl border border-emerald-600/15 bg-neutral-900 overflow-hidden p-6">
+            <!-- Titre de section -->
+            <h3 class="section-title font-semibold text-emerald-100 mb-4 text-lg">
+              {{ t('projectsPage.douala.sections.technical.title', 'Description technique') }}
+            </h3>
+
+            <!-- Layout magazine inversé : Image gauche + Texte droite -->
+            <div class="flex flex-col md:flex-row-reverse gap-6 items-start md:items-center">
+              <!-- Texte -->
+              <div class="flex-1 opacity-90">
+                <p class="leading-relaxed">{{ t('projectsPage.douala.sections.technical.content', projectData.details.technical) }}</p>
+              </div>
+              <!-- Image -->
+              <div class="w-full md:w-2/5 shrink-0">
+                <img
+                  :src="imgLaterale4"
+                  alt="Équipements techniques du Port Sec"
+                  class="w-full h-auto rounded-lg shadow-lg object-cover aspect-video"
+                  loading="lazy"
+                />
+              </div>
             </div>
-          </div>
+          </article>
 
           <!-- Gouvernance -->
-          <div class="accordion-item-live rounded-2xl border border-emerald-600/15 bg-neutral-900 overflow-hidden">
-            <button
-              @click="toggleSection('governance')"
-              class="accordion-button-live w-full px-6 py-4 flex items-center justify-between hover:bg-emerald-950/30 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 group"
-              :aria-expanded="openSections.has('governance')"
-            >
-              <span class="font-semibold text-emerald-100 group-hover:text-emerald-300 transition-colors">{{ t('projectsPage.douala.sections.governance.title', 'Gouvernance & performance') }}</span>
-              <svg
-                class="w-5 h-5 transition-transform duration-500 text-emerald-400"
-                :class="{ 'rotate-180': openSections.has('governance') }"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M6 9l6 6 6-6"/>
-              </svg>
-            </button>
-            <div
-              v-show="openSections.has('governance')"
-              class="accordion-content-live px-6 pb-4 opacity-90"
-            >
-              <p>{{ t('projectsPage.douala.sections.governance.content', projectData.details.governance) }}</p>
+          <article class="section-magazine rounded-2xl border border-emerald-600/15 bg-neutral-900 overflow-hidden p-6">
+            <!-- Titre de section -->
+            <h3 class="section-title font-semibold text-emerald-100 mb-4 text-lg">
+              {{ t('projectsPage.douala.sections.governance.title', 'Gouvernance & performance') }}
+            </h3>
+
+            <!-- Layout magazine : Texte gauche + Image droite -->
+            <div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
+              <!-- Texte -->
+              <div class="flex-1 opacity-90">
+                <p class="leading-relaxed">{{ t('projectsPage.douala.sections.governance.content', projectData.details.governance) }}</p>
+              </div>
+              <!-- Image -->
+              <div class="w-full md:w-2/5 shrink-0">
+                <img
+                  :src="imgLaterale2"
+                  alt="Gouvernance du Port Sec de Douala"
+                  class="w-full h-auto rounded-lg shadow-lg object-cover aspect-video"
+                  loading="lazy"
+                />
+              </div>
             </div>
-          </div>
+          </article>
 
           <!-- Stratégie 2024-2030 -->
-          <div class="accordion-item-live rounded-2xl border border-emerald-600/15 bg-neutral-900 overflow-hidden">
-            <button
-              @click="toggleSection('strategy')"
-              class="accordion-button-live w-full px-6 py-4 flex items-center justify-between hover:bg-emerald-950/30 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 group"
-              :aria-expanded="openSections.has('strategy')"
-            >
-              <span class="font-semibold text-emerald-100 group-hover:text-emerald-300 transition-colors">{{ t('projectsPage.douala.sections.strategy.title', 'Stratégie de développement 2024–2030') }}</span>
-              <svg
-                class="w-5 h-5 transition-transform duration-500 text-emerald-400"
-                :class="{ 'rotate-180': openSections.has('strategy') }"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
+          <article class="section-magazine rounded-2xl border border-emerald-600/15 bg-neutral-900 overflow-hidden p-6">
+            <!-- Titre de section -->
+            <h3 class="section-title font-semibold text-emerald-100 mb-4 text-lg">
+              {{ t('projectsPage.douala.sections.strategy.title', 'Stratégie de développement 2024–2030') }}
+            </h3>
+
+            <!-- Timeline -->
+            <div class="space-y-4">
+              <div
+                v-for="(phase, i) in projectData.details.strategy"
+                :key="i"
+                class="flex gap-4"
               >
-                <path d="M6 9l6 6 6-6"/>
-              </svg>
-            </button>
-            <div
-              v-show="openSections.has('strategy')"
-              class="accordion-content-live px-6 pb-4"
-            >
-              <div class="space-y-4">
-                <div
-                  v-for="(phase, i) in projectData.details.strategy"
-                  :key="i"
-                  class="flex gap-4"
-                >
-                  <div class="shrink-0 w-24 text-sm opacity-60">{{ phase.period }}</div>
-                  <div class="flex-1">
-                    <p class="font-medium mb-1">{{ phase.title }}</p>
-                    <p class="text-sm opacity-80">{{ phase.description }}</p>
-                  </div>
+                <div class="shrink-0 w-24 text-sm opacity-60">{{ phase.period }}</div>
+                <div class="flex-1">
+                  <p class="font-medium mb-1">{{ phase.title }}</p>
+                  <p class="text-sm opacity-80">{{ phase.description }}</p>
                 </div>
               </div>
             </div>
-          </div>
+          </article>
         </div>
 
         <!-- Autres projets -->
@@ -335,21 +303,16 @@ import OtherProjects from '../components/OtherProjects.vue'
 
 const { t, tm } = useI18n()
 
+// Import des images du Port Sec pour layout magazine
+const imgHaut = new URL('../assets/images/image_haut.jpg', import.meta.url).href
+const imgLaterale1 = new URL('../assets/images/image_vue_laterale.jpg', import.meta.url).href
+const imgLaterale2 = new URL('../assets/images/image_vue_laterale_second.jpg', import.meta.url).href
+const imgLaterale3 = new URL('../assets/images/image_vue_laterale_third.jpg', import.meta.url).href
+const imgLaterale4 = new URL('../assets/images/image_vue_laterale_4.jpg', import.meta.url).href
+const imgLaterale5 = new URL('../assets/images/image_vue_laterale_5.jpg', import.meta.url).href
+
 // Données du projet Douala
 const projectData = projectsData.projects[0] // Douala
-
-// Sections ouvertes par défaut (objective, context, metrics)
-const openSections = ref(new Set(['objective', 'context', 'legal']))
-
-const toggleSection = (section) => {
-  if (openSections.value.has(section)) {
-    openSections.value.delete(section)
-  } else {
-    openSections.value.add(section)
-  }
-  // Force reactivity
-  openSections.value = new Set(openSections.value)
-}
 
 // Métriques formatées
 const metrics = computed(() => ({
@@ -621,7 +584,26 @@ const legalItems = computed(() => {
   }
 }
 
-/* ===== ACCORDIONS LIVE ===== */
+/* ===== SECTIONS MAGAZINE (sans accordions) ===== */
+.section-magazine {
+  position: relative;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, rgba(5, 150, 105, 0.015) 0%, rgba(23, 23, 23, 0.6) 100%);
+}
+
+.section-magazine:hover {
+  transform: translateX(2px);
+  border-color: rgba(5, 150, 105, 0.3);
+  box-shadow: 0 2px 12px rgba(16, 185, 129, 0.1);
+}
+
+.section-title {
+  position: relative;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(5, 150, 105, 0.15);
+}
+
+/* ===== ACCORDIONS LIVE (legacy, conservé pour compatibilité) ===== */
 .accordion-item-live {
   position: relative;
   transition: all 0.3s ease;

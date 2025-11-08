@@ -17,7 +17,7 @@
     "trust": "Aligned with NDP 2026–2030"
   },
   "gpmHero": {
-    "tag": "Chadian national operator • Vision 2030",
+    "tag": "Chadian national operator • Vision 2032",
     "title": "Connecting Chad to the world through modern logistics infrastructure",
     "subtitle": "Genesis Port Management (GPM) develops and manages regional logistics platforms serving Chad's external trade.",
     "ctaPrimary": "Discover our projects",
@@ -64,10 +64,10 @@
       },
       {
         "period": "2025 – 2028",
-        "title": "Construction & Commissioning",
+        "title": "Construction & Commissioning of the Chad Dry Port in Douala",
         "status": "In progress",
         "statusIcon": "🟩",
-        "description": "Financing mobilization, construction work, team training and commissioning of the Chad Dry Port in Douala.",
+        "description": "Financing mobilization, construction work, team training and commissioning.",
         "color": "green"
       },
       {
@@ -174,24 +174,24 @@
     "sites": [
       {
         "name": "Douala",
-        "status": "Dry Port • Operational",
+        "status": "Dry Port • Operational 2028",
         "capacity": "10 ha • 3.5K TEU"
       },
       {
         "name": "Kribi",
-        "status": "Maritime platform • Q2 2026",
+        "status": "Maritime platform • 2030-2032",
         "capacity": "25 ha • 45K TEU"
       },
       {
         "name": "Ngaoundéré",
-        "status": "Rail hub • Q4 2026",
+        "status": "Rail hub • 2030-2032",
         "capacity": "35 ha • 60K TEU"
       }
     ]
   },
   "impactKpis": {
     "title": "Our concrete results",
-    "subtitle": "Projected figures for 2030",
+    "subtitle": "Projected figures for 2032",
     "items": [
       {
         "label": "Total area",
@@ -211,7 +211,7 @@
         "label": "Total investment",
         "value": "≈ 100",
         "unit": "Bn XAF",
-        "note": "Vision 2030",
+        "note": "Vision 2032",
         "icon": "💰"
       },
       {
@@ -252,17 +252,12 @@
     "title": "Project progress",
     "items": [
       {
-        "date": "March 2025",
-        "title": "Douala–Kribi protocol signing",
-        "description": "Completion of technical studies and launch of the logistics partnership between Douala and the deep-water port of Kribi."
-      },
-      {
         "date": "2025–2028",
-        "title": "Douala Dry Port development works",
+        "title": "Finalization of technical studies, securing financing, construction of the Douala Dry Port",
         "description": "Construction phase, equipment installation and progressive commissioning of the logistics site."
       },
       {
-        "date": "2028",
+        "date": "2030-2032",
         "title": "Kribi–Ngaoundéré studies and interconnection",
         "description": "Preparation of the rail connection and integration of the future Ngaoundéré multimodal hub into the Chad–Cameroon corridor."
       }
@@ -384,7 +379,7 @@
           "content": "GPM manages the project through a board of directors, experienced management and technical, financial and legal committees. Performance indicators (transit time, volumes, security, customer satisfaction) are monitored to ensure optimal operations."
         },
         "strategy": {
-          "title": "Development Strategy 2024–2030"
+          "title": "Development Strategy 2024–2032"
         }
       },
       "video": {
@@ -493,7 +488,7 @@
     "q2": "What are the guarantees?",
     "a2": "Reinforced bilateral legal framework and institutional alignment.",
     "q3": "What is the timeline?",
-    "a3": "Progressive rollout aligned with Vision 2030."
+    "a3": "Progressive rollout aligned with Vision 2032."
   },
   "dataroom": {
     "open": "Data Room",
@@ -645,7 +640,7 @@
       ]
     },
     "vision": {
-      "title": "Vision 2030 & trajectory",
+      "title": "Vision 2032 & trajectory",
       "goals": [
         "Integration into major Central African corridors",
         "Competitive regional hub within AfCFTA",

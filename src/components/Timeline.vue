@@ -45,9 +45,20 @@
 
           <!-- Carte -->
           <div
-            class="rounded-2xl border bg-neutral-900 p-4 md:pt-16 hover:border-emerald-700/40 transition-colors focus-within:ring-2 focus-within:ring-emerald-500"
+            class="rounded-2xl border relative overflow-hidden min-h-72 md:min-h-80 hover:border-emerald-700/40 transition-colors focus-within:ring-2 focus-within:ring-emerald-500 flex flex-col"
             :class="borderClass(item.status, item.color)"
           >
+            <!-- Background image fixe selon l'index -->
+            <div
+              class="absolute inset-0 z-0"
+              :style="getBackgroundImage(i)"
+            ></div>
+
+            <!-- Overlay sombre pour lisibilité (réduit pour voir plus l'image) -->
+            <div class="absolute inset-0 bg-gradient-to-br from-black/70 via-black/65 to-black/60 z-0"></div>
+
+            <!-- Contenu avec z-index supérieur -->
+            <div class="relative z-10 p-4 md:pt-16 flex-1 flex flex-col">
             <!-- Badge statut (mobile) -->
             <div class="flex items-center justify-between mb-3 md:hidden">
               <span
@@ -60,13 +71,13 @@
             </div>
 
             <!-- Période -->
-            <p class="text-xs opacity-60 mb-1">{{ item.period }}</p>
+            <p class="text-xs opacity-80 mb-1 text-shadow">{{ item.period }}</p>
 
             <!-- Titre -->
-            <h3 class="font-semibold mb-2">{{ item.title }}</h3>
+            <h3 class="font-semibold mb-2 text-shadow">{{ item.title }}</h3>
 
             <!-- Description -->
-            <p class="text-sm opacity-80">{{ item.description }}</p>
+            <p class="text-sm opacity-90 text-shadow">{{ item.description }}</p>
 
             <!-- Badge statut (desktop) -->
             <div class="hidden md:flex mt-3">
@@ -77,6 +88,7 @@
                 <span>{{ item.statusIcon }}</span>
                 <span>{{ item.status }}</span>
               </span>
+            </div>
             </div>
           </div>
         </article>
@@ -110,14 +122,32 @@ const props = defineProps({
 
 const { t, tm } = useI18n()
 
+// Import des images du Port Sec
+const portImages = [
+  new URL('../assets/images/image_haut.jpg', import.meta.url).href,
+  new URL('../assets/images/image_vue_laterale.jpg', import.meta.url).href,
+  new URL('../assets/images/image_vue_laterale_second.jpg', import.meta.url).href,
+  new URL('../assets/images/image_vue_laterale_third.jpg', import.meta.url).href
+]
+
+// Fonction pour obtenir l'image de fond selon l'index avec taille uniforme
+const getBackgroundImage = (index) => {
+  return {
+    backgroundImage: `url(${portImages[index]})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'
+  }
+}
+
 // Accessibilité
 const aria = computed(() =>
-  props.ariaLabel || t('vision.title', 'Notre Vision 2030')
+  props.ariaLabel || t('vision.title', 'Notre Vision 2032')
 )
 
 // Titre
 const resolvedTitle = computed(() =>
-  props.title || t('vision.title', 'Notre Vision 2030')
+  props.title || t('vision.title', 'Notre Vision 2032')
 )
 
 // Intro (optionnel)
@@ -226,6 +256,11 @@ const statusBadgeClass = (status, color) => {
 <style scoped>
 :focus-visible {
   outline: none;
+}
+
+/* Text shadow pour meilleure lisibilité sur images */
+.text-shadow {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 /* Animation hover sur les cartes */

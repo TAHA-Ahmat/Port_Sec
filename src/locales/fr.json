@@ -17,7 +17,7 @@
     "trust": "Aligné PND 2026–2030"
   },
   "gpmHero": {
-    "tag": "Opérateur national tchadien • Vision 2030",
+    "tag": "Opérateur national tchadien • Vision 2032",
     "title": "Connecter le Tchad au monde par des infrastructures logistiques modernes",
     "subtitle": "Genesis Port Management (GPM) développe et gère les plateformes logistiques régionales au service du commerce extérieur du Tchad.",
     "ctaPrimary": "Découvrir nos projets",
@@ -64,10 +64,10 @@
       },
       {
         "period": "2025 – 2028",
-        "title": "Construction & Mise en exploitation",
+        "title": "Construction & Mise en exploitation du Port Sec du Tchad à Douala",
         "status": "En cours",
         "statusIcon": "🟩",
-        "description": "Mobilisation des financements, réalisation des travaux, formation des équipes et mise en exploitation du Port Sec du Tchad à Douala.",
+        "description": "Mobilisation des financements, réalisation des travaux, formation des équipes et mise en exploitation.",
         "color": "green"
       },
       {
@@ -174,24 +174,24 @@
     "sites": [
       {
         "name": "Douala",
-        "status": "Port Sec • Opérationnel",
+        "status": "Port Sec • Opérationnel 2028",
         "capacity": "10 ha • 3.5K EVP"
       },
       {
         "name": "Kribi",
-        "status": "Plateforme maritime • T2 2026",
+        "status": "Plateforme maritime • 2030-2032",
         "capacity": "25 ha • 45K EVP"
       },
       {
         "name": "Ngaoundéré",
-        "status": "Hub ferroviaire • T4 2026",
+        "status": "Hub ferroviaire • 2030-2032",
         "capacity": "35 ha • 60K EVP"
       }
     ]
   },
   "impactKpis": {
     "title": "Nos résultats concrets",
-    "subtitle": "Chiffres prévisionnels à l'horizon 2030",
+    "subtitle": "Chiffres prévisionnels à l'horizon 2032",
     "items": [
       {
         "label": "Surface totale",
@@ -211,7 +211,7 @@
         "label": "Investissement total",
         "value": "≈ 100",
         "unit": "Mds XAF",
-        "note": "Vision 2030",
+        "note": "Vision 2032",
         "icon": "💰"
       },
       {
@@ -252,17 +252,12 @@
     "title": "Avancées du projet",
     "items": [
       {
-        "date": "Mars 2025",
-        "title": "Signature du protocole Douala–Kribi",
-        "description": "Finalisation des études techniques et lancement du partenariat logistique entre Douala et le port en eau profonde de Kribi."
-      },
-      {
         "date": "2025–2028",
-        "title": "Travaux d'aménagement du Port Sec de Douala",
+        "title": "Finalisation des études techniques, bouclage des financements, réalisation des travaux du Port Sec de Douala",
         "description": "Phase de construction, installation des équipements et mise en exploitation progressive du site logistique."
       },
       {
-        "date": "2028",
+        "date": "2030-2032",
         "title": "Études et interconnexion Kribi–Ngaoundéré",
         "description": "Préparation de la connexion ferroviaire et intégration du futur hub multimodal de Ngaoundéré dans le corridor Tchad–Cameroun."
       }
@@ -384,7 +379,7 @@
           "content": "GPM assure le pilotage du projet à travers un conseil d'administration, une direction expérimentée et des comités techniques, financiers et juridiques. Des indicateurs de performance (temps de transit, volumes, sécurité, satisfaction clients) sont suivis pour garantir une exploitation optimale."
         },
         "strategy": {
-          "title": "Stratégie de développement 2024–2030"
+          "title": "Stratégie de développement 2024–2032"
         }
       },
       "video": {
@@ -493,7 +488,7 @@
     "q2": "Quelles sont les garanties ?",
     "a2": "Cadre légal bilatéral et alignement institutionnel renforcés.",
     "q3": "Quel calendrier ?",
-    "a3": "Déploiement progressif aligné sur la Vision 2030."
+    "a3": "Déploiement progressif aligné sur la Vision 2032."
   },
   "dataroom": {
     "open": "Espace documentaire",
@@ -645,7 +640,7 @@
       ]
     },
     "vision": {
-      "title": "Vision 2030 & trajectoire",
+      "title": "Vision 2032 & trajectoire",
       "goals": [
         "Intégration aux grands corridors d’Afrique centrale",
         "Hub régional compétitif dans la ZLECAf",

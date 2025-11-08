@@ -64,7 +64,7 @@ const allProjects = [
     title: 'Port Sec du Tchad à Douala',
     description: 'Premier port sec opérationnel du réseau GPM, connectant le Tchad au Port de Douala via un corridor logistique sécurisé.',
     status: 'EN COURS',
-    link: '/projects#douala',
+    link: '/projects/douala',
     cta: 'Voir détails',
     badgeClass: 'bg-emerald-950/30 border border-emerald-700/40',
     dotClass: 'bg-emerald-500',
