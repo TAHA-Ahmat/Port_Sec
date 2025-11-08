@@ -67,13 +67,14 @@
 
     <!-- Réseau binational - Emblèmes CM/TD -->
     <div class="mt-8 flex items-center justify-center gap-4 px-4 py-6 rounded-xl border border-neutral-800 bg-neutral-900/50 backdrop-blur-sm">
-      <div class="flex items-center gap-3 group">
+      <!-- Cameroun -->
+      <div class="flex flex-col md:flex-row items-center gap-2 md:gap-3 group">
         <img
           src="@/assets/images/emblemeCameroun.png"
           alt="Cameroun"
           class="sceau-hero sceau-hero-cm h-10 md:h-12 w-10 md:w-12 object-contain"
         />
-        <span class="text-sm md:text-base font-medium opacity-80">Cameroun</span>
+        <span class="text-xs md:text-sm md:text-base font-medium opacity-80">Cameroun</span>
       </div>
 
       <div class="h-8 w-px bg-neutral-700"></div>
@@ -85,13 +86,14 @@
 
       <div class="h-8 w-px bg-neutral-700"></div>
 
-      <div class="flex items-center gap-3 group">
-        <span class="text-sm md:text-base font-medium opacity-80">Tchad</span>
+      <!-- Tchad -->
+      <div class="flex flex-col md:flex-row items-center gap-2 md:gap-3 group">
         <img
           src="@/assets/images/tchad_embleme.png"
           alt="Tchad"
           class="sceau-hero h-10 md:h-12 w-10 md:w-12 object-contain"
         />
+        <span class="text-xs md:text-sm md:text-base font-medium opacity-80">Tchad</span>
       </div>
     </div>
   </section>
