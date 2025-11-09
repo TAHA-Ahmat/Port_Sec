@@ -338,19 +338,82 @@ const handleSubmit = async () => {
   isSubmitting.value = true
 
   try {
-    // Simuler l'envoi (à connecter à votre backend)
-    await new Promise(resolve => setTimeout(resolve, 1500))
+    // Envoi via Web3Forms
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        access_key: '5e272f01-90e0-4d25-82d3-c68fa0d54f18',
+        subject: 'PRIORITAIRE - Demande acces DataRoom',
+        from_name: `${formData.firstName} ${formData.lastName}`,
+        email: 'tahaibrahimtaha@gpmtchad.com',
+        replyto: formData.email,
+        message: `
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENESIS PORT MANAGEMENT
+Port Sec du Tchad - DataRoom
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-    // En production, envoyer à votre API ou service email
-    console.log('Demande d\'accès DataRoom:', formData)
+NOUVELLE DEMANDE ACCES DATAROOM
 
-    formState.value = 'success'
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+INFORMATIONS DU DEMANDEUR:
 
-    // Réinitialiser après 5 secondes
-    setTimeout(() => {
-      Object.keys(formData).forEach(key => formData[key] = '')
-      formState.value = 'idle'
-    }, 5000)
+Nom complet: ${formData.firstName} ${formData.lastName}
+Email: ${formData.email}
+Telephone: ${formData.phone}
+Entreprise: ${formData.company}
+Fonction: ${formData.position}
+Type investisseur: ${formData.investorType}
+
+${formData.message ? `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MESSAGE DU DEMANDEUR:
+
+${formData.message}
+` : ''}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ACTIONS REQUISES:
+
+1. Verifier profil et legitimite investisseur
+2. Contacter demandeur pour valider interet
+3. Si valide: Creer acces securise DataRoom
+4. Envoyer email avec identifiants + NDA si necessaire
+5. Si refuse: Envoyer email refus poli
+
+⚠️ TRAITER DANS LES 24H - Demande investisseur prioritaire
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Date soumission: ${new Date().toLocaleDateString('fr-FR', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit'
+})}
+
+Email automatique - portsectchad.com
+GPM - N'Djamena, Tchad
+        `.trim()
+      })
+    })
+
+    const result = await response.json()
+
+    if (result.success) {
+      formState.value = 'success'
+
+      // Réinitialiser après 5 secondes
+      setTimeout(() => {
+        Object.keys(formData).forEach(key => formData[key] = '')
+        formState.value = 'idle'
+      }, 5000)
+    } else {
+      throw new Error('Erreur lors de l\'envoi du formulaire')
+    }
 
   } catch (error) {
     formState.value = 'error'

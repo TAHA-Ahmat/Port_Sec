@@ -211,17 +211,72 @@ const handleSubscribe = async () => {
 
   isSubmitting.value = true
 
-  // Simuler l'envoi (remplacer par votre API)
-  await new Promise(resolve => setTimeout(resolve, 1000))
+  try {
+    // Envoi via Web3Forms
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        access_key: '5e272f01-90e0-4d25-82d3-c68fa0d54f18',
+        subject: 'Nouvelle inscription Newsletter - Port Sec de Kribi',
+        from_name: 'Port Sec du Tchad',
+        email: 'tahaibrahimtaha@gpmtchad.com',
+        replyto: email.value,
+        message: `
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GENESIS PORT MANAGEMENT
+Port Sec du Tchad
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  console.log('Newsletter subscription:', email.value)
-  subscribed.value = true
-  email.value = ''
-  isSubmitting.value = false
+NOUVELLE INSCRIPTION NEWSLETTER
 
-  setTimeout(() => {
-    subscribed.value = false
-  }, 5000)
+Projet: Port Sec de Kribi
+Email: ${email.value}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ACTIONS A EFFECTUER:
+
+✓ Ajouter l'email a la liste Newsletter Kribi
+✓ Envoyer email de bienvenue
+✓ Programmer envoi actualites projet
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Date: ${new Date().toLocaleDateString('fr-FR', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit'
+})}
+
+Email automatique - portsectchad.com
+GPM - N'Djamena, Tchad
+        `.trim()
+      })
+    })
+
+    const result = await response.json()
+
+    if (result.success) {
+      subscribed.value = true
+      email.value = ''
+
+      setTimeout(() => {
+        subscribed.value = false
+      }, 5000)
+    } else {
+      throw new Error('Erreur lors de l\'envoi')
+    }
+  } catch (error) {
+    console.error('Erreur newsletter:', error)
+    alert('Une erreur est survenue. Veuillez réessayer.')
+  } finally {
+    isSubmitting.value = false
+  }
 }
 </script>
 
