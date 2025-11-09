@@ -165,7 +165,7 @@
             <div>
               <div class="font-bold text-emerald-300 text-shadow-strong">{{ tArray('network.sites')[0]?.name || 'Douala' }}</div>
               <div class="text-xs text-neutral-100 text-shadow-strong">{{ tArray('network.sites')[0]?.status || 'Port Sec • Opérationnel' }}</div>
-              <div class="text-xs text-neutral-200 text-shadow-strong mt-1">{{ tArray('network.sites')[0]?.capacity || '10 ha • 3.5K EVP' }}</div>
+              <div class="text-xs text-neutral-200 text-shadow-strong mt-1">{{ tArray('network.sites')[0]?.capacity || '10 ha • 42K EVP/an' }}</div>
             </div>
           </div>
 
