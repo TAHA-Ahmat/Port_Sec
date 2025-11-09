@@ -347,56 +347,28 @@ const handleSubmit = async () => {
       },
       body: JSON.stringify({
         access_key: '5e272f01-90e0-4d25-82d3-c68fa0d54f18',
-        subject: 'PRIORITAIRE - Demande acces DataRoom',
+        subject: 'Demande accès DataRoom',
         from_name: `${formData.firstName} ${formData.lastName}`,
-        email: 'tahaibrahimtaha@gpmtchad.com',
+        email: 'contact@gpmtchad.com',
         replyto: formData.email,
         message: `
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-GENESIS PORT MANAGEMENT
-Port Sec du Tchad - DataRoom
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DEMANDE ACCÈS DATAROOM
 
-NOUVELLE DEMANDE ACCES DATAROOM
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-INFORMATIONS DU DEMANDEUR:
-
-Nom complet: ${formData.firstName} ${formData.lastName}
+Nom: ${formData.firstName} ${formData.lastName}
 Email: ${formData.email}
-Telephone: ${formData.phone}
-Entreprise: ${formData.company}
+Téléphone: ${formData.phone}
+Société: ${formData.company}
 Fonction: ${formData.position}
-Type investisseur: ${formData.investorType}
+Type: ${formData.investorType}
 
-${formData.message ? `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-MESSAGE DU DEMANDEUR:
-
-${formData.message}
-` : ''}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ACTIONS REQUISES:
-
-1. Verifier profil et legitimite investisseur
-2. Contacter demandeur pour valider interet
-3. Si valide: Creer acces securise DataRoom
-4. Envoyer email avec identifiants + NDA si necessaire
-5. Si refuse: Envoyer email refus poli
-
-⚠️ TRAITER DANS LES 24H - Demande investisseur prioritaire
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Date soumission: ${new Date().toLocaleDateString('fr-FR', {
+${formData.message ? `Message:\n${formData.message}\n` : ''}
+Date: ${new Date().toLocaleDateString('fr-FR', {
   year: 'numeric',
   month: '2-digit',
   day: '2-digit',
   hour: '2-digit',
   minute: '2-digit'
 })}
-
-Email automatique - portsectchad.com
-GPM - N'Djamena, Tchad
         `.trim()
       })
     })

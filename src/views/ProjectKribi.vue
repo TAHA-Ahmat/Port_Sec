@@ -221,29 +221,15 @@ const handleSubscribe = async () => {
       },
       body: JSON.stringify({
         access_key: '5e272f01-90e0-4d25-82d3-c68fa0d54f18',
-        subject: 'Nouvelle inscription Newsletter - Port Sec de Kribi',
+        subject: 'Newsletter Kribi',
         from_name: 'Port Sec du Tchad',
-        email: 'tahaibrahimtaha@gpmtchad.com',
+        email: 'contact@gpmtchad.com',
         replyto: email.value,
         message: `
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-GENESIS PORT MANAGEMENT
-Port Sec du Tchad
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-NOUVELLE INSCRIPTION NEWSLETTER
+INSCRIPTION NEWSLETTER
 
 Projet: Port Sec de Kribi
 Email: ${email.value}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ACTIONS A EFFECTUER:
-
-✓ Ajouter l'email a la liste Newsletter Kribi
-✓ Envoyer email de bienvenue
-✓ Programmer envoi actualites projet
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Date: ${new Date().toLocaleDateString('fr-FR', {
   year: 'numeric',
@@ -252,9 +238,6 @@ Date: ${new Date().toLocaleDateString('fr-FR', {
   hour: '2-digit',
   minute: '2-digit'
 })}
-
-Email automatique - portsectchad.com
-GPM - N'Djamena, Tchad
         `.trim()
       })
     })
