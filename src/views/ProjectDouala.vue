@@ -21,7 +21,7 @@
           <span class="live-dot"></span>
           <span class="live-text">PROJET ACTIF</span>
           <span class="live-separator">•</span>
-          <span class="live-status">En construction • Opérationnel 2028</span>
+          <span class="live-status">En développement • Opérationnel 2028</span>
         </div>
 
         <!-- Header Hero -->

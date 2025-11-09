@@ -151,35 +151,12 @@
         <h2 class="font-semibold">{{ t('projectsPage.portfolio.title') }}</h2>
       </header>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <!-- Total Surface -->
-        <div class="p-5 rounded-xl border border-emerald-800/40 bg-gradient-to-br from-emerald-900/20 to-neutral-900">
-          <div class="text-3xl mb-2">📐</div>
-          <div class="text-2xl font-bold text-emerald-300">70 ha</div>
-          <div class="text-xs text-neutral-400 mt-1">{{ t('projectsPage.portfolio.totalArea') }}</div>
-        </div>
-
-        <!-- Total Capacity -->
-        <div class="p-5 rounded-xl border border-blue-800/40 bg-gradient-to-br from-blue-900/20 to-neutral-900">
-          <div class="text-3xl mb-2">📦</div>
-          <div class="text-2xl font-bold text-blue-300">{{ locale === 'en' ? '133K TEU' : '133K EVP' }}</div>
-          <div class="text-xs text-neutral-400 mt-1">{{ t('projectsPage.portfolio.totalCapacity') }}</div>
-        </div>
-
-        <!-- Total Investment -->
-        <div class="p-5 rounded-xl border border-amber-800/40 bg-gradient-to-br from-amber-900/20 to-neutral-900">
-          <div class="text-3xl mb-2">💰</div>
-          <div class="text-2xl font-bold text-amber-300">≈ 100 Mds</div>
-          <div class="text-xs text-neutral-400 mt-1">{{ t('projectsPage.portfolio.totalInvestment') }}</div>
-        </div>
-
-        <!-- Total Jobs -->
-        <div class="p-5 rounded-xl border border-purple-800/40 bg-gradient-to-br from-purple-900/20 to-neutral-900">
-          <div class="text-3xl mb-2">👥</div>
-          <div class="text-2xl font-bold text-purple-300">760+</div>
-          <div class="text-xs text-neutral-400 mt-1">{{ t('projectsPage.portfolio.totalJobs') }}</div>
-        </div>
-      </div>
+      <KpiStrip
+        mode="impact"
+        :columns="4"
+        :show-title="false"
+        :animated="true"
+      />
     </section>
 
     <!-- =========================
@@ -207,6 +184,7 @@ import projectsData from '../data/projects.json'
 import Breadcrumbs from '../components/Breadcrumbs.vue'
 import HeroProjects from '../components/HeroProjects.vue'
 import InvestorCTA from '../components/InvestorCTA.vue'
+import KpiStrip from '../components/KpiStrip.vue'
 
 const { t, tm, locale } = useI18n()
 

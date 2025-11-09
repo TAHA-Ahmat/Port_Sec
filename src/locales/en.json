@@ -311,7 +311,7 @@
     "grid": {
       "title": "Project Portfolio",
       "seeDetails": "See details",
-      "discoverMain": "Discover the flagship project",
+      "discoverMain": "View the Douala Dry Port",
       "learnMore": "Learn more about this project",
       "comingSoon": "Coming soon",
       "inPreparation": "In preparation"
@@ -335,9 +335,9 @@
       "q4": "Q4"
     },
     "badges": {
-      "active": "✓ In progress",
-      "kribiPrep": "○ In preparation • Launch Q2 2026",
-      "ngaoundereStudy": "○ Under study • Launch Q4 2026"
+      "active": "✓ Under development • Operational 2028",
+      "kribiPrep": "Launch Q2 2026",
+      "ngaoundereStudy": "Launch Q4 2026"
     },
     "douala": {
       "title": "Chad Dry Port in Douala",

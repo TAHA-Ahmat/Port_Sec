@@ -58,14 +58,6 @@
             EN
           </button>
         </div>
-
-        <!-- CTA Documentation (plus subtil et professionnel) -->
-        <RouterLink
-          to="/dataroom"
-          class="px-3 py-1.5 rounded-xl bg-emerald-500/90 hover:bg-emerald-400 text-neutral-900 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-500"
-        >
-          {{ t('nav.dataroom') || 'Documentation' }}
-        </RouterLink>
       </div>
 
       <!-- Burger mobile moderne -->
@@ -187,19 +179,8 @@
               </li>
             </ul>
 
-            <!-- Actions secondaires -->
-            <div class="flex items-center gap-3 pt-4 border-t border-neutral-800">
-              <RouterLink
-                to="/dataroom"
-                class="flex-1 px-4 py-2.5 rounded-xl bg-emerald-500/90 hover:bg-emerald-400 text-neutral-900 text-center text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all shadow-lg shadow-emerald-500/20"
-                @click="close()"
-              >
-                {{ t('nav.dataroom') || 'Documentation' }}
-              </RouterLink>
-            </div>
-
             <!-- Sélecteur langue -->
-            <div class="flex justify-center">
+            <div class="flex justify-center pt-4 border-t border-neutral-800">
               <div class="rounded-xl border border-neutral-800 bg-neutral-900 p-1 inline-flex items-center gap-1">
                 <button
                   class="px-3 py-1.5 text-xs rounded-lg transition-all"
@@ -743,5 +724,97 @@ header::before {
 @keyframes shimmer {
   0%, 100% { opacity: 0.5; }
   50% { opacity: 1; }
+}
+
+/* ===== Optimisation mode paysage (landscape) pour mobile/tablette ===== */
+@media (orientation: landscape) and (max-height: 500px) {
+  /* Réduire le padding du drawer */
+  #mobile-menu nav {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Réduire l'espacement entre les items */
+  #mobile-menu nav > ul {
+    gap: 0.5rem !important;
+  }
+
+  .mobile-menu-item {
+    margin-bottom: 0 !important;
+  }
+
+  /* Réduire le padding des liens */
+  .menu-item-link {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+    font-size: 0.813rem !important;
+  }
+
+  /* Réduire la taille du logo dans le header du drawer */
+  #mobile-menu img {
+    height: 1.5rem !important;
+  }
+
+  /* Réduire le padding du header du drawer */
+  #mobile-menu nav > div:first-child {
+    padding-bottom: 0.5rem !important;
+  }
+
+  /* Réduire l'espacement du sélecteur de langue */
+  #mobile-menu nav > div:nth-last-child(2) {
+    padding-top: 0.5rem !important;
+  }
+
+  /* Réduire la taille des icônes SVG */
+  .menu-item-link svg {
+    width: 1.125rem !important;
+    height: 1.125rem !important;
+  }
+
+  /* Réduire le badge Madmit */
+  .badge-madmit {
+    padding-top: 0.375rem !important;
+    padding-bottom: 0.375rem !important;
+    font-size: 0.688rem !important;
+  }
+
+  /* Réduire le bouton de fermeture */
+  .close-button {
+    padding: 0.375rem !important;
+  }
+
+  .close-button svg {
+    width: 1.125rem !important;
+    height: 1.125rem !important;
+  }
+
+  /* Optimiser le scroll du menu */
+  #mobile-menu nav > ul {
+    padding-right: 0.25rem !important;
+    margin-right: -0.25rem !important;
+  }
+}
+
+/* ===== Optimisation pour les très petites hauteurs (iPhone SE landscape, etc.) ===== */
+@media (orientation: landscape) and (max-height: 400px) {
+  /* Espacement encore plus réduit */
+  #mobile-menu nav {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+
+  .menu-item-link {
+    padding-top: 0.375rem !important;
+    padding-bottom: 0.375rem !important;
+  }
+
+  /* Cacher le badge Madmit sur les très petits écrans en paysage */
+  .badge-madmit {
+    display: none !important;
+  }
 }
 </style>

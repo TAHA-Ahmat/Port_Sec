@@ -311,7 +311,7 @@
     "grid": {
       "title": "Portfolio de projets",
       "seeDetails": "Voir détails",
-      "discoverMain": "Découvrir le projet phare",
+      "discoverMain": "Voir le Port Sec de Douala",
       "learnMore": "En savoir plus sur ce projet",
       "comingSoon": "Bientôt disponible",
       "inPreparation": "En préparation"
@@ -335,9 +335,9 @@
       "q4": "T4"
     },
     "badges": {
-      "active": "✓ En cours",
-      "kribiPrep": "○ En préparation • Lancement T2 2026",
-      "ngaoundereStudy": "○ En étude • Lancement T4 2026"
+      "active": "✓ En développement • Opérationnel 2028",
+      "kribiPrep": "Lancement T2 2026",
+      "ngaoundereStudy": "Lancement T4 2026"
     },
     "douala": {
       "title": "Port Sec du Tchad à Douala",
