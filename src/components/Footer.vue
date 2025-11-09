@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-neutral-900 text-gray-300 py-10 border-t border-neutral-800">
+  <footer class="relative z-10 bg-neutral-900 text-gray-300 py-10 border-t border-neutral-800">
     <!-- Logo GPM Text en haut centré -->
     <div class="max-w-6xl mx-auto px-4 sm:px-6 mb-8 sm:mb-10 text-center">
       <img
