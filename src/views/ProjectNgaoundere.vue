@@ -10,25 +10,14 @@
     <!-- Hero Section avec visuel -->
     <section class="max-w-6xl mx-auto px-6">
       <div class="rounded-2xl border border-blue-700/40 bg-gradient-to-br from-blue-950/20 via-neutral-900 to-neutral-950 overflow-hidden">
-        <!-- Image placeholder -->
-        <div class="aspect-[21/9] bg-gradient-to-br from-blue-900/20 to-neutral-800 relative overflow-hidden">
-          <div class="absolute inset-0 flex items-center justify-center">
-            <div class="text-center space-y-4 p-8">
-              <div class="text-7xl opacity-40">🚂</div>
-              <p class="text-sm text-neutral-400">Hub multimodal ferroviaire-routier de Ngaoundéré</p>
-            </div>
-          </div>
-          <!-- Badge statut superposé -->
-          <div class="absolute top-6 left-6">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-950/80 backdrop-blur-sm border border-blue-700/40 text-sm">
-              <span class="inline-block h-2.5 w-2.5 rounded-full bg-blue-500 animate-pulse"></span>
-              <span class="text-blue-300 font-semibold">{{ t('project.status', 'EN ÉTUDE') }}</span>
-            </div>
-          </div>
-        </div>
-
         <!-- Contenu Hero -->
         <div class="p-8 md:p-12 space-y-6">
+          <!-- Badge statut -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-950/80 backdrop-blur-sm border border-blue-700/40 text-sm">
+            <span class="inline-block h-2.5 w-2.5 rounded-full bg-blue-500 animate-pulse"></span>
+            <span class="text-blue-300 font-semibold">{{ t('project.status', 'EN ÉTUDE') }}</span>
+          </div>
+
           <h1 class="text-3xl md:text-5xl font-bold">
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-white to-blue-300">
               Port Sec de Ngaoundéré
@@ -133,161 +122,6 @@
       </div>
     </section>
 
-    <!-- Timeline de développement -->
-    <section class="max-w-6xl mx-auto px-6 space-y-6">
-      <header class="flex items-center gap-2 text-sm opacity-80">
-        <span class="inline-block h-2 w-2 rounded-full bg-blue-400"></span>
-        <h2 class="font-semibold">Calendrier de réalisation</h2>
-      </header>
-
-      <div class="relative">
-        <!-- Ligne de temps -->
-        <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-blue-700 to-transparent"></div>
-
-        <div class="space-y-8">
-          <!-- Phase 1 -->
-          <div class="flex gap-6 items-start">
-            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-blue-500/20 border-2 border-blue-500 flex items-center justify-center font-bold text-blue-300 relative z-10">
-              1
-            </div>
-            <div class="flex-1 pt-3">
-              <h3 class="text-lg font-semibold text-white mb-2">2030 : Études de faisabilité</h3>
-              <p class="text-neutral-400 text-sm">Études techniques approfondies, négociations foncières, études d'impact environnemental et social</p>
-            </div>
-          </div>
-
-          <!-- Phase 2 -->
-          <div class="flex gap-6 items-start">
-            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-neutral-900 border-2 border-blue-600 flex items-center justify-center font-bold text-blue-400 relative z-10">
-              2
-            </div>
-            <div class="flex-1 pt-3">
-              <h3 class="text-lg font-semibold text-white mb-2">2030-2031 : Sécurisation & Préparation</h3>
-              <p class="text-neutral-400 text-sm">Acquisition terrain, autorisations, conception détaillée, bouclage financements et validation partenaires</p>
-            </div>
-          </div>
-
-          <!-- Phase 3 -->
-          <div class="flex gap-6 items-start">
-            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-neutral-900 border-2 border-blue-700 flex items-center justify-center font-bold text-blue-500 relative z-10">
-              3
-            </div>
-            <div class="flex-1 pt-3">
-              <h3 class="text-lg font-semibold text-white mb-2">2031-2032 : Construction infrastructure</h3>
-              <p class="text-neutral-400 text-sm">Travaux de génie civil, voiries, embranchement ferré, zones de stockage conteneurs, bâtiments administratifs</p>
-            </div>
-          </div>
-
-          <!-- Phase 4 -->
-          <div class="flex gap-6 items-start">
-            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-neutral-900 border-2 border-blue-800 flex items-center justify-center font-bold text-blue-600 relative z-10">
-              4
-            </div>
-            <div class="flex-1 pt-3">
-              <h3 class="text-lg font-semibold text-white mb-2">Fin 2032 : Équipement & Lancement</h3>
-              <p class="text-neutral-400 text-sm">Installation systèmes IT, matériel de manutention, formation personnel, phase pilote et ouverture commerciale</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Partenaires & Soutiens -->
-    <section class="max-w-6xl mx-auto px-6 space-y-6">
-      <header class="flex items-center gap-2 text-sm opacity-80">
-        <span class="inline-block h-2 w-2 rounded-full bg-blue-400"></span>
-        <h2 class="font-semibold">Partenaires & Soutiens institutionnels</h2>
-      </header>
-
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900 text-center space-y-3">
-          <div class="text-4xl">🇹🇩</div>
-          <h3 class="font-semibold">État du Tchad</h3>
-          <p class="text-xs text-neutral-500">Soutien stratégique et garanties souveraines</p>
-        </div>
-        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900 text-center space-y-3">
-          <div class="text-4xl">🇨🇲</div>
-          <h3 class="font-semibold">État du Cameroun</h3>
-          <p class="text-xs text-neutral-500">Facilitation administrative et accès ferroviaire</p>
-        </div>
-        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900 text-center space-y-3">
-          <div class="text-4xl">🏦</div>
-          <h3 class="font-semibold">Institutions financières</h3>
-          <p class="text-xs text-neutral-500">Banques de développement et bailleurs CEMAC</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Impact attendu -->
-    <section class="max-w-6xl mx-auto px-6 space-y-6">
-      <header class="flex items-center gap-2 text-sm opacity-80">
-        <span class="inline-block h-2 w-2 rounded-full bg-blue-400"></span>
-        <h2 class="font-semibold">Impact socio-économique attendu</h2>
-      </header>
-
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900 space-y-4">
-          <h3 class="text-lg font-semibold text-blue-300">Bénéfices économiques</h3>
-          <ul class="space-y-3">
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="text-sm text-neutral-300">Réduction de 40% du coût transport fer vs route</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="text-sm text-neutral-300">Hub de transbordement fer-route optimisé</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="text-sm text-neutral-300">Desserte RCA et Nigéria via corridors régionaux</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="text-sm text-neutral-300">Désenclavement économique du Nord-Cameroun</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900 space-y-4">
-          <h3 class="text-lg font-semibold text-blue-300">Impact social</h3>
-          <ul class="space-y-3">
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="text-sm text-neutral-300">320+ emplois directs qualifiés</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="text-sm text-neutral-300">800+ emplois indirects (transport, services)</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="text-sm text-neutral-300">Centre de formation logistique CEMAC</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="text-sm text-neutral-300">Renforcement de l'intégration sous-régionale</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
     <!-- Newsletter inscription -->
     <section class="max-w-3xl mx-auto px-6">
       <div class="rounded-2xl border border-blue-700/40 bg-gradient-to-br from-blue-950/20 to-neutral-900 p-8 md:p-12 space-y-6">
@@ -340,28 +174,6 @@
 
     <!-- CTA & Navigation -->
     <section class="max-w-6xl mx-auto px-6 space-y-6">
-      <!-- CTA principal -->
-      <div class="p-8 rounded-2xl border border-neutral-800 bg-neutral-900 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div class="space-y-2 text-center md:text-left">
-          <h3 class="text-xl font-bold">Intéressé par ce projet ?</h3>
-          <p class="text-neutral-400 text-sm">Découvrez les opportunités d'investissement et partenariat</p>
-        </div>
-        <div class="flex flex-wrap gap-3 justify-center">
-          <RouterLink
-            to="/dataroom"
-            class="px-6 py-3 rounded-xl bg-emerald-500 text-neutral-900 font-semibold hover:bg-emerald-400 transition focus:outline-none focus:ring-2 focus:ring-emerald-500"
-          >
-            Documentation investisseurs
-          </RouterLink>
-          <RouterLink
-            to="/contact"
-            class="px-6 py-3 rounded-xl border border-neutral-700 font-semibold hover:bg-neutral-800 transition focus:outline-none focus:ring-2 focus:ring-neutral-500"
-          >
-            Nous contacter
-          </RouterLink>
-        </div>
-      </div>
-
       <!-- Autres projets -->
       <OtherProjects current-project="ngaoundere" />
 

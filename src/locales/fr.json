@@ -572,7 +572,7 @@
     "kpiOps": {
       "title": "Capacités & ressources",
       "areaHa": "10 ha",
-      "capacityEvp": "3 500 EVP",
+      "capacityEvp": "42 000 EVP/an",
       "railFleet": "2 locomotives + 8 wagons",
       "jobsDirect": "≈ 140 emplois directs"
     },
@@ -696,5 +696,28 @@
       "cookies": "Politique de confidentialité et cookies"
     },
     "updated": "Dernière mise à jour : Octobre 2025"
+  },
+  "map": {
+    "countries": {
+      "chad": "TCHAD"
+    },
+    "status": {
+      "ongoing": "En cours",
+      "planned": "Prévu 2030-2032"
+    },
+    "douala": {
+      "capacity": "10 ha / 42K EVP/an",
+      "jobs": "300+ emplois"
+    },
+    "kribi": {
+      "desc": "Port en eau profonde"
+    },
+    "ngaoundere": {
+      "desc": "Corridor ferroviaire"
+    },
+    "ndjamena": {
+      "status": "Siège Social",
+      "desc": "GPM Headquarters"
+    }
   }
 }

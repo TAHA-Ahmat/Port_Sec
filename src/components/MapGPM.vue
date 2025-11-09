@@ -186,17 +186,6 @@
     <!-- Labels pays -->
     <template v-if="mode === 'interactive'">
       <text
-        x="200"
-        y="340"
-        fill="rgba(255,255,255,0.18)"
-        font-size="16"
-        font-weight="600"
-        text-anchor="middle"
-        letter-spacing="2"
-      >
-        CAMEROUN
-      </text>
-      <text
         x="270"
         y="180"
         fill="rgba(255,255,255,0.18)"
@@ -205,7 +194,7 @@
         text-anchor="middle"
         letter-spacing="2"
       >
-        TCHAD
+        {{ t('map.countries.chad', 'TCHAD') }}
       </text>
     </template>
 
@@ -305,10 +294,10 @@
         <text x="0" y="8" fill="white" font-size="11" font-weight="700" style="text-shadow: 0 2px 30px rgba(0,0,0,0.95);">Douala</text>
         <g transform="translate(0, 16)">
           <circle cx="3" cy="0" r="2.5" fill="#34D399"/>
-          <text x="9" y="3" fill="#34D399" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">En cours</text>
+          <text x="9" y="3" fill="#34D399" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">{{ t('map.status.ongoing', 'En cours') }}</text>
         </g>
-        <text x="0" y="29" fill="rgba(255,255,255,0.9)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">10 ha / 42K EVP/an</text>
-        <text x="0" y="39" fill="rgba(255,255,255,0.8)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">300+ emplois</text>
+        <text x="0" y="29" fill="rgba(255,255,255,0.9)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">{{ t('map.douala.capacity', '10 ha / 42K EVP/an') }}</text>
+        <text x="0" y="39" fill="rgba(255,255,255,0.8)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">{{ t('map.douala.jobs', '300+ emplois') }}</text>
       </g>
 
       <!-- Kribi -->
@@ -317,9 +306,9 @@
         <text x="0" y="8" fill="white" font-size="11" font-weight="700" style="text-shadow: 0 2px 30px rgba(0,0,0,0.95);">Kribi</text>
         <g transform="translate(0, 16)">
           <circle cx="3" cy="0" r="2.5" fill="#EAB308" fill-opacity="0.9"/>
-          <text x="9" y="3" fill="#EAB308" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">Prévu 2030-2032</text>
+          <text x="9" y="3" fill="#EAB308" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">{{ t('map.status.planned', 'Prévu 2030-2032') }}</text>
         </g>
-        <text x="0" y="29" fill="rgba(255,255,255,0.8)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">Port en eau profonde</text>
+        <text x="0" y="29" fill="rgba(255,255,255,0.8)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">{{ t('map.kribi.desc', 'Port en eau profonde') }}</text>
       </g>
 
       <!-- Ngaoundéré -->
@@ -328,9 +317,9 @@
         <text x="0" y="8" fill="white" font-size="11" font-weight="700" style="text-shadow: 0 2px 30px rgba(0,0,0,0.95);">Ngaoundéré</text>
         <g transform="translate(0, 16)">
           <circle cx="3" cy="0" r="2.5" fill="#EAB308" fill-opacity="0.9"/>
-          <text x="9" y="3" fill="#EAB308" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">Prévu 2030-2032</text>
+          <text x="9" y="3" fill="#EAB308" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">{{ t('map.status.planned', 'Prévu 2030-2032') }}</text>
         </g>
-        <text x="0" y="29" fill="rgba(255,255,255,0.8)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">Corridor ferroviaire</text>
+        <text x="0" y="29" fill="rgba(255,255,255,0.8)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">{{ t('map.ngaoundere.desc', 'Corridor ferroviaire') }}</text>
       </g>
 
       <!-- N'Djamena (Siège Social GPM) -->
@@ -339,9 +328,9 @@
         <text x="0" y="8" fill="white" font-size="11" font-weight="700" style="text-shadow: 0 2px 30px rgba(0,0,0,0.95);">N'Djamena</text>
         <g transform="translate(0, 16)">
           <circle cx="3" cy="0" r="2.5" fill="#ff3b3b" fill-opacity="0.9"/>
-          <text x="9" y="3" fill="#ff3b3b" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">Siège Social</text>
+          <text x="9" y="3" fill="#ff3b3b" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">{{ t('map.ndjamena.status', 'Siège Social') }}</text>
         </g>
-        <text x="0" y="29" fill="rgba(255,255,255,0.9)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">GPM Headquarters</text>
+        <text x="0" y="29" fill="rgba(255,255,255,0.9)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">{{ t('map.ndjamena.desc', 'GPM Headquarters') }}</text>
       </g>
     </template>
   </svg>
@@ -349,6 +338,7 @@
 
 <script setup>
 import { reactive, ref, onMounted, onUnmounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 /**
  * MapGPM.vue - Composant carte unifié Tchad-Cameroun
@@ -365,6 +355,8 @@ const props = defineProps({
     validator: (value) => ['background', 'interactive'].includes(value)
   }
 })
+
+const { t } = useI18n()
 
 // Positions GPS exactes des villes
 const cities = reactive({

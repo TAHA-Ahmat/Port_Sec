@@ -49,6 +49,7 @@
 
         <!-- CTA secondaire -->
         <component
+          v-if="secondaryTo || secondaryHref"
           :is="secondaryIsExternal ? 'a' : 'RouterLink'"
           :to="!secondaryIsExternal ? secondaryTo : undefined"
           :href="secondaryIsExternal ? secondaryHref : undefined"
@@ -90,7 +91,7 @@ const props = defineProps({
   primaryLabel: { type: String, default: '' },
 
   /** CTA secondaire */
-  secondaryTo: { type: String, default: '/contact' },
+  secondaryTo: { type: String, default: '' },
   secondaryHref: { type: String, default: '' },
   secondaryLabel: { type: String, default: '' },
 

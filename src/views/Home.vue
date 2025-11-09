@@ -12,9 +12,7 @@
       :subtitle-override="t('gpmHero.subtitle', 'Genesis Port Management développe et gère les plateformes logistiques régionales au service du commerce extérieur du Tchad.')"
       :trust-override="t('gpmHero.trust', 'Basé à N\'Djamena • Opérateur CEMAC')"
       :cta-invest-label="t('gpmHero.ctaPrimary', 'Découvrir nos projets')"
-      :cta-secondary-label="t('gpmHero.ctaSecondary', 'Nous contacter')"
       invest-to="/projects"
-      secondary-to="/contact"
       :feature-badges="[]"
       org-name="Genesis Port Management"
       org-url="https://portsectchad.com"
@@ -326,8 +324,6 @@
       :subtitle="t('cta.subtitle', 'Ensemble, construisons le réseau logistique du futur.')"
       primary-to="/projects"
       :primary-label="t('cta.primaryLabel', 'Découvrir nos projets')"
-      secondary-to="/contact"
-      :secondary-label="t('cta.secondaryLabel', 'Nous contacter')"
       variant="solid"
     />
   </main>

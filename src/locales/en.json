@@ -572,7 +572,7 @@
     "kpiOps": {
       "title": "Capacities & resources",
       "areaHa": "10 ha",
-      "capacityEvp": "3,500 TEU",
+      "capacityEvp": "42,000 TEU/yr",
       "railFleet": "2 locomotives + 8 wagons",
       "jobsDirect": "≈ 140 direct jobs"
     },
@@ -696,5 +696,28 @@
       "cookies": "Privacy and Cookie Policy"
     },
     "updated": "Last updated: October 2025"
+  },
+  "map": {
+    "countries": {
+      "chad": "CHAD"
+    },
+    "status": {
+      "ongoing": "Ongoing",
+      "planned": "Planned 2030-2032"
+    },
+    "douala": {
+      "capacity": "10 ha / 42K TEU/yr",
+      "jobs": "300+ jobs"
+    },
+    "kribi": {
+      "desc": "Deep-water port"
+    },
+    "ngaoundere": {
+      "desc": "Rail corridor"
+    },
+    "ndjamena": {
+      "status": "Headquarters",
+      "desc": "GPM HQ"
+    }
   }
 }
