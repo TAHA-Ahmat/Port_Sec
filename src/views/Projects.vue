@@ -26,7 +26,7 @@
       >
         <!-- Background image -->
         <div
-          class="absolute inset-0 z-0 bg-cover bg-left-top md:bg-[center_20%]"
+          class="absolute inset-0 z-0 bg-cover bg-[18%_top] md:bg-[center_20%]"
           :style="{
             backgroundImage: `url(${imgLaterale6})`
           }"

@@ -86,42 +86,6 @@
       </div>
     </section>
 
-    <!-- KPIs du projet -->
-    <section class="max-w-6xl mx-auto px-6 space-y-6">
-      <header class="flex items-center gap-2 text-sm opacity-80">
-        <span class="inline-block h-2 w-2 rounded-full bg-amber-400"></span>
-        <h2 class="font-semibold">Caractéristiques techniques</h2>
-      </header>
-
-      <div class="grid md:grid-cols-4 gap-4">
-        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900">
-          <p class="text-xs text-neutral-500 uppercase tracking-wider">Superficie</p>
-          <p class="text-3xl font-bold mt-2 bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-white">
-            25 ha
-          </p>
-        </div>
-        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900">
-          <p class="text-xs text-neutral-500 uppercase tracking-wider">Capacité annuelle</p>
-          <p class="text-3xl font-bold mt-2 bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-white">
-            45K EVP
-          </p>
-        </div>
-        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900">
-          <p class="text-xs text-neutral-500 uppercase tracking-wider">Investissement</p>
-          <p class="text-3xl font-bold mt-2 bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-white">
-            40 Mds
-          </p>
-          <p class="text-xs text-neutral-500 mt-1">XAF</p>
-        </div>
-        <div class="p-6 rounded-xl border border-neutral-800 bg-neutral-900">
-          <p class="text-xs text-neutral-500 uppercase tracking-wider">Emplois créés</p>
-          <p class="text-3xl font-bold mt-2 bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-white">
-            250+
-          </p>
-        </div>
-      </div>
-    </section>
-
     <!-- Newsletter inscription -->
     <section class="max-w-3xl mx-auto px-6">
       <div class="rounded-2xl border border-amber-700/40 bg-gradient-to-br from-amber-950/20 to-neutral-900 p-8 md:p-12 space-y-6">
