@@ -307,7 +307,7 @@
           <circle cx="3" cy="0" r="2.5" fill="#34D399"/>
           <text x="9" y="3" fill="#34D399" font-size="9" font-weight="700" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9);">En cours</text>
         </g>
-        <text x="0" y="29" fill="rgba(255,255,255,0.9)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">10 ha / 3,5K EVP</text>
+        <text x="0" y="29" fill="rgba(255,255,255,0.9)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">10 ha / 42K EVP/an</text>
         <text x="0" y="39" fill="rgba(255,255,255,0.8)" font-size="8" font-weight="600" style="text-shadow: 0 1px 15px rgba(0,0,0,0.9);">300+ emplois</text>
       </g>
 
