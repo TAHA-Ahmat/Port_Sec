@@ -20,7 +20,7 @@
     <main class="flex-1 relative z-10">
       <router-view :key="$route.fullPath" />
     </main>
-    <Footer />
+    <Footer class="relative z-20" />
 
     <!-- Loading spinner global -->
     <LoadingSpinner
@@ -28,11 +28,14 @@
       :message="loadingMessage"
       :submessage="loadingSubmessage"
     />
+
+    <!-- Consent Banner RGPD -->
+    <ConsentBanner />
   </div>
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, onBeforeMount } from 'vue'
 import { inject } from '@vercel/analytics'
 import InstitutionalHeader from './components/InstitutionalHeader.vue'
 import Navbar from './components/Navbar.vue'
@@ -40,8 +43,10 @@ import Footer from './components/Footer.vue'
 import LoadingSpinner from './components/LoadingSpinner.vue'
 import ScrollProgressBar from './components/ScrollProgressBar.vue'
 import WatermarkSeals from './components/WatermarkSeals.vue'
+import ConsentBanner from './components/ConsentBanner.vue'
 import { useSeo } from './composables/useSeo'
 import { useLoading } from './composables/useLoading'
+import { useConsent } from './composables/useConsent'
 
 // Activer le SEO dynamique
 useSeo()
@@ -49,9 +54,18 @@ useSeo()
 // État de loading global
 const { isLoading, loadingMessage, loadingSubmessage } = useLoading()
 
-// Initialiser Vercel Analytics
+// Gestion du consentement RGPD
+const { loadConsent, initGoogleConsentMode } = useConsent()
+
+// Initialiser Google Consent Mode AVANT tout
+onBeforeMount(() => {
+  initGoogleConsentMode()
+})
+
+// Charger le consentement et analytics
 onMounted(() => {
-  inject()
+  loadConsent()
+  inject() // Vercel Analytics
 })
 </script>
 

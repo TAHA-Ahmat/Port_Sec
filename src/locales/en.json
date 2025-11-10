@@ -719,5 +719,12 @@
       "status": "Headquarters",
       "desc": "GPM HQ"
     }
+  },
+  "consent": {
+    "title": "Your data protection",
+    "description": "We use cookies to improve your experience and measure the performance of our advertising campaigns. Your data is processed in accordance with GDPR.",
+    "learnMore": "Learn more",
+    "accept": "Accept all",
+    "reject": "Reject"
   }
 }

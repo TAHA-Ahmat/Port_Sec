@@ -719,5 +719,12 @@
       "status": "Siège Social",
       "desc": "GPM Headquarters"
     }
+  },
+  "consent": {
+    "title": "Protection de vos données",
+    "description": "Nous utilisons des cookies pour améliorer votre expérience et mesurer les performances de nos campagnes publicitaires. Vos données sont traitées conformément au RGPD.",
+    "learnMore": "En savoir plus",
+    "accept": "Accepter tout",
+    "reject": "Refuser"
   }
 }
