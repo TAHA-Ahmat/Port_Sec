@@ -32,6 +32,8 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
+import { inject } from '@vercel/analytics'
 import InstitutionalHeader from './components/InstitutionalHeader.vue'
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
@@ -46,6 +48,11 @@ useSeo()
 
 // État de loading global
 const { isLoading, loadingMessage, loadingSubmessage } = useLoading()
+
+// Initialiser Vercel Analytics
+onMounted(() => {
+  inject()
+})
 </script>
 
 <style>
